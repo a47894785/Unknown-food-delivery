@@ -1,7 +1,5 @@
 # Unknown-food-delivery
 
-# Unknown-food-delivery
-
 | 組員姓名 | 學號     | GitHub帳號     |
 | -------- | -------- | -------------- |
 | 陳品華   | D0843806 | a47894785      |
