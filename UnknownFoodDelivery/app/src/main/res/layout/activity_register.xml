@@ -101,7 +101,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Phone"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:paddingLeft="20dp"
         android:paddingRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"

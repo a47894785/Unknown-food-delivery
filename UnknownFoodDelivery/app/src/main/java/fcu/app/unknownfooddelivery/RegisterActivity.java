@@ -126,6 +126,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
               });
 
+              fAuth.signOut(); // 避免一註冊完就跳到 MainActivity
               startActivity(new Intent(getApplicationContext(), LoginActivity.class));
 
             } else { // 註冊失敗
