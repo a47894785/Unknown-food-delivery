@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480029413673",
+    "project_id": "unknownfooddeliverydatabase",
+    "storage_bucket": "unknownfooddeliverydatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480029413673:android:22bc0af72180a4aa196738",
+        "android_client_info": {
+          "package_name": "fcu.app.unknownfooddelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480029413673-80oe1f8qu9an66kk3lv2nshooaohrjpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsgOYHvjIxvKnGXA3rhlZObcFusKDU0r8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480029413673-80oe1f8qu9an66kk3lv2nshooaohrjpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

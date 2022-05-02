@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">480029413673-80oe1f8qu9an66kk3lv2nshooaohrjpd.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">480029413673</string>
+    <string name="google_api_key" translatable="false">AIzaSyBsgOYHvjIxvKnGXA3rhlZObcFusKDU0r8</string>
+    <string name="google_app_id" translatable="false">1:480029413673:android:22bc0af72180a4aa196738</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBsgOYHvjIxvKnGXA3rhlZObcFusKDU0r8</string>
+    <string name="google_storage_bucket" translatable="false">unknownfooddeliverydatabase.appspot.com</string>
+    <string name="project_id" translatable="false">unknownfooddeliverydatabase</string>
+</resources>
