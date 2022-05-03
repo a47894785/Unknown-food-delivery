@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
         "merged": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_input.xml.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_register.xml.flat",
         "source": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans.xml.flat",
+        "source": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\font\\noto_sans.xml"
     },
     {
         "merged": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
