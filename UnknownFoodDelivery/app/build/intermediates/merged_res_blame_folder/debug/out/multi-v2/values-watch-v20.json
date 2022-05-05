@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\4cbcb2a139875109bde94b7e730430f9\\transformed\\appcompat-1.4.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\sfsffk\\.gradle\\caches\\transforms-3\\4cbcb2a139875109bde94b7e730430f9\\transformed\\appcompat-1.4.1\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

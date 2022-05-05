@@ -1,12 +1,12 @@
-#Tue May 03 11:10:51 CST 2022
+#Thu May 05 20:05:29 GMT+08:00 2022
 path.3=classes2.dex
 path.2=1/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.3=D\:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.2=D\:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.1=D\:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=D\:\\WorkSpace\\app_design\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.3=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.1=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
