@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     // 改變上方通知欄
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
       getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
     // 連接 Components
@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // 若已經登入，則直接 Navigate to MainActivity
     if (fAuth.getCurrentUser() != null) {
-      startActivity(new Intent(getApplicationContext(), MainActivity.class));
+      startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
       finish();
     }
 
@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
           public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()) {
               Toast.makeText(LoginActivity.this, "Login Successfully", android.widget.Toast.LENGTH_SHORT).show();
-              startActivity(new Intent(getApplicationContext(), MainActivity.class));
+              startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
             } else {
               Toast.makeText(LoginActivity.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
             }

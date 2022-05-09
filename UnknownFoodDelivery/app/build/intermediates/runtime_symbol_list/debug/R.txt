@@ -2504,6 +2504,7 @@ int drawable ic_clock_black_24dp 0x7f08007d
 int drawable ic_keyboard_black_24dp 0x7f08007e
 int drawable ic_launcher_background 0x7f08007f
 int drawable ic_launcher_foreground 0x7f080080
+int drawable ic_logout 0x7f0800bf
 int drawable ic_m3_chip_check 0x7f080081
 int drawable ic_m3_chip_checked_circle 0x7f080082
 int drawable ic_m3_chip_close 0x7f080083
@@ -2562,10 +2563,13 @@ int drawable notification_template_icon_low_bg 0x7f0800b7
 int drawable notification_tile_bg 0x7f0800b8
 int drawable notify_panel_notification_icon_bg 0x7f0800b9
 int drawable profile 0x7f0800ba
+int drawable search_icon 0x7f0800c0
+int drawable searchbar 0x7f0800c1
 int drawable test_custom_background 0x7f0800bb
 int drawable test_level_drawable 0x7f0800bc
 int drawable tooltip_frame_dark 0x7f0800bd
 int drawable tooltip_frame_light 0x7f0800be
+int drawable userprofile 0x7f0800c2
 int font noto_sans 0x7f090000
 int font poppins 0x7f090001
 int id ALT 0x7f0a0000
@@ -2747,6 +2751,7 @@ int id dragLeft 0x7f0a00af
 int id dragRight 0x7f0a00b0
 int id dragStart 0x7f0a00b1
 int id dragUp 0x7f0a00b2
+int id drawerLayout 0x7f0a021f
 int id dropdown_menu 0x7f0a00b3
 int id easeIn 0x7f0a00b4
 int id easeInOut 0x7f0a00b5
@@ -2818,7 +2823,7 @@ int id imageView19 0x7f0a00f6
 int id imageView2 0x7f0a00f7
 int id imageView20 0x7f0a00f8
 int id imageView21 0x7f0a00f9
-int id imageView22 0x7f0a00fa
+int id imageView26 0x7f0a0225
 int id imageView3 0x7f0a00fb
 int id imageView4 0x7f0a00fc
 int id imageView5 0x7f0a00fd
@@ -2837,6 +2842,7 @@ int id item2 0x7f0a0109
 int id item3 0x7f0a010a
 int id item4 0x7f0a010b
 int id item_touch_helper_previous_elevation 0x7f0a010c
+int id iv_menu 0x7f0a0220
 int id jumpToEnd 0x7f0a010d
 int id jumpToStart 0x7f0a010e
 int id labeled 0x7f0a010f
@@ -2873,6 +2879,8 @@ int id material_timepicker_mode_button 0x7f0a012d
 int id material_timepicker_ok_button 0x7f0a012e
 int id material_timepicker_view 0x7f0a012f
 int id material_value_index 0x7f0a0130
+int id menuLogout 0x7f0a0221
+int id menuProfile 0x7f0a0222
 int id message 0x7f0a0131
 int id middle 0x7f0a0132
 int id mini 0x7f0a0133
@@ -2907,6 +2915,7 @@ int id mtrl_picker_text_input_range_start 0x7f0a014f
 int id mtrl_picker_title_text 0x7f0a0150
 int id mtrl_view_tag_bottom_padding 0x7f0a0151
 int id multiply 0x7f0a0152
+int id navigationView 0x7f0a0223
 int id navigation_bar_item_active_indicator_view 0x7f0a0153
 int id navigation_bar_item_icon_container 0x7f0a0154
 int id navigation_bar_item_icon_view 0x7f0a0155
@@ -3083,6 +3092,7 @@ int id tv_labelsensor 0x7f0a01ff
 int id tv_labelupdates 0x7f0a0200
 int id tv_lat 0x7f0a0201
 int id tv_lbladdress 0x7f0a0202
+int id tv_location_addr 0x7f0a0224
 int id tv_lon 0x7f0a0203
 int id tv_sensor 0x7f0a0204
 int id tv_title 0x7f0a0205
@@ -3094,6 +3104,7 @@ int id unlabeled 0x7f0a020a
 int id up 0x7f0a020b
 int id useLogo 0x7f0a020c
 int id vertical_only 0x7f0a020d
+int id view 0x7f0a0226
 int id view_offset_helper 0x7f0a020e
 int id view_transition 0x7f0a020f
 int id view_tree_lifecycle_owner 0x7f0a0210
@@ -3219,6 +3230,7 @@ int layout design_navigation_menu 0x7f0d002e
 int layout design_navigation_menu_item 0x7f0d002f
 int layout design_text_input_end_icon 0x7f0d0030
 int layout design_text_input_start_icon 0x7f0d0031
+int layout layout_navigation_header 0x7f0d0079
 int layout m3_alert_dialog 0x7f0d0032
 int layout m3_alert_dialog_actions 0x7f0d0033
 int layout m3_alert_dialog_title 0x7f0d0034
@@ -3292,6 +3304,7 @@ int layout text_view_with_theme_line_height 0x7f0d0077
 int layout text_view_without_line_height 0x7f0d0078
 int menu example_menu 0x7f0e0000
 int menu example_menu2 0x7f0e0001
+int menu navigation_menu 0x7f0e0002
 int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int plurals mtrl_badge_content_description 0x7f100000

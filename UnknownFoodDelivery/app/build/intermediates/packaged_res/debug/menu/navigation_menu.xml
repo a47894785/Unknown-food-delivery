@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menuProfile"
+        android:icon="@drawable/userprofile"
+        android:title="個人資訊" />
+
+    <item android:id="@+id/menuLogout"
+        android:icon="@drawable/ic_logout"
+        android:title="登出" />
+
+</menu>
