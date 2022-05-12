@@ -31,19 +31,20 @@
     <string name="google_app_id" translatable="false">1:480029413673:android:22bc0af72180a4aa196738</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBsgOYHvjIxvKnGXA3rhlZObcFusKDU0r8</string>
     <string name="google_storage_bucket" translatable="false">unknownfooddeliverydatabase.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="project_id" translatable="false">unknownfooddeliverydatabase</string>
     <style name="Theme.UnknownFoodDelivery" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
+        
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+        
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
+        
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        
         <item name="windowNoTitle">true</item>
         <item name="colorPrimaryDark">@color/white</item>
     </style>

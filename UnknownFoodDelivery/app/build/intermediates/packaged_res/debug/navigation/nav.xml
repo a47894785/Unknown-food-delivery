@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainActivity_simulate">
+
+    <activity
+        android:id="@+id/mainActivity_simulate"
+        android:name="fcu.app.unknownfooddelivery.MainActivity_simulate"
+        android:label="activity_main_simulate"
+        tools:layout="@layout/activity_main_simulate" />
+    <fragment
+        android:id="@+id/cart"
+        android:name="fcu.app.unknownfooddelivery.Cart"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/general_chat"
+        android:name="fcu.app.unknownfooddelivery.GeneralChat"
+        android:label="fragment_general_chat"
+        tools:layout="@layout/fragment_general_chat" />
+    <fragment
+        android:id="@+id/history"
+        android:name="fcu.app.unknownfooddelivery.History"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+</navigation>

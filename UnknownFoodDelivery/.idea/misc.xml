@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/bg.xml" value="0.254" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_main_simulate.xml" value="0.24592391304347827" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_cart.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_general_chat.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_history.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/layout_navigation_header.xml" value="0.24592391304347827" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/buttom_nav_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/PinHua/Desktop/APPTEST/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/navigation_menu.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/sfsffk/Documents/GitHub/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/bg_color.xml" value="0.3375" />
         <entry key="..\:/Users/sfsffk/Documents/GitHub/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/bg_input.xml" value="0.3375" />
         <entry key="..\:/Users/sfsffk/Documents/GitHub/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_login.xml" value="0.2971014492753623" />

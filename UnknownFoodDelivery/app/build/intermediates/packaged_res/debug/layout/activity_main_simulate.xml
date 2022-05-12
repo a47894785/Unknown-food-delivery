@@ -10,6 +10,20 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/btn_nav_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="58dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView16">
+
+        </FrameLayout>
+
         <EditText
             android:id="@+id/et_search"
             android:layout_width="300dp"
@@ -32,15 +46,6 @@
             app:layout_constraintVertical_bias="0.826" />
 
         <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="411dp"
-            android:layout_height="58dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/bg" />
-
-        <ImageView
             android:id="@+id/imageView16"
             android:layout_width="411dp"
             android:layout_height="100dp"
@@ -48,43 +53,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bg" />
-
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="50dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView19"
-            app:layout_constraintTop_toTopOf="@+id/imageView17"
-            app:srcCompat="@drawable/icon_home" />
-
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="50dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
-            app:layout_constraintEnd_toStartOf="@+id/imageView20"
-            app:srcCompat="@drawable/icon_cart" />
-
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="50dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView19"
-            app:layout_constraintEnd_toStartOf="@+id/imageView21"
-            app:srcCompat="@drawable/icon_chat" />
-
-        <ImageView
-            android:id="@+id/imageView21"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="50dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView20"
-            app:layout_constraintEnd_toEndOf="@+id/imageView17"
-            app:srcCompat="@drawable/icon_history" />
 
         <ImageView
             android:id="@+id/iv_menu"
@@ -111,6 +79,17 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/bg"
+            app:itemRippleColor="#2196F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

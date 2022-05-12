@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    // 改變上方通知欄
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+    }
+
     tv_lat = findViewById(R.id.tv_lat);
     tv_lon = findViewById(R.id.tv_lon);
     tv_sensor = findViewById(R.id.tv_sensor);
@@ -72,11 +78,8 @@ public class MainActivity extends AppCompatActivity {
     locationRequest.setFastestInterval(1000 * FAST_UPDATE_INTERVAL);
     locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
 
-    // 改變上方通知欄
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-    }
+
+
 
     // 連接 Components, FirebaseAuth & FirebaseFirestore
     tvTitle = findViewById(R.id.tv_title);

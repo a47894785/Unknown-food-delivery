@@ -2,9 +2,7 @@ package fcu.app.unknownfooddelivery;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,13 +17,11 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
-import android.os.Looper;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,10 +31,10 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -52,9 +48,17 @@ public class MainActivity_simulate extends AppCompatActivity {
     private ImageView ivMenu;
     private NavigationView navigationView;
     private FirebaseAuth fAuth;
+    private String currentAddress = "當前位置";
     LocationRequest locationRequest;
     LocationCallback locationCallBack;
     FusedLocationProviderClient fusedLocationProviderClient;
+    private BottomNavigationView bottomNavigationView;
+    int count = 0;
+
+    Home home = new Home();
+    Cart cart = new Cart();
+    GeneralChat generalChat = new GeneralChat();
+    History history = new History();
 
     public static final int PERMISSION_FINE_LOCATION = 99;
 
@@ -75,9 +79,10 @@ public class MainActivity_simulate extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
         ivMenu = findViewById(R.id.iv_menu);
         navigationView = findViewById(R.id.navigationView);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         locationRequest = new LocationRequest();
-        locationRequest.setInterval(1000 * 30);
+        locationRequest.setInterval(1000 * 10);
         locationRequest.setFastestInterval(1000 * 5);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
@@ -111,9 +116,32 @@ public class MainActivity_simulate extends AppCompatActivity {
             }
         };
 
-
-
         updateGPS();
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.btn_nav_home:
+                            Bundle bundle = new Bundle();
+                            bundle.putString("address", currentAddress);
+                            home.setArguments(bundle);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, home).commit();
+                        break;
+                    case R.id.btn_nav_cart:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, cart).commit();
+                        break;
+                    case R.id.btn_nav_chat:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, generalChat).commit();
+                        break;
+                    case R.id.btn_nav_history:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, history).commit();
+                        break;
+                }
+                return true;
+            }
+        });
+
 
     }
 
@@ -123,8 +151,22 @@ public class MainActivity_simulate extends AppCompatActivity {
 
         Geocoder geocoder = new Geocoder(MainActivity_simulate.this);
         try {
+            currentAddress = "";
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-            tvLocationAddr.setText(addresses.get(0).getAddressLine(0));
+            currentAddress = addresses.get(0).getAddressLine(0);
+            tvLocationAddr.setText(currentAddress);
+
+            Log.d("CurrentAddress", currentAddress + ", No." + ++count);
+            // TODO 設 flag 控制更新
+            if (count == 1) {
+                Bundle bundle = new Bundle();
+                bundle.putString("address", currentAddress);
+                home.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, home).commit();
+                Log.d("CurrentAddress", "Update");
+            }
+
+
         } catch (Exception e) {
             Toast.makeText(this, "Unable to get address", Toast.LENGTH_SHORT).show();
         }
@@ -152,6 +194,7 @@ public class MainActivity_simulate extends AppCompatActivity {
             return;
         }
         fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallBack, null);
+
     }
 
     private void stopLocationUpdate() {
