@@ -55,10 +55,10 @@ public class MainActivity_simulate extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     int count = 0;
 
-    Home home = new Home();
-    Cart cart = new Cart();
-    GeneralChat generalChat = new GeneralChat();
-    History history = new History();
+    HomeFragment homeFragment = new HomeFragment();
+    CartFragment cartFragment = new CartFragment();
+    GeneralChatFragment generalChatFragment = new GeneralChatFragment();
+    HistoryFragment historyFragment = new HistoryFragment();
 
     public static final int PERMISSION_FINE_LOCATION = 99;
 
@@ -125,17 +125,17 @@ public class MainActivity_simulate extends AppCompatActivity {
                     case R.id.btn_nav_home:
                             Bundle bundle = new Bundle();
                             bundle.putString("address", currentAddress);
-                            home.setArguments(bundle);
-                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, home).commit();
+                            homeFragment.setArguments(bundle);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, homeFragment).commit();
                         break;
                     case R.id.btn_nav_cart:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, cart).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, cartFragment).commit();
                         break;
                     case R.id.btn_nav_chat:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, generalChat).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, generalChatFragment).commit();
                         break;
                     case R.id.btn_nav_history:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, history).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, historyFragment).commit();
                         break;
                 }
                 return true;
@@ -161,8 +161,8 @@ public class MainActivity_simulate extends AppCompatActivity {
             if (count == 1) {
                 Bundle bundle = new Bundle();
                 bundle.putString("address", currentAddress);
-                home.setArguments(bundle);
-                getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, home).commit();
+                homeFragment.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, homeFragment).commit();
                 Log.d("CurrentAddress", "Update");
             }
 

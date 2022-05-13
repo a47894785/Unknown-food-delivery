@@ -9,15 +9,14 @@
         android:icon="@drawable/ic_logout"
         android:title="登出" />
 
-    <item>
+    <item android:title="模式">
         <menu>
-            <item android:id="@+id/menuSetting"
-                android:icon="@drawable/ic_logout"
-                android:title="設定" />
-
-            <item android:id="@+id/About"
-                android:icon="@drawable/ic_logout"
-                android:title="相關" />
+            <item android:title="一般使用者"
+                android:id="@+id/general_mode"/>
+            <item android:title="店家"
+                android:id="@+id/shop_mode"/>
+            <item android:title="外送員"
+                android:id="@+id/delivery_man_mode"/>
         </menu>
     </item>
 

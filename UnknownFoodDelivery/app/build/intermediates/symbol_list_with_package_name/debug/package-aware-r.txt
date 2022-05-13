@@ -2625,7 +2625,6 @@ drawable userprofile
 font noto_sans
 font poppins
 id ALT
-id About
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2790,6 +2789,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delivery_man_mode
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -2851,6 +2851,7 @@ id forever
 id fragment_container_view_tag
 id frost
 id general_chat
+id general_mode
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2947,7 +2948,6 @@ id material_value_index
 id media_actions
 id menuLogout
 id menuProfile
-id menuSetting
 id message
 id middle
 id mini
@@ -3062,6 +3062,7 @@ id selected
 id selection_type
 id sharedValueSet
 id sharedValueUnset
+id shop_mode
 id shortcut
 id showCustom
 id showHome

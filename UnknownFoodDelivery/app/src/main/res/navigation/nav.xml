@@ -12,17 +12,17 @@
         tools:layout="@layout/activity_main_simulate" />
     <fragment
         android:id="@+id/cart"
-        android:name="fcu.app.unknownfooddelivery.Cart"
+        android:name="fcu.app.unknownfooddelivery.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/general_chat"
-        android:name="fcu.app.unknownfooddelivery.GeneralChat"
+        android:name="fcu.app.unknownfooddelivery.GeneralChatFragment"
         android:label="fragment_general_chat"
         tools:layout="@layout/fragment_general_chat" />
     <fragment
         android:id="@+id/history"
-        android:name="fcu.app.unknownfooddelivery.History"
+        android:name="fcu.app.unknownfooddelivery.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
 </navigation>

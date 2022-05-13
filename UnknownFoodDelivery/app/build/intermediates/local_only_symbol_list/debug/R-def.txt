@@ -32,7 +32,6 @@ drawable searchbar
 drawable userprofile
 font noto_sans
 font poppins
-id About
 id bottom_navigation
 id btn_login
 id btn_nav_cart
@@ -43,6 +42,7 @@ id btn_nav_home
 id btn_register
 id button
 id cart
+id delivery_man_mode
 id divider
 id drawerLayout
 id et_login_email
@@ -54,6 +54,7 @@ id et_password2
 id et_phone
 id et_search
 id general_chat
+id general_mode
 id guideline2
 id history
 id home_frag_address
@@ -79,10 +80,10 @@ id lock
 id mainActivity_simulate
 id menuLogout
 id menuProfile
-id menuSetting
 id message
 id nav
 id navigationView
+id shop_mode
 id sw_gps
 id sw_locationsupdates
 id textView
