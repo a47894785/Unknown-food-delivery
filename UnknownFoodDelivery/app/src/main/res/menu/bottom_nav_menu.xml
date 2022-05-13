@@ -4,18 +4,18 @@
     <item
         android:id="@+id/btn_nav_home"
         android:icon="@drawable/icon_home"
-        android:title="Home"/>
+        android:title="主頁"/>
     <item
         android:id="@+id/btn_nav_cart"
         android:icon="@drawable/icon_cart"
-        android:title="Cart"/>
+        android:title="購物車"/>
     <item
         android:id="@+id/btn_nav_chat"
         android:icon="@drawable/icon_chat"
-        android:title="Chat"/>
+        android:title="聊天室"/>
     <item
         android:id="@+id/btn_nav_history"
         android:icon="@drawable/icon_history"
-        android:title="History"/>
+        android:title="歷史紀錄"/>
 
 </menu>

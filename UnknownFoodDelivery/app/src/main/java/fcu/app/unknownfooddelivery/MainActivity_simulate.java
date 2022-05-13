@@ -46,14 +46,18 @@ public class MainActivity_simulate extends AppCompatActivity {
     private double latitude;
     private double longitude;
     private ImageView ivMenu;
-    private NavigationView navigationView;
     private FirebaseAuth fAuth;
+
+    private NavigationView navigationView;
+    private BottomNavigationView bottomNavigationView;
+    int count = 0;
+
     private String currentAddress = "當前位置";
     LocationRequest locationRequest;
     LocationCallback locationCallBack;
     FusedLocationProviderClient fusedLocationProviderClient;
-    private BottomNavigationView bottomNavigationView;
-    int count = 0;
+
+
 
     HomeFragment homeFragment = new HomeFragment();
     CartFragment cartFragment = new CartFragment();
@@ -123,9 +127,9 @@ public class MainActivity_simulate extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.btn_nav_home:
-                            Bundle bundle = new Bundle();
-                            bundle.putString("address", currentAddress);
-                            homeFragment.setArguments(bundle);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("address", currentAddress);
+                        homeFragment.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, homeFragment).commit();
                         break;
                     case R.id.btn_nav_cart:
