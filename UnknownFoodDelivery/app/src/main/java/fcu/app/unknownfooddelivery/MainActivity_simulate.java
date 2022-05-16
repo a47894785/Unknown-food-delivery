@@ -163,6 +163,24 @@ public class MainActivity_simulate extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                fAuth = FirebaseAuth.getInstance();
+//                db = FirebaseFirestore.getInstance();
+//                userId = fAuth.getCurrentUser().getUid();
+                DocumentReference documentReference = db.collection("users").document(userId);
+                documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            Log.d("GetUserInfo", "Document Exists.");
+                            userName = documentSnapshot.getString("username");
+                            userEmail = documentSnapshot.getString("email");
+                            userPhone = documentSnapshot.getString("phone");
+                            Log.d("GetUserInfo", "UserName: " + userName + ", UserEmail: " + userEmail + ", UserPhone: " + userPhone);
+                        } else {
+                            Log.d("GetUserInfo", "Error, document do not exists.");
+                        }
+                    }
+                });
                 switch (item.getItemId()) {
                     case R.id.btn_nav_home:
                         bottomId = R.id.btn_nav_home;

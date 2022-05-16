@@ -77,6 +77,8 @@ public class LoginActivity extends AppCompatActivity {
           return;
         }
 
+
+
         // Authenticate the user
         fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
           @Override
