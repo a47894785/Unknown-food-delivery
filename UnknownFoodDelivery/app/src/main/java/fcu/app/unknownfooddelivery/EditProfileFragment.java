@@ -1,27 +1,41 @@
 package fcu.app.unknownfooddelivery;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EditProfileFragment extends Fragment {
 
   private String[] userProfileTitle = {"使用者名稱", "電子郵件", "電話號碼"};
   String userName, userEmail, userPhone;
+  String updateData;
   private FirebaseFirestore db;
   private FirebaseAuth fAuth;
   private String userId;
@@ -38,9 +52,9 @@ public class EditProfileFragment extends Fragment {
       userPhone = this.getArguments().getString("phone");
     }
 
-//    fAuth = FirebaseAuth.getInstance();
-//    db = FirebaseFirestore.getInstance();
-//    userId = fAuth.getCurrentUser().getUid();
+    fAuth = FirebaseAuth.getInstance();
+    db = FirebaseFirestore.getInstance();
+    userId = fAuth.getCurrentUser().getUid();
 
 //    DocumentReference documentReference = db.collection("users").document(userId);
 //    Log.d("UserId", userId);
@@ -69,7 +83,90 @@ public class EditProfileFragment extends Fragment {
     UserProfileAdapter adapter =  new UserProfileAdapter(getContext(), R.layout.layout_edit_profile, userProfileList);
     lv.setAdapter(adapter);
 
+    lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
+        AlertDialog.Builder editDialog = new AlertDialog.Builder(getContext());
+        editDialog.setTitle(userProfileTitle[index]);
+        EditText updateDataInput = new EditText(getContext());
+        editDialog.setView(updateDataInput);
+
+        editDialog.setPositiveButton("確認", new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialogInterface, int i) {
+           updateData = updateDataInput.getText().toString();
+           switch (index){
+             case 0:
+               updateUserData(index, userName, updateData);
+               break;
+             case 1:
+               updateUserData(index, userEmail, updateData);
+               break;
+             case 2:
+               updateUserData(index, userPhone, updateData);
+               break;
+           }
+//           Toast.makeText(getContext(), "User Profile is update to " + updateData, Toast.LENGTH_SHORT).show();
+          }
+        });
+
+        editDialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+          @Override
+          public void onClick(DialogInterface dialogInterface, int i) {
+           dialogInterface.cancel();
+          }
+        });
+        editDialog.show();
+      }
+    });
+
     // Inflate the layout for this fragment
     return view;
+  }
+
+  private void updateUserData(int index, String currentUserData, String newData) {
+    String profileType = "";
+    Map<String, Object> userProfile = new HashMap<>();
+    switch (index) {
+      case 0:
+        userProfile.put("username", newData);
+        break;
+      case 1:
+        userProfile.put("email", newData);
+        break;
+      case 2:
+        userProfile.put("phone", newData);
+        break;
+    }
+
+    Log.d("UpdateUserData", newData + ", " + String.valueOf(index) + ", " + currentUserData);
+    db.collection("users").whereEqualTo("username", currentUserData)
+        .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+      @Override
+      public void onComplete(@NonNull Task<QuerySnapshot> task) {
+        if (task.isSuccessful() && !task.getResult().isEmpty()) {
+          DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
+          String documentId = documentSnapshot.getId();
+          db.collection("users")
+              .document(documentId)
+              .update(userProfile)
+              .addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                  Toast.makeText(getContext(), "Successfully Updated", Toast.LENGTH_SHORT).show();
+                }
+              }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+              Toast.makeText(getContext(), "Some Error Occurred", Toast.LENGTH_SHORT).show();
+
+            }
+          });
+        } else {
+          Toast.makeText(getContext(), "Failed to Update", Toast.LENGTH_SHORT).show();
+        }
+      }
+    });
+
   }
 }
