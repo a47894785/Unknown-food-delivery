@@ -35,6 +35,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
@@ -46,11 +49,16 @@ public class MainActivity_simulate extends AppCompatActivity {
     private double latitude;
     private double longitude;
     private ImageView ivMenu;
+
     private FirebaseAuth fAuth;
+    private FirebaseFirestore db;
+    private String userId;
+    private String userName, userEmail, userPhone;
 
     private NavigationView navigationView;
     private BottomNavigationView bottomNavigationView;
     int count = 0;
+    int bottomId;
 
     private String currentAddress = "當前位置";
     LocationRequest locationRequest;
@@ -63,6 +71,7 @@ public class MainActivity_simulate extends AppCompatActivity {
     CartFragment cartFragment = new CartFragment();
     GeneralChatFragment generalChatFragment = new GeneralChatFragment();
     HistoryFragment historyFragment = new HistoryFragment();
+    EditProfileFragment editProfileFragment = new EditProfileFragment();
 
     public static final int PERMISSION_FINE_LOCATION = 99;
 
@@ -78,17 +87,36 @@ public class MainActivity_simulate extends AppCompatActivity {
         }
 
         fAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        userId = fAuth.getCurrentUser().getUid();
+        DocumentReference documentReference = db.collection("users").document(userId);
+        documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    Log.d("GetUserInfo", "Document Exists.");
+                    userName = documentSnapshot.getString("username");
+                    userEmail = documentSnapshot.getString("email");
+                    userPhone = documentSnapshot.getString("phone");
+                    Log.d("GetUserInfo", "UserName: " + userName + ", UserEmail: " + userEmail + ", UserPhone: " + userPhone);
+                } else {
+                    Log.d("GetUserInfo", "Error, document do not exists.");
+                }
+            }
+        });
 
         tvLocationAddr = findViewById(R.id.tv_location_addr);
         drawerLayout = findViewById(R.id.drawerLayout);
         ivMenu = findViewById(R.id.iv_menu);
         navigationView = findViewById(R.id.navigationView);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.getMenu().getItem(0).setChecked(false);
 
         locationRequest = new LocationRequest();
         locationRequest.setInterval(1000 * 10);
         locationRequest.setFastestInterval(1000 * 5);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
 
         ivMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +134,16 @@ public class MainActivity_simulate extends AppCompatActivity {
                     fAuth.signOut();
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                     finish();
+                } else if (id == R.id.menuProfile) {
+                    Log.d("BottomIndex", String.valueOf(bottomId));
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("username", userName);
+                    bundle.putString("email", userEmail);
+                    bundle.putString("phone", userPhone);
+                    editProfileFragment.setArguments(bundle);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, editProfileFragment).commit();
+                    drawerLayout.closeDrawer(GravityCompat.START);
                 }
                 return true;
             }
@@ -127,18 +165,22 @@ public class MainActivity_simulate extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.btn_nav_home:
+                        bottomId = R.id.btn_nav_home;
                         Bundle bundle = new Bundle();
                         bundle.putString("address", currentAddress);
                         homeFragment.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, homeFragment).commit();
                         break;
                     case R.id.btn_nav_cart:
+                        bottomId = R.id.btn_nav_cart;
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, cartFragment).commit();
                         break;
                     case R.id.btn_nav_chat:
+                        bottomId = R.id.btn_nav_chat;
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, generalChatFragment).commit();
                         break;
                     case R.id.btn_nav_history:
+                        bottomId = R.id.btn_nav_history;
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, historyFragment).commit();
                         break;
                 }
@@ -166,6 +208,7 @@ public class MainActivity_simulate extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("address", currentAddress);
                 homeFragment.setArguments(bundle);
+                bottomId = R.id.btn_nav_home;
                 getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, homeFragment).commit();
                 Log.d("CurrentAddress", "Update");
             }

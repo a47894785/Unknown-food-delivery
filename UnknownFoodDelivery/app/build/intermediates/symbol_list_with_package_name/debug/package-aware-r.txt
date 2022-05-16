@@ -2517,6 +2517,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable bg
 drawable bg_color
+drawable bg_edit
 drawable bg_input
 drawable bottom_navigation_selector
 drawable btn_checkbox_checked_mtrl
@@ -2553,6 +2554,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_edit_24
+drawable ic_baseline_push_pin_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2571,6 +2574,7 @@ drawable icon_history
 drawable icon_home
 drawable icon_other
 drawable icon_phone
+drawable icon_trashcan
 drawable lock
 drawable logo
 drawable m3_appbar_background
@@ -2741,6 +2745,8 @@ id btn_nav_history
 id btn_nav_home
 id btn_register
 id button
+id button2
+id button3
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2821,6 +2827,8 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTextTextPersonName
+id edit_profile_lv
 id edit_query
 id elastic
 id end
@@ -2925,6 +2933,8 @@ id list_item
 id locale
 id lock
 id ltr
+id lv_cart
+id lv_history
 id mainActivity_simulate
 id masked
 id match_constraint
@@ -3133,6 +3143,11 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView10
+id textView12
+id textView14
+id textView15
+id textView16
 id textView2
 id textView3
 id textView4
@@ -3140,6 +3155,7 @@ id textView5
 id textView6
 id textView7
 id textView8
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3167,6 +3183,8 @@ id transition_transform
 id triangle
 id tv_address
 id tv_create
+id tv_edit_profile_title
+id tv_edit_profile_update
 id tv_gotologin
 id tv_labellat
 id tv_labellon
@@ -3314,9 +3332,11 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_cart
+layout fragment_edit_profile
 layout fragment_general_chat
 layout fragment_history
 layout fragment_home
+layout layout_edit_profile
 layout layout_navigation_header
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
