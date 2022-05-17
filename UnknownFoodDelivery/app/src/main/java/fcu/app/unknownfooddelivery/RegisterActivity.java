@@ -98,6 +98,10 @@ public class RegisterActivity extends AppCompatActivity {
           return;
         }
 
+        if (phone.length() < 10) {
+          etPhone.setError("Phone Number Must be 10 characters.");
+        }
+
         // Register the user in Firebase
         fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
           @Override

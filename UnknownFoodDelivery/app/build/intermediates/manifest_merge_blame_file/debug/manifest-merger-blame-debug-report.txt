@@ -6,84 +6,84 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+8-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+9-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:5-79
-13-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:22-76
+13-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 14-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d7d1c36225808f6cc525ee9064daafb1\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 14-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d7d1c36225808f6cc525ee9064daafb1\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:22-76
 15
 16    <application
-16-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:9:5-38:19
+16-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:9:5-38:19
 17        android:allowBackup="true"
-17-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:10:9-35
+17-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:10:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 18-->[androidx.core:core:1.7.0] C:\Users\PinHua\.gradle\caches\transforms-3\fb9aa2ab3966fe894c67bd9003ea76a4\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:extractNativeLibs="false"
 21        android:icon="@mipmap/ic_launcher"
-21-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:11:9-43
+21-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:11:9-43
 22        android:label="@string/app_name"
-22-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:12:9-41
+22-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:12:9-41
 23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:13:9-54
+23-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:13:9-54
 24        android:supportsRtl="true"
-24-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:14:9-35
+24-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:14:9-35
 25        android:testOnly="true"
 26        android:theme="@style/Theme.UnknownFoodDelivery" >
-26-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:15:9-57
+26-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:15:9-57
 27        <activity
-27-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:16:9-18:40
+27-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:16:9-18:40
 28            android:name="fcu.app.unknownfooddelivery.MainActivity_simulate"
-28-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:17:13-50
+28-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:17:13-50
 29            android:exported="false" />
-29-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:18:13-37
+29-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:18:13-37
 30        <activity
-30-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:19:9-21:40
+30-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:19:9-21:40
 31            android:name="fcu.app.unknownfooddelivery.RegisterActivity"
-31-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:20:13-45
+31-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:20:13-45
 32            android:exported="false" />
-32-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:21:13-37
+32-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:21:13-37
 33        <activity
-33-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:22:9-30:20
+33-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:22:9-30:20
 34            android:name="fcu.app.unknownfooddelivery.LoginActivity"
-34-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:23:13-42
+34-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:23:13-42
 35            android:exported="true" >
-35-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:24:13-36
+35-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:24:13-36
 36            <intent-filter>
-36-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:25:13-29:29
+36-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:25:13-29:29
 37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:26:17-69
-37-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:26:25-66
+37-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:26:17-69
+37-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:26:25-66
 38
 39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:28:17-77
-39-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:28:27-74
+39-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:28:17-77
+39-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:28:27-74
 40            </intent-filter>
 41        </activity>
 42        <activity
-42-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:31:9-33:40
+42-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:31:9-33:40
 43            android:name="fcu.app.unknownfooddelivery.MainActivity"
-43-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:32:13-41
+43-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:32:13-41
 44            android:exported="false" />
-44-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:33:13-37
+44-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:33:13-37
 45
 46        <meta-data
-46-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:35:9-37:57
+46-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:35:9-37:57
 47            android:name="preloaded_fonts"
-47-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:36:13-43
+47-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:36:13-43
 48            android:resource="@array/preloaded_fonts" />
-48-->C:\Users\PinHua\Desktop\APPTEST\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:37:13-54
+48-->C:\Users\PinHua\Desktop\APPTEST\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:37:13-54
 49
 50        <activity
 50-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d7d1c36225808f6cc525ee9064daafb1\transformed\firebase-auth-21.0.3\AndroidManifest.xml:27:9-44:20
