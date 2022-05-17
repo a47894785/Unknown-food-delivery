@@ -94,17 +94,21 @@ public class EditProfileFragment extends Fragment {
         editDialog.setPositiveButton("確認", new DialogInterface.OnClickListener() {
           @Override
           public void onClick(DialogInterface dialogInterface, int i) {
-           updateData = updateDataInput.getText().toString();
-           switch (index){
-             case 0:
-               updateUserData(index, userName, updateData);
-               break;
-             case 1:
-               updateUserData(index, userEmail, updateData);
-               break;
-             case 2:
-               updateUserData(index, userPhone, updateData);
-               break;
+            if  (index == 2 && updateDataInput.getText().toString().length() != 10) {
+               Toast.makeText(getContext(), "Error! Phone Number Should be 10 Characters!" + updateData, Toast.LENGTH_SHORT).show();
+            } else {
+              updateData = updateDataInput.getText().toString();
+              switch (index){
+                case 0:
+                  updateUserData(index, userName, updateData);
+                  break;
+                case 1:
+                  updateUserData(index, userEmail, updateData);
+                  break;
+                case 2:
+                  updateUserData(index, userPhone, updateData);
+                  break;
+              }
            }
 //           Toast.makeText(getContext(), "User Profile is update to " + updateData, Toast.LENGTH_SHORT).show();
           }
@@ -130,17 +134,20 @@ public class EditProfileFragment extends Fragment {
     switch (index) {
       case 0:
         userProfile.put("username", newData);
+        profileType = "username";
         break;
       case 1:
         userProfile.put("email", newData);
+        profileType = "email";
         break;
       case 2:
         userProfile.put("phone", newData);
+        profileType = "phone";
         break;
     }
 
     Log.d("UpdateUserData", newData + ", " + String.valueOf(index) + ", " + currentUserData);
-    db.collection("users").whereEqualTo("username", currentUserData)
+    db.collection("users").whereEqualTo(profileType, currentUserData)
         .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
       @Override
       public void onComplete(@NonNull Task<QuerySnapshot> task) {
