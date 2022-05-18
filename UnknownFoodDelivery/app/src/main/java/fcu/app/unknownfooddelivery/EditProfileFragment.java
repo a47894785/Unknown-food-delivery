@@ -96,17 +96,19 @@ public class EditProfileFragment extends Fragment {
           public void onClick(DialogInterface dialogInterface, int i) {
             if  (index == 2 && updateDataInput.getText().toString().length() != 10) {
                Toast.makeText(getContext(), "Error! Phone Number Should be 10 Characters!" + updateData, Toast.LENGTH_SHORT).show();
+            } else if (updateDataInput.getText().toString().length() <= 0) {
+              Toast.makeText(getContext(), "Error! Input was empty", Toast.LENGTH_SHORT).show();
             } else {
               updateData = updateDataInput.getText().toString();
               switch (index){
                 case 0:
-                  updateUserData(index, userName, updateData);
+                  updateUserData(index, userName, updateData, userEmail);
                   break;
                 case 1:
-                  updateUserData(index, userEmail, updateData);
+                  updateUserData(index, userEmail, updateData, userEmail);
                   break;
                 case 2:
-                  updateUserData(index, userPhone, updateData);
+                  updateUserData(index, userPhone, updateData, userEmail);
                   break;
               }
            }
@@ -128,7 +130,7 @@ public class EditProfileFragment extends Fragment {
     return view;
   }
 
-  private void updateUserData(int index, String currentUserData, String newData) {
+  private void updateUserData(int index, String currentUserData, String newData, String userEmail) {
     String profileType = "";
     Map<String, Object> userProfile = new HashMap<>();
     switch (index) {
@@ -146,16 +148,17 @@ public class EditProfileFragment extends Fragment {
         break;
     }
 
+
     Log.d("UpdateUserData", newData + ", " + String.valueOf(index) + ", " + currentUserData);
-    db.collection("users").whereEqualTo(profileType, currentUserData)
+    db.collection("users").whereEqualTo("email", userEmail)
         .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
       @Override
       public void onComplete(@NonNull Task<QuerySnapshot> task) {
         if (task.isSuccessful() && !task.getResult().isEmpty()) {
-          DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
-          String documentId = documentSnapshot.getId();
+//          DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
+//          String documentId = documentSnapshot.getId();
           db.collection("users")
-              .document(documentId)
+              .document(userId)
               .update(userProfile)
               .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
