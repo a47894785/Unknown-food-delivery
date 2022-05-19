@@ -100,6 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         if (phone.length() < 10) {
           etPhone.setError("Phone Number Must be 10 characters.");
+          return;
         }
 
         // Register the user in Firebase
@@ -121,14 +122,16 @@ public class RegisterActivity extends AppCompatActivity {
               documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-                  Log.d("TAG", "OnSuccess: user Profile is created for " + userID);
+                  Log.d("CreateUser", "OnSuccess: user Profile is created for " + userID);
                 }
               }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                  Log.w("TAG", "OnFailure: " + e);
+                  Log.w("CreateUser", "OnFailure: " + e);
                 }
               });
+
+              initShopInfo(userID);
 
               fAuth.signOut(); // 避免一註冊完就跳到 MainActivity
               startActivity(new Intent(getApplicationContext(), LoginActivity.class));
@@ -151,4 +154,29 @@ public class RegisterActivity extends AppCompatActivity {
     });
 
   }
+
+  private void initShopInfo(String id){
+    DocumentReference documentReference = db.collection("shops").document(id);
+
+    // init db data
+    Map<String, Object> shop = new HashMap<>();
+    shop.put("shopName", "");
+    shop.put("shopAddress", "");
+    shop.put("shopPhone", "");
+    shop.put("shopEmail", "");
+
+    documentReference.set(shop).addOnSuccessListener(new OnSuccessListener<Void>() {
+      @Override
+      public void onSuccess(Void unused) {
+        Log.d("CreateShopInfo", "OnSuccess: Shop information is initialized for " + id);
+      }
+    }).addOnFailureListener(new OnFailureListener() {
+      @Override
+      public void onFailure(@NonNull Exception e) {
+        Log.d("CreateShopInfo", "OnFailure: " + e);
+      }
+    });
+
+  }
+
 }
