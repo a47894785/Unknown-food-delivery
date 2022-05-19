@@ -50,10 +50,22 @@
         <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
         <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_main_simulate.xml" value="0.22" />
         <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_register.xml" value="0.17916666666666667" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_resaurant.xml" value="0.21544715447154472" />
         <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_cart.xml" value="0.264" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_edit_profile.xml" value="0.22826086956521738" />
         <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_general_chat.xml" value="0.23777173913043478" />
         <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_history.xml" value="0.23777173913043478" />
         <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_shop_add.xml" value="0.22418478260869565" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_shop_history.xml" value="0.22418478260869565" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_shop_home.xml" value="0.22418478260869565" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/layout_edit_profile.xml" value="0.22826086956521738" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/layout_navigation_header.xml" value="0.12335359675785208" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20185185185185187" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/bottom_nav_shop_menu.xml" value="0.25364583333333335" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/botton_nav_shop_menu.xml" value="0.25364583333333335" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/navigation_menu.xml" value="0.20185185185185187" />
+        <entry key="..\:/unknown/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/menu/navigation_shop_menu.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>

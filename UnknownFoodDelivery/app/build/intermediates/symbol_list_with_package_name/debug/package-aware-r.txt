@@ -2568,12 +2568,15 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable icon_add
 drawable icon_cart
+drawable icon_change_shop_menu
 drawable icon_chat
 drawable icon_history
 drawable icon_home
 drawable icon_other
 drawable icon_phone
+drawable icon_shophistory
 drawable icon_trashcan
 drawable lock
 drawable logo
@@ -2728,6 +2731,7 @@ id bestChoice
 id blocking
 id bottom
 id bottom_navigation
+id bottom_navigation_shop
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2738,11 +2742,15 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_login
+id btn_nav_add_shop
 id btn_nav_cart
 id btn_nav_chat
 id btn_nav_container
+id btn_nav_container_shop
 id btn_nav_history
+id btn_nav_history_shop
 id btn_nav_home
+id btn_nav_home_shop
 id btn_register
 id button
 id button2
@@ -2797,6 +2805,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id delivery_man_mode
+id delivery_man_mode_shop
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -2822,6 +2831,7 @@ id dragRight
 id dragStart
 id dragUp
 id drawerLayout
+id drawerLayout_shop
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -2861,6 +2871,7 @@ id fragment_container_view_tag
 id frost
 id general_chat
 id general_mode
+id general_mode_shop
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2905,6 +2916,7 @@ id imageView6
 id imageView7
 id imageView8
 id imageView9
+id image_View16_shop
 id immediateStop
 id included
 id info
@@ -2917,6 +2929,7 @@ id item3
 id item4
 id item_touch_helper_previous_elevation
 id iv_menu
+id iv_menu_shop
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2961,6 +2974,10 @@ id material_value_index
 id media_actions
 id menuLogout
 id menuProfile
+id menu_History_shop
+id menu_Logout_shop
+id menu_Profile_shop
+id menu_change_shop
 id message
 id middle
 id mini
@@ -2999,6 +3016,7 @@ id nav
 id nav_controller_view_tag
 id nav_host_fragment_container
 id navigationView
+id navigationView_shop
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3076,6 +3094,7 @@ id selection_type
 id sharedValueSet
 id sharedValueUnset
 id shop_mode
+id shop_mode_shop
 id shortcut
 id showCustom
 id showHome
@@ -3313,6 +3332,7 @@ layout activity_login
 layout activity_main
 layout activity_main_simulate
 layout activity_register
+layout activity_resaurant
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -3336,6 +3356,9 @@ layout fragment_edit_profile
 layout fragment_general_chat
 layout fragment_history
 layout fragment_home
+layout fragment_shop_add
+layout fragment_shop_history
+layout fragment_shop_home
 layout layout_edit_profile
 layout layout_navigation_header
 layout m3_alert_dialog
@@ -3419,9 +3442,11 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav_menu
+menu bottom_nav_shop_menu
 menu example_menu
 menu example_menu2
 menu navigation_menu
+menu navigation_shop_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav

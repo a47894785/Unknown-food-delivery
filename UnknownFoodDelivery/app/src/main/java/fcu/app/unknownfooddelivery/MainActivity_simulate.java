@@ -144,6 +144,8 @@ public class MainActivity_simulate extends AppCompatActivity {
                     editProfileFragment.setArguments(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, editProfileFragment).commit();
                     drawerLayout.closeDrawer(GravityCompat.START);
+                } else if(id == R.id.shop_mode){
+                    startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
                 }
                 return true;
             }

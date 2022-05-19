@@ -25,6 +25,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.UnknownFoodDelivery" >
         <activity
+            android:name="fcu.app.unknownfooddelivery.RestaurantActivity"
+            android:exported="false" />
+        <activity
             android:name="fcu.app.unknownfooddelivery.MainActivity_simulate"
             android:exported="false" />
         <activity
