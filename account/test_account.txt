@@ -1,0 +1,8 @@
+General User Account:
+1.  test1@mail.com   111111
+1.  test2@mail.com   111111
+
+
+Restaurant Account:
+1. Rtest1@mail.com  111111
+2. Rtest2@mail.com  111111

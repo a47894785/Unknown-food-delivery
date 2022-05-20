@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btn_nav_home_shop"
+        android:icon="@drawable/icon_home"
+        android:title="主頁"/>
+    <item
+        android:id="@+id/btn_nav_add_shop"
+        android:icon="@drawable/icon_add"
+        android:title="新增商品"/>
+    <item
+        android:id="@+id/btn_nav_history_shop"
+        android:icon="@drawable/icon_history"
+        android:title="統計資料"/>
+
+</menu>
