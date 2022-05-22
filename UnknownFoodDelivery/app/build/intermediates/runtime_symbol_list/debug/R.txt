@@ -2946,6 +2946,7 @@ int id locale 0x7f0a0137
 int id lock 0x7f0a0138
 int id ltr 0x7f0a0139
 int id lv_cart 0x7f0a013a
+int id lv_edit_shop_prodile 0x7f0a0265
 int id lv_history 0x7f0a013b
 int id mainActivity_simulate 0x7f0a013c
 int id masked 0x7f0a013d
@@ -2973,10 +2974,10 @@ int id material_value_index 0x7f0a0152
 int id media_actions 0x7f0a0153
 int id menuLogout 0x7f0a0154
 int id menuProfile 0x7f0a0155
-int id menu_History_shop 0x7f0a0156
-int id menu_Logout_shop 0x7f0a0157
-int id menu_Profile_shop 0x7f0a0158
 int id menu_change_shop 0x7f0a0159
+int id menu_history_shop 0x7f0a0261
+int id menu_logout_shop 0x7f0a0262
+int id menu_profile_shop 0x7f0a0263
 int id message 0x7f0a015a
 int id middle 0x7f0a015b
 int id mini 0x7f0a015c
@@ -3352,6 +3353,7 @@ int layout design_text_input_end_icon 0x7f0d0031
 int layout design_text_input_start_icon 0x7f0d0032
 int layout fragment_cart 0x7f0d0033
 int layout fragment_edit_profile 0x7f0d0034
+int layout fragment_edit_restaurant 0x7f0d008d
 int layout fragment_general_chat 0x7f0d0035
 int layout fragment_history 0x7f0d0036
 int layout fragment_home 0x7f0d0037
