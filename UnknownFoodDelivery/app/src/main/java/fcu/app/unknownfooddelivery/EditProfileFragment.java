@@ -33,7 +33,7 @@ import java.util.Map;
 
 public class EditProfileFragment extends Fragment {
 
-  private String[] userProfileTitle = {"使用者名稱", "電子郵件", "電話號碼"};
+  private String[] userProfileTitle = {"使用者名稱", "電話號碼"};
   String userName, userEmail, userPhone;
   String updateData;
   private FirebaseFirestore db;
@@ -77,8 +77,8 @@ public class EditProfileFragment extends Fragment {
     ArrayList<UserProfile> userProfileList = new ArrayList<UserProfile>();
 
     userProfileList.add(new UserProfile(userProfileTitle[0], userName));
-    userProfileList.add(new UserProfile(userProfileTitle[1], userEmail));
-    userProfileList.add(new UserProfile(userProfileTitle[2], userPhone));
+    userProfileList.add(new UserProfile(userProfileTitle[1], userPhone));
+//    userProfileList.add(new UserProfile(userProfileTitle[1], userEmail));
 
     UserProfileAdapter adapter =  new UserProfileAdapter(getContext(), R.layout.layout_edit_profile, userProfileList);
     lv.setAdapter(adapter);
@@ -89,14 +89,18 @@ public class EditProfileFragment extends Fragment {
         AlertDialog.Builder editDialog = new AlertDialog.Builder(getContext());
         editDialog.setTitle(userProfileTitle[index]);
         EditText updateDataInput = new EditText(getContext());
+        if (index ==  1) {
+          updateDataInput.setInputType(InputType.TYPE_CLASS_PHONE);
+        }
         editDialog.setView(updateDataInput);
 
         editDialog.setPositiveButton("確認", new DialogInterface.OnClickListener() {
           @Override
           public void onClick(DialogInterface dialogInterface, int i) {
-            if  (index == 2 && updateDataInput.getText().toString().length() != 10) {
-               Toast.makeText(getContext(), "Error! Phone Number Should be 10 Characters!" + updateData, Toast.LENGTH_SHORT).show();
-            } else if (updateDataInput.getText().toString().length() <= 0) {
+            String inputText = updateDataInput.getText().toString();
+            if  (index == 1 && inputText.length() != 10) {
+              Toast.makeText(getContext(), "Error! Phone Number Should be 10 Characters!" + updateData, Toast.LENGTH_SHORT).show();
+            } else if (inputText.length() <= 0) {
               Toast.makeText(getContext(), "Error! Input was empty", Toast.LENGTH_SHORT).show();
             } else {
               updateData = updateDataInput.getText().toString();
@@ -105,9 +109,6 @@ public class EditProfileFragment extends Fragment {
                   updateUserData(index, userName, updateData, userEmail);
                   break;
                 case 1:
-                  updateUserData(index, userEmail, updateData, userEmail);
-                  break;
-                case 2:
                   updateUserData(index, userPhone, updateData, userEmail);
                   break;
               }
@@ -139,10 +140,6 @@ public class EditProfileFragment extends Fragment {
         profileType = "username";
         break;
       case 1:
-        userProfile.put("email", newData);
-        profileType = "email";
-        break;
-      case 2:
         userProfile.put("phone", newData);
         profileType = "phone";
         break;

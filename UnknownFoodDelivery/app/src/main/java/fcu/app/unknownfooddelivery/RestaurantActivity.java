@@ -32,9 +32,11 @@ public class RestaurantActivity extends AppCompatActivity {
   int bottomId;
   private NavigationView navigationViewShop;
   private BottomNavigationView bottomNavigationViewShop;
+
   ShopHomeFragment shopHomeFragment= new ShopHomeFragment();
   ShopAddFragment shopAddFragment = new ShopAddFragment();
   ShopHistoryFragment shopHistoryFragment = new ShopHistoryFragment();
+  EditRestaurantFragment editRestaurantFragment = new EditRestaurantFragment();
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -72,11 +74,14 @@ public class RestaurantActivity extends AppCompatActivity {
       @Override
       public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menu_Logout_shop) {
+        if (id == R.id.menu_logout_shop) {
           fAuth.signOut();
           startActivity(new Intent(getApplicationContext(), LoginActivity.class));
           finish();
-        }else if(id == R.id.general_mode_shop){
+        } else if (id == R.id.menu_profile_shop) {
+          getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, editRestaurantFragment).commit();
+          drawerLayoutShop.closeDrawer(GravityCompat.START);
+        } else if (id == R.id.general_mode_shop){
           startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
         }
         return true;

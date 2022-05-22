@@ -21,6 +21,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +46,7 @@ public class MainActivity_simulate extends AppCompatActivity {
 
     private static final int LOCATION_REQUEST_CODE = 1001;
     private TextView tvLocationAddr;
+    private EditText etSearch;
     private DrawerLayout drawerLayout;
     private double latitude;
     private double longitude;
@@ -108,6 +110,7 @@ public class MainActivity_simulate extends AppCompatActivity {
         tvLocationAddr = findViewById(R.id.tv_location_addr);
         drawerLayout = findViewById(R.id.drawerLayout);
         ivMenu = findViewById(R.id.iv_menu);
+        etSearch = findViewById(R.id.et_search);
         navigationView = findViewById(R.id.navigationView);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.getMenu().getItem(0).setChecked(false);
@@ -135,6 +138,7 @@ public class MainActivity_simulate extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                     finish();
                 } else if (id == R.id.menuProfile) {
+                    etSearch.setVisibility(View.GONE);
                     Log.d("BottomIndex", String.valueOf(bottomId));
 
                     Bundle bundle = new Bundle();
@@ -186,6 +190,7 @@ public class MainActivity_simulate extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.btn_nav_home:
                         bottomId = R.id.btn_nav_home;
+                        etSearch.setVisibility(View.VISIBLE);
                         Bundle bundle = new Bundle();
                         bundle.putString("address", currentAddress);
                         homeFragment.setArguments(bundle);
@@ -193,14 +198,17 @@ public class MainActivity_simulate extends AppCompatActivity {
                         break;
                     case R.id.btn_nav_cart:
                         bottomId = R.id.btn_nav_cart;
+                        etSearch.setVisibility(View.VISIBLE);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, cartFragment).commit();
                         break;
                     case R.id.btn_nav_chat:
                         bottomId = R.id.btn_nav_chat;
+                        etSearch.setVisibility(View.VISIBLE);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, generalChatFragment).commit();
                         break;
                     case R.id.btn_nav_history:
                         bottomId = R.id.btn_nav_history;
+                        etSearch.setVisibility(View.VISIBLE);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, historyFragment).commit();
                         break;
                 }
