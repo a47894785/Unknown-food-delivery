@@ -33,7 +33,7 @@ public class RestaurantActivity extends AppCompatActivity {
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
   private String userId;
-  private String rName, rEmail, rPhone, rAddress;
+  private String rName, rEmail, rPhone, rAddress, userEmail;
 
   int bottomId;
   private NavigationView navigationViewShop;
@@ -68,6 +68,17 @@ public class RestaurantActivity extends AppCompatActivity {
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
+
+    DocumentReference userDocumentReference = db.collection("users").document(userId);
+    userDocumentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+      @Override
+      public void onSuccess(DocumentSnapshot documentSnapshot) {
+        if (documentSnapshot.exists()) {
+          userEmail = documentSnapshot.getString("email");
+        }
+      }
+    });
+
     DocumentReference documentReference = db.collection("shops").document(userId);
     documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
       @Override
@@ -126,7 +137,6 @@ public class RestaurantActivity extends AppCompatActivity {
             bottomId = R.id.btn_nav_add_shop;
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopAddFragment).commit();
             checkRestaurantInfo(editRestaurantFragment);
-
             break;
           case R.id.btn_nav_history_shop:
             bottomId = R.id.btn_nav_history_shop;
@@ -140,7 +150,11 @@ public class RestaurantActivity extends AppCompatActivity {
   }
 
   public void checkRestaurantInfo(EditRestaurantFragment editRestaurantFragment) {
-    if (rName == "" || rEmail == null || rPhone == "" | rAddress == ""){
+    dataBundle(editRestaurantFragment);
+    Log.d("GetRestaurantInfo", "Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
+
+    if (rName == null || rEmail == null || rPhone == null || rAddress == null
+        || rName == "" || rEmail == "" || rPhone == "" || rAddress == ""){
       AlertDialog.Builder checkDialog = new AlertDialog.Builder(this);
       checkDialog.setMessage("尚有店家資訊未設定，請至店家資訊設定。");
       checkDialog.setTitle("提醒");
@@ -157,11 +171,24 @@ public class RestaurantActivity extends AppCompatActivity {
   }
 
   private void dataBundle(EditRestaurantFragment editRestaurantFragment) {
+    DocumentReference documentReference = db.collection("shops").document(userId);
+    documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+      @Override
+      public void onSuccess(DocumentSnapshot documentSnapshot) {
+        if (documentSnapshot.exists()) {
+          rName = documentSnapshot.getString("shopName");
+          rEmail = documentSnapshot.getString("shopEmail");
+          rPhone = documentSnapshot.getString("shopPhone");
+          rAddress = documentSnapshot.getString("shopAddress");
+        }
+      }
+    });
     Bundle bundle = new Bundle();
     bundle.putString("shopName", rName);
     bundle.putString("shopEmail", rEmail);
     bundle.putString("shopPhone", rPhone);
     bundle.putString("shopAddress", rAddress);
+    bundle.putString("userEmail", userEmail);
     editRestaurantFragment.setArguments(bundle);
   }
 }

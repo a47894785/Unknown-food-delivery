@@ -99,7 +99,7 @@ public class EditProfileFragment extends Fragment {
           public void onClick(DialogInterface dialogInterface, int i) {
             String inputText = updateDataInput.getText().toString();
             if  (index == 1 && inputText.length() != 10) {
-              Toast.makeText(getContext(), "Error! Phone Number Should be 10 Characters!" + updateData, Toast.LENGTH_SHORT).show();
+              Toast.makeText(getContext(), "Error! Phone Number Should be 10 Characters!", Toast.LENGTH_SHORT).show();
             } else if (inputText.length() <= 0) {
               Toast.makeText(getContext(), "Error! Input was empty", Toast.LENGTH_SHORT).show();
             } else {
@@ -112,7 +112,7 @@ public class EditProfileFragment extends Fragment {
                   updateUserData(index, userPhone, updateData, userEmail);
                   break;
               }
-           }
+            }
 //           Toast.makeText(getContext(), "User Profile is update to " + updateData, Toast.LENGTH_SHORT).show();
           }
         });
@@ -120,7 +120,7 @@ public class EditProfileFragment extends Fragment {
         editDialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
           @Override
           public void onClick(DialogInterface dialogInterface, int i) {
-           dialogInterface.cancel();
+            dialogInterface.cancel();
           }
         });
         editDialog.show();

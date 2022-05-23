@@ -52,6 +52,6 @@ public class HomeFragment extends Fragment {
       tvCurrentAddress.setText(currentAddress);
     }
 
-    return view;*/
-  }
+    return view;
+  }*/
 }
