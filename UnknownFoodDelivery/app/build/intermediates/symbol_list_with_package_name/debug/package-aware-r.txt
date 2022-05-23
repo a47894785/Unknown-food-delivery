@@ -2906,7 +2906,6 @@ id imageView14
 id imageView15
 id imageView16
 id imageView17
-id imageView18
 id imageView2
 id imageView26
 id imageView3
@@ -3171,10 +3170,6 @@ id textView16
 id textView2
 id textView3
 id textView4
-id textView5
-id textView6
-id textView7
-id textView8
 id textView9
 id text_input_end_icon
 id text_input_error_icon
