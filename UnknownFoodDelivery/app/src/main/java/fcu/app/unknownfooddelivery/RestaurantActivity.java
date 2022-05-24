@@ -33,7 +33,8 @@ public class RestaurantActivity extends AppCompatActivity {
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
   private String userId;
-  private String rName, rEmail, rPhone, rAddress, userEmail;
+  private String rName = "", rEmail = "", rPhone = "", rAddress  = "", userEmail = "";
+  boolean flag = false;
 
   int bottomId;
   private NavigationView navigationViewShop;
@@ -88,14 +89,14 @@ public class RestaurantActivity extends AppCompatActivity {
           rEmail = documentSnapshot.getString("shopEmail");
           rPhone = documentSnapshot.getString("shopPhone");
           rAddress = documentSnapshot.getString("shopAddress");
-          Log.d("GetRestaurantInfo", "Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
+          Log.d("GetRestaurantInfo", "NO.1 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
+          flag = true;
+          checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
         } else {
           Log.d("GetRestaurantInfo", "Error, document not found.");
         }
       }
     });
-
-    checkRestaurantInfo(editRestaurantFragment);
 
     ivMenuShop.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -114,7 +115,7 @@ public class RestaurantActivity extends AppCompatActivity {
           startActivity(new Intent(getApplicationContext(), LoginActivity.class));
           finish();
         } else if (id == R.id.menu_profile_shop) {
-          dataBundle(editRestaurantFragment);
+          dataBundle(editRestaurantFragment, flag);
           getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, editRestaurantFragment).commit();
           drawerLayoutShop.closeDrawer(GravityCompat.START);
         } else if (id == R.id.general_mode_shop){
@@ -131,27 +132,29 @@ public class RestaurantActivity extends AppCompatActivity {
           case R.id.btn_nav_home_shop:
             bottomId = R.id.btn_nav_home_shop;
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
-            checkRestaurantInfo(editRestaurantFragment);
+            updateInfo(userId);
+//            checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
             break;
           case R.id.btn_nav_add_shop:
             bottomId = R.id.btn_nav_add_shop;
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopAddFragment).commit();
-            checkRestaurantInfo(editRestaurantFragment);
+            updateInfo(userId);
+//            checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
             break;
           case R.id.btn_nav_history_shop:
             bottomId = R.id.btn_nav_history_shop;
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHistoryFragment).commit();
-            checkRestaurantInfo(editRestaurantFragment);
+            updateInfo(userId);
+//            checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
             break;
         }
         return true;
       }
     });
+
   }
 
-  public void checkRestaurantInfo(EditRestaurantFragment editRestaurantFragment) {
-    dataBundle(editRestaurantFragment);
-    Log.d("GetRestaurantInfo", "Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
+  public void checkRestaurantInfo(EditRestaurantFragment editRestaurantFragment, boolean flag, String rName, String rEmail, String rPhone, String rAddress) {
 
     if (rName == null || rEmail == null || rPhone == null || rAddress == null
         || rName == "" || rEmail == "" || rPhone == "" || rAddress == ""){
@@ -161,7 +164,7 @@ public class RestaurantActivity extends AppCompatActivity {
       checkDialog.setPositiveButton("前往", new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialogInterface, int i) {
-          dataBundle(editRestaurantFragment);
+          dataBundle(editRestaurantFragment, flag);
           getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, editRestaurantFragment).commit();
         }
       });
@@ -170,7 +173,7 @@ public class RestaurantActivity extends AppCompatActivity {
     }
   }
 
-  private void dataBundle(EditRestaurantFragment editRestaurantFragment) {
+  private void updateInfo(String userId) {
     DocumentReference documentReference = db.collection("shops").document(userId);
     documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
       @Override
@@ -180,9 +183,29 @@ public class RestaurantActivity extends AppCompatActivity {
           rEmail = documentSnapshot.getString("shopEmail");
           rPhone = documentSnapshot.getString("shopPhone");
           rAddress = documentSnapshot.getString("shopAddress");
+          checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
+          Log.d("GetRestaurantInfo", "NO.3 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
         }
       }
     });
+  }
+
+  private void dataBundle(EditRestaurantFragment editRestaurantFragment, boolean flag) {
+    if (!flag){
+      return;
+    }
+//    DocumentReference documentReference = db.collection("shops").document(userId);
+//    documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//      @Override
+//      public void onSuccess(DocumentSnapshot documentSnapshot) {
+//        if (documentSnapshot.exists()) {
+//          rName = documentSnapshot.getString("shopName");
+//          rEmail = documentSnapshot.getString("shopEmail");
+//          rPhone = documentSnapshot.getString("shopPhone");
+//          rAddress = documentSnapshot.getString("shopAddress");
+//        }
+//      }
+//    });
     Bundle bundle = new Bundle();
     bundle.putString("shopName", rName);
     bundle.putString("shopEmail", rEmail);
