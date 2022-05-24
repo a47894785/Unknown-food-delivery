@@ -1,12 +1,10 @@
 package fcu.app.unknownfooddelivery;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,12 +27,8 @@ public class RestaurantActivity extends AppCompatActivity {
 
   private DrawerLayout drawerLayoutShop;
   private ImageView ivMenuShop;
-
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
-  private String userId;
-  private String rName, rEmail, rPhone, rAddress;
-
   int bottomId;
   private NavigationView navigationViewShop;
   private BottomNavigationView bottomNavigationViewShop;
@@ -66,25 +60,7 @@ public class RestaurantActivity extends AppCompatActivity {
     getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
 
     fAuth = FirebaseAuth.getInstance();
-    db = FirebaseFirestore.getInstance();
-    userId = fAuth.getCurrentUser().getUid();
-    DocumentReference documentReference = db.collection("shops").document(userId);
-    documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-      @Override
-      public void onSuccess(DocumentSnapshot documentSnapshot) {
-        if (documentSnapshot.exists()){
-          rName = documentSnapshot.getString("shopName");
-          rEmail = documentSnapshot.getString("shopEmail");
-          rPhone = documentSnapshot.getString("shopPhone");
-          rAddress = documentSnapshot.getString("shopAddress");
-          Log.d("GetRestaurantInfo", "Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
-        } else {
-          Log.d("GetRestaurantInfo", "Error, document not found.");
-        }
-      }
-    });
 
-    checkRestaurantInfo(editRestaurantFragment);
 
     ivMenuShop.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -103,7 +79,6 @@ public class RestaurantActivity extends AppCompatActivity {
           startActivity(new Intent(getApplicationContext(), LoginActivity.class));
           finish();
         } else if (id == R.id.menu_profile_shop) {
-          dataBundle(editRestaurantFragment);
           getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, editRestaurantFragment).commit();
           drawerLayoutShop.closeDrawer(GravityCompat.START);
         } else if (id == R.id.general_mode_shop){
@@ -120,48 +95,18 @@ public class RestaurantActivity extends AppCompatActivity {
           case R.id.btn_nav_home_shop:
             bottomId = R.id.btn_nav_home_shop;
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
-            checkRestaurantInfo(editRestaurantFragment);
             break;
           case R.id.btn_nav_add_shop:
             bottomId = R.id.btn_nav_add_shop;
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopAddFragment).commit();
-            checkRestaurantInfo(editRestaurantFragment);
-
             break;
           case R.id.btn_nav_history_shop:
             bottomId = R.id.btn_nav_history_shop;
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHistoryFragment).commit();
-            checkRestaurantInfo(editRestaurantFragment);
             break;
         }
         return true;
       }
     });
-  }
-
-  public void checkRestaurantInfo(EditRestaurantFragment editRestaurantFragment) {
-    if (rName == "" || rEmail == null || rPhone == "" | rAddress == ""){
-      AlertDialog.Builder checkDialog = new AlertDialog.Builder(this);
-      checkDialog.setMessage("尚有店家資訊未設定，請至店家資訊設定。");
-      checkDialog.setTitle("提醒");
-      checkDialog.setPositiveButton("前往", new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialogInterface, int i) {
-          dataBundle(editRestaurantFragment);
-          getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, editRestaurantFragment).commit();
-        }
-      });
-      checkDialog.setCancelable(false);
-      checkDialog.show();
-    }
-  }
-
-  private void dataBundle(EditRestaurantFragment editRestaurantFragment) {
-    Bundle bundle = new Bundle();
-    bundle.putString("shopName", rName);
-    bundle.putString("shopEmail", rEmail);
-    bundle.putString("shopPhone", rPhone);
-    bundle.putString("shopAddress", rAddress);
-    editRestaurantFragment.setArguments(bundle);
   }
 }

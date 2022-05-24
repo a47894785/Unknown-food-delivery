@@ -2946,7 +2946,6 @@ id locale
 id lock
 id ltr
 id lv_cart
-id lv_edit_shop_prodile
 id lv_history
 id mainActivity_simulate
 id masked
@@ -2974,10 +2973,10 @@ id material_value_index
 id media_actions
 id menuLogout
 id menuProfile
+id menu_History_shop
+id menu_Logout_shop
+id menu_Profile_shop
 id menu_change_shop
-id menu_history_shop
-id menu_logout_shop
-id menu_profile_shop
 id message
 id middle
 id mini
@@ -3349,7 +3348,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_cart
 layout fragment_edit_profile
-layout fragment_edit_restaurant
 layout fragment_general_chat
 layout fragment_history
 layout fragment_home

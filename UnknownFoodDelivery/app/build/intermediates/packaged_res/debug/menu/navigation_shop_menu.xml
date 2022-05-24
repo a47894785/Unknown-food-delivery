@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/menu_profile_shop"
+    <item android:id="@+id/menu_Profile_shop"
         android:icon="@drawable/userprofile"
         android:title="店家資訊" />
 
-    <item android:id="@+id/menu_history_shop"
+    <item android:id="@+id/menu_History_shop"
         android:icon="@drawable/icon_shophistory"
         android:title="訂單紀錄" />
 
@@ -13,16 +13,16 @@
         android:icon="@drawable/icon_change_shop_menu"
         android:title="更改菜單" />
 
-    <item android:id="@+id/menu_logout_shop"
+    <item android:id="@+id/menu_Logout_shop"
         android:icon="@drawable/ic_logout"
         android:title="登出" />
 
     <item android:title="模式">
         <menu>
-            <item android:title="店家"
-                android:id="@+id/shop_mode_shop"/>
             <item android:title="一般使用者"
                 android:id="@+id/general_mode_shop"/>
+            <item android:title="店家"
+                android:id="@+id/shop_mode_shop"/>
             <item android:title="外送員"
                 android:id="@+id/delivery_man_mode_shop"/>
         </menu>
