@@ -2639,6 +2639,9 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id Raddress
+id Rname
+id Rnumber
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2905,6 +2908,7 @@ id imageView13
 id imageView14
 id imageView15
 id imageView16
+id imageView19
 id imageView2
 id imageView26
 id imageView3
@@ -2944,6 +2948,7 @@ id list_item
 id locale
 id lock
 id ltr
+id lvAlbum
 id lv_cart
 id lv_history
 id mainActivity_simulate
@@ -2972,10 +2977,10 @@ id material_value_index
 id media_actions
 id menuLogout
 id menuProfile
-id menu_History_shop
-id menu_Logout_shop
-id menu_Profile_shop
 id menu_change_shop
+id menu_history_shop
+id menu_logout_shop
+id menu_profile_shop
 id message
 id middle
 id mini
@@ -3161,6 +3166,7 @@ id textStart
 id textTop
 id textView
 id textView10
+id textView11
 id textView12
 id textView14
 id textView15
@@ -3347,6 +3353,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_cart
 layout fragment_edit_profile
+layout fragment_edit_restaurant
 layout fragment_general_chat
 layout fragment_history
 layout fragment_home
@@ -3355,6 +3362,7 @@ layout fragment_shop_history
 layout fragment_shop_home
 layout layout_edit_profile
 layout layout_navigation_header
+layout listitem
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

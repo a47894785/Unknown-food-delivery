@@ -40,6 +40,9 @@ drawable searchbar
 drawable userprofile
 font noto_sans
 font poppins
+id Raddress
+id Rname
+id Rnumber
 id bottom_navigation
 id bottom_navigation_shop
 id btn_login
@@ -86,6 +89,7 @@ id imageView13
 id imageView14
 id imageView15
 id imageView16
+id imageView19
 id imageView2
 id imageView26
 id imageView3
@@ -99,15 +103,16 @@ id image_View16_shop
 id iv_menu
 id iv_menu_shop
 id lock
+id lvAlbum
 id lv_cart
 id lv_history
 id mainActivity_simulate
 id menuLogout
 id menuProfile
-id menu_History_shop
-id menu_Logout_shop
-id menu_Profile_shop
 id menu_change_shop
+id menu_history_shop
+id menu_logout_shop
+id menu_profile_shop
 id message
 id nav
 id navigationView
@@ -118,6 +123,7 @@ id sw_gps
 id sw_locationsupdates
 id textView
 id textView10
+id textView11
 id textView12
 id textView14
 id textView15
@@ -151,6 +157,7 @@ layout activity_register
 layout activity_resaurant
 layout fragment_cart
 layout fragment_edit_profile
+layout fragment_edit_restaurant
 layout fragment_general_chat
 layout fragment_history
 layout fragment_home
@@ -159,6 +166,7 @@ layout fragment_shop_history
 layout fragment_shop_home
 layout layout_edit_profile
 layout layout_navigation_header
+layout listitem
 menu bottom_nav_menu
 menu bottom_nav_shop_menu
 menu navigation_menu

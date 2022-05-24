@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        android:id="@+id/lvAlbum"
         android:layout_width="411dp"
         android:layout_height="664dp"
         app:layout_constraintBottom_toBottomOf="parent"
