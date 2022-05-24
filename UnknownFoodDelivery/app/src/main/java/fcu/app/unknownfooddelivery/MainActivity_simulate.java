@@ -231,7 +231,7 @@ public class MainActivity_simulate extends AppCompatActivity {
             tvLocationAddr.setText(currentAddress);
 
             Log.d("CurrentAddress", currentAddress + ", No." + ++count);
-            // TODO 設 flag 控制更新
+            // 設 flag 控制更新
             if (count == 1) {
                 Bundle bundle = new Bundle();
                 bundle.putString("address", currentAddress);
