@@ -5,6 +5,8 @@ array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
 color black
+color gray
+color main_green
 color purple_200
 color purple_500
 color purple_700
@@ -12,6 +14,8 @@ color teal_200
 color teal_700
 color white
 drawable bg
+drawable bg_add_menu_body
+drawable bg_add_menu_header
 drawable bg_color
 drawable bg_edit
 drawable bg_input
@@ -56,6 +60,8 @@ id btn_nav_history_shop
 id btn_nav_home
 id btn_nav_home_shop
 id btn_register
+id btn_sendout
+id btn_upload_img
 id button
 id button2
 id button3
@@ -67,6 +73,9 @@ id drawerLayout
 id drawerLayout_shop
 id editTextTextPersonName
 id edit_profile_lv
+id et_add_meal_info
+id et_add_meal_name
+id et_add_meal_price
 id et_login_email
 id et_login_password
 id et_mail
@@ -81,6 +90,7 @@ id general_mode_shop
 id guideline2
 id history
 id home_frag_address
+id im_upload
 id imageView
 id imageView10
 id imageView11
@@ -131,6 +141,8 @@ id textView16
 id textView2
 id textView3
 id textView4
+id textView5
+id textView7
 id textView9
 id tv_address
 id tv_create

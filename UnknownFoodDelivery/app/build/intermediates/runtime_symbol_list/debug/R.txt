@@ -1340,6 +1340,7 @@ int color error_color_material_dark 0x7f060068
 int color error_color_material_light 0x7f060069
 int color foreground_material_dark 0x7f06006a
 int color foreground_material_light 0x7f06006b
+int color gray 0x7f060263
 int color highlighted_text_material_dark 0x7f06006c
 int color highlighted_text_material_light 0x7f06006d
 int color m3_appbar_overlay_color 0x7f06006e
@@ -1657,6 +1658,7 @@ int color m3_timepicker_display_text_color 0x7f0601a5
 int color m3_timepicker_secondary_text_button_ripple_color 0x7f0601a6
 int color m3_timepicker_secondary_text_button_text_color 0x7f0601a7
 int color m3_tonal_button_ripple_color_selector 0x7f0601a8
+int color main_green 0x7f060264
 int color material_blue_grey_800 0x7f0601a9
 int color material_blue_grey_900 0x7f0601aa
 int color material_blue_grey_950 0x7f0601ab
@@ -2515,6 +2517,8 @@ int drawable abc_vector_test 0x7f080055
 int drawable avd_hide_password 0x7f080056
 int drawable avd_show_password 0x7f080057
 int drawable bg 0x7f080058
+int drawable bg_add_menu_body 0x7f0800cb
+int drawable bg_add_menu_header 0x7f0800cc
 int drawable bg_color 0x7f080059
 int drawable bg_edit 0x7f08005a
 int drawable bg_input 0x7f08005b
@@ -2754,6 +2758,8 @@ int id btn_nav_history_shop 0x7f0a0077
 int id btn_nav_home 0x7f0a0078
 int id btn_nav_home_shop 0x7f0a0079
 int id btn_register 0x7f0a007a
+int id btn_sendout 0x7f0a0262
+int id btn_upload_img 0x7f0a026c
 int id button 0x7f0a007b
 int id button2 0x7f0a007c
 int id button3 0x7f0a007d
@@ -2848,6 +2854,9 @@ int id endToStart 0x7f0a00d5
 int id end_padder 0x7f0a00d6
 int id enterAlways 0x7f0a00d7
 int id enterAlwaysCollapsed 0x7f0a00d8
+int id et_add_meal_info 0x7f0a026d
+int id et_add_meal_name 0x7f0a026e
+int id et_add_meal_price 0x7f0a026f
 int id et_login_email 0x7f0a00d9
 int id et_login_password 0x7f0a00da
 int id et_mail 0x7f0a00db
@@ -2898,6 +2907,7 @@ int id icon_only 0x7f0a0107
 int id ifRoom 0x7f0a0108
 int id ignore 0x7f0a0109
 int id ignoreRequest 0x7f0a010a
+int id im_upload 0x7f0a0270
 int id image 0x7f0a010b
 int id imageView 0x7f0a010c
 int id imageView10 0x7f0a010d
@@ -3173,6 +3183,8 @@ int id textView16 0x7f0a021a
 int id textView2 0x7f0a021b
 int id textView3 0x7f0a021c
 int id textView4 0x7f0a021d
+int id textView5 0x7f0a0268
+int id textView7 0x7f0a026a
 int id textView9 0x7f0a021e
 int id text_input_end_icon 0x7f0a021f
 int id text_input_error_icon 0x7f0a0220

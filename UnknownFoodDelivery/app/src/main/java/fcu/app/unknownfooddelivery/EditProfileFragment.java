@@ -89,7 +89,10 @@ public class EditProfileFragment extends Fragment {
         AlertDialog.Builder editDialog = new AlertDialog.Builder(getContext());
         editDialog.setTitle(userProfileTitle[index]);
         EditText updateDataInput = new EditText(getContext());
-        if (index ==  1) {
+
+        if (index == 0) {
+          updateDataInput.setText(userName);
+        } else if (index ==  1) {
           updateDataInput.setInputType(InputType.TYPE_CLASS_PHONE);
         }
         editDialog.setView(updateDataInput);

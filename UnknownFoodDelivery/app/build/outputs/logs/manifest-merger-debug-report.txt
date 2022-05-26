@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [androidx.navigation:navigation-ui:2.4.2] C:\Users\PinHua\.gradle\caches\transforms-3\25e96eef9fdb9773c187041558004d56\transformed\navigation-ui-2.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\PinHua\.gradle\caches\transforms-3\3b185c71f62a8e5ce74dbacb5af9ac95\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\PinHua\.gradle\caches\transforms-3\c051c6e0d169f7cea8b828b6e2e10046\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
@@ -12,6 +12,7 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\c
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.navigation:navigation-fragment:2.4.2] C:\Users\PinHua\.gradle\caches\transforms-3\6082e540a4b8bd87895ab8e39d265f9c\transformed\navigation-fragment-2.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\1966d26a93049f6f5da6288a230edf6d\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\38e5b66d42b0986267915b7e3e70732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\PinHua\.gradle\caches\transforms-3\fd521136ce2c6392395539f549a62f43\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
@@ -78,20 +79,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\PinHua\.gradle\caches\transfor
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\b5b9a8ffe71c29ead418b5833555d33b\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\0c56d297b0c111274292142cfab35623\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
 		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
 		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:11-69
@@ -101,6 +102,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\c
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d7d1c36225808f6cc525ee9064daafb1\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
 	android:name
 		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -111,8 +114,12 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:5-79
 	android:name
 		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:8:22-77
 application
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:9:5-41:19
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:10:5-42:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\PinHua\.gradle\caches\transforms-3\3b185c71f62a8e5ce74dbacb5af9ac95\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\PinHua\.gradle\caches\transforms-3\3b185c71f62a8e5ce74dbacb5af9ac95\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\PinHua\.gradle\caches\transforms-3\c051c6e0d169f7cea8b828b6e2e10046\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
@@ -121,6 +128,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\c
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d7d1c36225808f6cc525ee9064daafb1\transformed\firebase-auth-21.0.3\AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6860b130f9ab3b506df3cd72ce86393a\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
@@ -154,63 +163,63 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\PinHua\.gradle\cac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\PinHua\.gradle\caches\transforms-3\fb9aa2ab3966fe894c67bd9003ea76a4\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:15:9-57
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:16:9-57
 activity#fcu.app.unknownfooddelivery.RestaurantActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:16:9-18:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:18:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:17:13-47
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:18:13-47
 activity#fcu.app.unknownfooddelivery.MainActivity_simulate
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:19:9-21:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:20:9-22:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:21:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:20:13-50
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:21:13-50
 activity#fcu.app.unknownfooddelivery.RegisterActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:22:9-24:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:24:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:23:13-45
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:24:13-45
 activity#fcu.app.unknownfooddelivery.LoginActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:25:9-33:20
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:26:9-34:20
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:27:13-36
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:26:13-42
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:27:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:28:13-32:29
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:29:17-69
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:29:25-66
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:32:27-74
 activity#fcu.app.unknownfooddelivery.MainActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:34:9-36:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:35:13-41
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:36:13-41
 meta-data#preloaded_fonts
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:38:9-40:57
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:39:9-41:57
 	android:resource
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:40:13-54
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:41:13-54
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:39:13-43
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:40:13-43
 uses-sdk
 INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
@@ -231,6 +240,8 @@ MERGED from [androidx.navigation:navigation-fragment:2.4.2] C:\Users\PinHua\.gra
 MERGED from [androidx.navigation:navigation-fragment:2.4.2] C:\Users\PinHua\.gradle\caches\transforms-3\6082e540a4b8bd87895ab8e39d265f9c\transformed\navigation-fragment-2.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\1966d26a93049f6f5da6288a230edf6d\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\1966d26a93049f6f5da6288a230edf6d\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\38e5b66d42b0986267915b7e3e70732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -377,6 +388,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d7d1c36225808f6cc525ee9064daafb1\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 	android:name
@@ -433,6 +446,8 @@ service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d7d1c36225808f6cc525ee9064daafb1\transformed\firebase-auth-21.0.3\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\3d3046c03e2c58ca4fecb9a85cbcc3a4\transformed\firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
 MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\3d3046c03e2c58ca4fecb9a85cbcc3a4\transformed\firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
 	android:exported
@@ -455,6 +470,12 @@ ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.grad
 		ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:22:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\3d3046c03e2c58ca4fecb9a85cbcc3a4\transformed\firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
 	android:authorities

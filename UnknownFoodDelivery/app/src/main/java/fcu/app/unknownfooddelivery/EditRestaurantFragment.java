@@ -72,8 +72,15 @@ public class EditRestaurantFragment extends Fragment {
         AlertDialog.Builder editDialog = new AlertDialog.Builder(getContext());
         editDialog.setTitle(restaurantProfileTitle[index]);
         EditText updateDataInput = new EditText(getContext());
-        if (index == 2) {
+        if (index == 0) {
+          updateDataInput.setText(rName);
+        } else if (index == 1) {
+          updateDataInput.setText(rAddress);
+        } else if (index == 2) {
+//          updateDataInput.setText(rPhone);
           updateDataInput.setInputType(InputType.TYPE_CLASS_PHONE);
+        } else if (index == 3) {
+          updateDataInput.setText(rEmail);
         }
 
         editDialog.setView(updateDataInput);
