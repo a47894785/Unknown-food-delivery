@@ -137,8 +137,11 @@ public class RestaurantActivity extends AppCompatActivity {
             break;
           case R.id.btn_nav_add_shop:
             bottomId = R.id.btn_nav_add_shop;
-            getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopAddFragment).commit();
             updateInfo(userId);
+            Bundle bundle = new Bundle();
+            bundle.putString("shopName", rName);
+            editRestaurantFragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopAddFragment).commit();
 //            checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
             break;
           case R.id.btn_nav_history_shop:

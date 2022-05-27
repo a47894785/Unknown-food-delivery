@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -17,8 +18,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ShopAddFragment extends Fragment {
 
@@ -28,8 +38,11 @@ public class ShopAddFragment extends Fragment {
   Intent intent;
 
   Uri uri;
-  String data_type;
-  StorageReference storageReference;
+  String data_type, mealName, mealPrice, mealInfo,shopName;
+  StorageReference storageReference,pic_storage;
+  private FirebaseFirestore db;
+  private FirebaseAuth fAuth;
+  private String userId;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +50,9 @@ public class ShopAddFragment extends Fragment {
 
     View view = inflater.inflate(R.layout.fragment_shop_add, container, false);
 //
+    if(getArguments() != null){
+      shopName = this.getArguments().getString("shopName");
+    }
     btnUploadImg = view.findViewById(R.id.btn_upload_img);
     btnSendOut = view.findViewById(R.id.btn_sendout);
     etMealName = (EditText) view.findViewById(R.id.et_add_meal_name);
@@ -45,6 +61,10 @@ public class ShopAddFragment extends Fragment {
     imUpload = view.findViewById(R.id.im_upload);
 
     storageReference = FirebaseStorage.getInstance().getReference();
+
+    fAuth = FirebaseAuth.getInstance();
+    db = FirebaseFirestore.getInstance();
+    userId = fAuth.getCurrentUser().getUid();
 
     btnUploadImg.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -56,7 +76,41 @@ public class ShopAddFragment extends Fragment {
         startActivityForResult(intent, 1);
       }
     });
+    Log.d("shopName",shopName);
+    btnSendOut.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+//        mealInfo = etMealInfo.getText().toString();
+//        mealName = etMealName.getText().toString();
+//        mealPrice = etMealPrice.getText().toString()
+//        Log.d("shopName",shopName);
+//        DocumentReference documentReference = db.collection("shop").document(userId).collection("menu").document(shopName);
+//        Map<String, Object> menu = new HashMap<String, Object>();
+//        menu.put("mealInfo",mealInfo);
+//        menu.put("mealName", mealName);
+//        menu.put("mealPrice", mealPrice);
+//        menu.put("photoName","");
 
+//        documentReference.set(menu).addOnSuccessListener(new OnSuccessListener<Void>() {
+//          @Override
+//          public void onSuccess(Void unused) {
+//            Log.d("NewMael", "OnSuccess: add meal");
+//          }
+//        }).addOnFailureListener(new OnFailureListener() {
+//          @Override
+//          public void onFailure(@NonNull Exception e) {
+//            Log.w("NewMael", "OnFailure: " + e);
+//          }
+//        });
+//        pic_storage = storageReference.child(mealName + data_type);
+//        pic_storage.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//          @Override
+//          public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//            Log.d("photo", "OnSuccess: upload photo");
+//          }
+//        });
+      }
+    });
     return view;
   }
 
