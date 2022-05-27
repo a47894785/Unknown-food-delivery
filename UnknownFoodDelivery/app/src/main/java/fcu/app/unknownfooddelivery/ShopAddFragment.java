@@ -1,6 +1,8 @@
 package fcu.app.unknownfooddelivery;
 
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,17 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -27,6 +33,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.AbstractList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,6 +43,7 @@ public class ShopAddFragment extends Fragment {
   EditText etMealName, etMealPrice, etMealInfo;
   ImageView imUpload;
   Intent intent;
+  Boolean checkImg = false;
 
   Uri uri;
   String data_type, mealName, mealPrice, mealInfo,shopName;
@@ -66,6 +74,7 @@ public class ShopAddFragment extends Fragment {
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
 
+
     btnUploadImg.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -76,43 +85,75 @@ public class ShopAddFragment extends Fragment {
         startActivityForResult(intent, 1);
       }
     });
-    Log.d("shopName",shopName);
     btnSendOut.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-//        mealInfo = etMealInfo.getText().toString();
-//        mealName = etMealName.getText().toString();
-//        mealPrice = etMealPrice.getText().toString()
-//        Log.d("shopName",shopName);
-//        DocumentReference documentReference = db.collection("shop").document(userId).collection("menu").document(shopName);
-//        Map<String, Object> menu = new HashMap<String, Object>();
-//        menu.put("mealInfo",mealInfo);
-//        menu.put("mealName", mealName);
-//        menu.put("mealPrice", mealPrice);
-//        menu.put("photoName","");
 
-//        documentReference.set(menu).addOnSuccessListener(new OnSuccessListener<Void>() {
-//          @Override
-//          public void onSuccess(Void unused) {
-//            Log.d("NewMael", "OnSuccess: add meal");
-//          }
-//        }).addOnFailureListener(new OnFailureListener() {
-//          @Override
-//          public void onFailure(@NonNull Exception e) {
-//            Log.w("NewMael", "OnFailure: " + e);
-//          }
-//        });
-//        pic_storage = storageReference.child(mealName + data_type);
-//        pic_storage.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//          @Override
-//          public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//            Log.d("photo", "OnSuccess: upload photo");
-//          }
-//        });
+        mealInfo = etMealInfo.getText().toString();
+        mealName = etMealName.getText().toString();
+        mealPrice = etMealPrice.getText().toString();
+
+        if(!checkImg){
+          Toast.makeText(getContext(), "error no img", Toast.LENGTH_SHORT).show();
+          return;
+        }
+
+        if (TextUtils.isEmpty(mealName)) {
+          etMealName.setError("mealName is required.");
+          return;
+        }
+
+        if (TextUtils.isEmpty(mealPrice)) {
+          etMealPrice.setError("mealPrice is required.");
+          return;
+        }
+
+        if (TextUtils.isEmpty(mealInfo)) {
+          etMealInfo.setError("mealInfo is required.");
+          return;
+        }
+
+        DocumentReference documentReference = db.collection("shops").document(userId).collection("menu").document(mealName);
+        Map<String, Object> menu = new HashMap<String, Object>();
+        menu.put("mealInfo",mealInfo);
+        menu.put("mealName", mealName);
+        menu.put("mealPrice", mealPrice);
+        menu.put("photoName",shopName+"-"+mealName +"."+ data_type);
+
+        documentReference.set(menu).addOnSuccessListener(new OnSuccessListener<Void>() {
+          @Override
+          public void onSuccess(Void unused) {
+
+            Log.d("NewMeal", "OnSuccess: add meal");
+
+            mealName = "";
+            mealInfo = "";
+            mealPrice = "";
+            etMealName.setText("");
+            etMealInfo.setText("");
+            etMealPrice.setText("");
+            imUpload.setImageResource(R.drawable.ic_launcher_foreground);
+            checkImg = false;
+          }
+        }).addOnFailureListener(new OnFailureListener() {
+          @Override
+          public void onFailure(@NonNull Exception e) {
+            Log.w("NewMeal", "OnFailure: " + e);
+          }
+        });
+
+        pic_storage = storageReference.child(shopName+"-"+mealName +"."+ data_type);
+        pic_storage.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+          @Override
+          public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+            Log.d("photo", "OnSuccess: upload photo");
+          }
+        });
       }
     });
     return view;
   }
+
 
   @Override
   public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -126,5 +167,6 @@ public class ShopAddFragment extends Fragment {
     }
 
     super.onActivityResult(requestCode, resultCode, data);
+    checkImg = true;
   }
 }

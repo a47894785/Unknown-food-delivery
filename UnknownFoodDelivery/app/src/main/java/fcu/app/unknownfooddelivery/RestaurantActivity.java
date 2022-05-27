@@ -140,7 +140,7 @@ public class RestaurantActivity extends AppCompatActivity {
             updateInfo(userId);
             Bundle bundle = new Bundle();
             bundle.putString("shopName", rName);
-            editRestaurantFragment.setArguments(bundle);
+            shopAddFragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopAddFragment).commit();
 //            checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
             break;
