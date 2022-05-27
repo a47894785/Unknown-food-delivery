@@ -112,6 +112,7 @@ id imageView9
 id image_View16_shop
 id iv_menu
 id iv_menu_shop
+id line_chart
 id lock
 id lvAlbum
 id lv_cart
