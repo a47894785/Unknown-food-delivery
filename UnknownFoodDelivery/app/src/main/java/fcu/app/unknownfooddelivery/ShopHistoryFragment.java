@@ -38,9 +38,9 @@ public class ShopHistoryFragment extends Fragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
 
-    View view = inflater.inflate(R.layout.fragment_edit_profile, container, false);
+    View view = inflater.inflate(R.layout.fragment_shop_history, container, false);
     lineChart = (LineChart) view.findViewById(R.id.line_chart);
-    lineChartData = new LineChartData(lineChart, getContext());
+    lineChartData = new LineChartData(lineChart, getActivity());
 
     for(int i = 0; i < 10; i++){
       xData.add("第" + i + "筆");

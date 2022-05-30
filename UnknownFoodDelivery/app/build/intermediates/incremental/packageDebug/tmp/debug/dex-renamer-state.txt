@@ -1,14 +1,14 @@
-#Sun May 29 13:44:41 GMT+08:00 2022
+#Mon May 30 23:30:27 CST 2022
 path.4=classes3.dex
 path.3=classes2.dex
 path.2=1/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
-base.3=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.2=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.1=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=C\:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.4=C\:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.3=C\:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=C\:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.1=C\:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

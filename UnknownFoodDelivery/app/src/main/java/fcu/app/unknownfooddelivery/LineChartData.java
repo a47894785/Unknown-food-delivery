@@ -2,6 +2,7 @@ package fcu.app.unknownfooddelivery;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 
 import androidx.core.content.ContextCompat;
 
@@ -60,6 +61,7 @@ public class LineChartData{
   }
 
   public void initX(ArrayList dateList) {
+    Log.d("LineChart", String.valueOf(lineChart));
     XAxis xAxis = lineChart.getXAxis();
 
     xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//X軸標籤顯示位置(預設顯示在上方，分為上方內/外側、下方內/外側及上下同時顯示)

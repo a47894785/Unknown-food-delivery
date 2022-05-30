@@ -90,6 +90,7 @@ id general_mode_shop
 id guideline2
 id history
 id home_frag_address
+id im_shopImg
 id im_upload
 id imageView
 id imageView10
@@ -114,10 +115,10 @@ id iv_menu
 id iv_menu_shop
 id line_chart
 id lock
-id lvAlbum
 id lv_cart
 id lv_edit_shop_prodile
 id lv_history
+id lv_shop
 id mainActivity_simulate
 id menuLogout
 id menuProfile
@@ -159,6 +160,8 @@ id tv_lbladdress
 id tv_location_addr
 id tv_lon
 id tv_sensor
+id tv_shop_address
+id tv_shop_name
 id tv_title
 id tv_updates
 id tv_username
@@ -178,6 +181,7 @@ layout fragment_shop_add
 layout fragment_shop_history
 layout fragment_shop_home
 layout layout_edit_profile
+layout layout_home
 layout layout_navigation_header
 layout listitem
 menu bottom_nav_menu

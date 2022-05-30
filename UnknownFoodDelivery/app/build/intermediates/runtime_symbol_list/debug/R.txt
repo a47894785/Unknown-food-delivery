@@ -2907,6 +2907,7 @@ int id icon_only 0x7f0a010c
 int id ifRoom 0x7f0a010d
 int id ignore 0x7f0a010e
 int id ignoreRequest 0x7f0a010f
+int id im_shopImg 0x7f0a026a
 int id im_upload 0x7f0a0110
 int id image 0x7f0a0111
 int id imageView 0x7f0a0112
@@ -2958,10 +2959,10 @@ int id list_item 0x7f0a013f
 int id locale 0x7f0a0140
 int id lock 0x7f0a0141
 int id ltr 0x7f0a0142
-int id lvAlbum 0x7f0a0143
 int id lv_cart 0x7f0a0144
 int id lv_edit_shop_prodile 0x7f0a0145
 int id lv_history 0x7f0a0146
+int id lv_shop 0x7f0a026b
 int id mainActivity_simulate 0x7f0a0147
 int id masked 0x7f0a0148
 int id match_constraint 0x7f0a0149
@@ -3226,6 +3227,8 @@ int id tv_lbladdress 0x7f0a024b
 int id tv_location_addr 0x7f0a024c
 int id tv_lon 0x7f0a024d
 int id tv_sensor 0x7f0a024e
+int id tv_shop_address 0x7f0a026c
+int id tv_shop_name 0x7f0a026d
 int id tv_title 0x7f0a024f
 int id tv_updates 0x7f0a0250
 int id tv_username 0x7f0a0251
@@ -3373,6 +3376,7 @@ int layout fragment_shop_add 0x7f0d0039
 int layout fragment_shop_history 0x7f0d003a
 int layout fragment_shop_home 0x7f0d003b
 int layout layout_edit_profile 0x7f0d003c
+int layout layout_home 0x7f0d008f
 int layout layout_navigation_header 0x7f0d003d
 int layout listitem 0x7f0d003e
 int layout m3_alert_dialog 0x7f0d003f
