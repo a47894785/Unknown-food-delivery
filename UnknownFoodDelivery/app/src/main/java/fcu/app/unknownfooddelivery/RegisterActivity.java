@@ -79,27 +79,27 @@ public class RegisterActivity extends AppCompatActivity {
 
         // 設定輸入限制
         if (TextUtils.isEmpty(email)) {
-          etEmail.setError("Email is required.");
+          etEmail.setError("Email不能為空");
           return;
         }
 
         if (TextUtils.isEmpty(password)) {
-          etPassword.setError("Password is required.");
+          etPassword.setError("密碼不能為空");
           return;
         }
 
         if (password.length() < 6) {
-          etPassword.setError("Password Must be >= 6 Characters.");
+          etPassword.setError("密碼必須>=6個字元");
           return;
         }
 
         if (!password.equals(confirm)) {
-          etConfirm.setError("Confirm password is not correct!");
+          etConfirm.setError("確認密碼不相符!");
           return;
         }
 
         if (phone.length() < 10) {
-          etPhone.setError("Phone Number Must be 10 characters.");
+          etPhone.setError("輸入錯誤!電話號碼必須為十個數字!");
           return;
         }
 
@@ -108,7 +108,7 @@ public class RegisterActivity extends AppCompatActivity {
           @Override
           public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()) { // 註冊成功
-              Toast.makeText(RegisterActivity.this, "User Created", Toast.LENGTH_SHORT).show();
+              Toast.makeText(RegisterActivity.this, "註冊成功", Toast.LENGTH_SHORT).show();
 
               // get userID and access db
               userID = fAuth.getCurrentUser().getUid();

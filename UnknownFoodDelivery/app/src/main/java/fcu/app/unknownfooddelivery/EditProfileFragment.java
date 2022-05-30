@@ -102,9 +102,9 @@ public class EditProfileFragment extends Fragment {
           public void onClick(DialogInterface dialogInterface, int i) {
             String inputText = updateDataInput.getText().toString();
             if  (index == 1 && inputText.length() != 10) {
-              Toast.makeText(getContext(), "Error! Phone Number Should be 10 Characters!", Toast.LENGTH_SHORT).show();
+              Toast.makeText(getContext(), "輸入錯誤!電話號碼必須為十個數字!", Toast.LENGTH_SHORT).show();
             } else if (inputText.length() <= 0) {
-              Toast.makeText(getContext(), "Error! Input was empty", Toast.LENGTH_SHORT).show();
+              Toast.makeText(getContext(), "輸入錯誤!輸入不能為空", Toast.LENGTH_SHORT).show();
             } else {
               updateData = updateDataInput.getText().toString();
               switch (index){
@@ -163,17 +163,17 @@ public class EditProfileFragment extends Fragment {
               .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-                  Toast.makeText(getContext(), "Successfully Updated", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(getContext(), "更新成功", Toast.LENGTH_SHORT).show();
                 }
               }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-              Toast.makeText(getContext(), "Some Error Occurred", Toast.LENGTH_SHORT).show();
+              Toast.makeText(getContext(), "發生錯誤", Toast.LENGTH_SHORT).show();
 
             }
           });
         } else {
-          Toast.makeText(getContext(), "Failed to Update", Toast.LENGTH_SHORT).show();
+          Toast.makeText(getContext(), "更新失敗", Toast.LENGTH_SHORT).show();
         }
       }
     });

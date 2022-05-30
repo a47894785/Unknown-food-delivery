@@ -63,17 +63,17 @@ public class LoginActivity extends AppCompatActivity {
         String password = etPassword.getText().toString();
 
         if (TextUtils.isEmpty(email)) {
-          etEmail.setError("Email is required.");
+          etEmail.setError("Email不可為空");
           return;
         }
 
         if (TextUtils.isEmpty(password)) {
-          etPassword.setError("Password is required.");
+          etPassword.setError("密碼不可為空");
           return;
         }
 
         if (password.length() < 6) {
-          etPassword.setError("Password Must be >= 6 Characters.");
+          etPassword.setError("密碼必須>=6個字元");
           return;
         }
 

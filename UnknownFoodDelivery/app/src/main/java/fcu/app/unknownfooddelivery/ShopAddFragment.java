@@ -94,22 +94,22 @@ public class ShopAddFragment extends Fragment {
         mealPrice = etMealPrice.getText().toString();
 
         if(!checkImg){
-          Toast.makeText(getContext(), "error no img", Toast.LENGTH_SHORT).show();
+          Toast.makeText(getContext(), "錯誤!找不到圖片", Toast.LENGTH_SHORT).show();
           return;
         }
 
         if (TextUtils.isEmpty(mealName)) {
-          etMealName.setError("mealName is required.");
+          etMealName.setError("餐點名稱不能為空");
           return;
         }
 
         if (TextUtils.isEmpty(mealPrice)) {
-          etMealPrice.setError("mealPrice is required.");
+          etMealPrice.setError("餐點價格不能為空");
           return;
         }
 
         if (TextUtils.isEmpty(mealInfo)) {
-          etMealInfo.setError("mealInfo is required.");
+          etMealInfo.setError("餐點資訊不能為空");
           return;
         }
 

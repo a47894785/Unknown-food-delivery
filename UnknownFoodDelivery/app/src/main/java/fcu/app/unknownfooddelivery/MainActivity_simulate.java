@@ -243,7 +243,7 @@ public class MainActivity_simulate extends AppCompatActivity {
 
 
         } catch (Exception e) {
-            Toast.makeText(this, "Unable to get address", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "無法取得位置", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -279,7 +279,7 @@ public class MainActivity_simulate extends AppCompatActivity {
     private void askLocationPermission() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                Toast.makeText(this, "Permission required", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "需要權限", Toast.LENGTH_SHORT).show();
                 ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
             } else {
                 ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
