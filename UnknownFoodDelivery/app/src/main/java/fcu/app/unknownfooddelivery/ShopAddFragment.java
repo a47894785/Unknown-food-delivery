@@ -132,6 +132,9 @@ public class ShopAddFragment extends Fragment {
             etMealName.setText("");
             etMealInfo.setText("");
             etMealPrice.setText("");
+            etMealName.setError(null);
+            etMealInfo.setError(null);
+            etMealPrice.setError(null);
             imUpload.setImageResource(R.drawable.ic_launcher_foreground);
             checkImg = false;
           }
@@ -154,6 +157,14 @@ public class ShopAddFragment extends Fragment {
     return view;
   }
 
+  @Override
+  public void onPause() {
+    etMealName.setError(null);
+    etMealInfo.setError(null);
+    etMealPrice.setError(null);
+    checkImg = false;
+    super.onPause();
+  }
 
   @Override
   public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
