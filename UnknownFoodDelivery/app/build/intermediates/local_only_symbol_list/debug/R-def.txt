@@ -4,6 +4,7 @@ array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
+array shop_status
 color black
 color gray
 color main_green
@@ -19,9 +20,11 @@ drawable bg_add_menu_header
 drawable bg_color
 drawable bg_edit
 drawable bg_input
+drawable bg_shop_status
 drawable bottom_navigation_selector
 drawable ic_baseline_edit_24
 drawable ic_baseline_push_pin_24
+drawable ic_down
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_logout
@@ -41,6 +44,7 @@ drawable message
 drawable profile
 drawable search_icon
 drawable searchbar
+drawable style_spinner
 drawable userprofile
 font noto_sans
 font poppins
@@ -49,6 +53,7 @@ id Rname
 id Rnumber
 id bottom_navigation
 id bottom_navigation_shop
+id btn_change_status
 id btn_login
 id btn_nav_add_shop
 id btn_nav_cart
@@ -69,6 +74,7 @@ id cart
 id delivery_man_mode
 id delivery_man_mode_shop
 id divider
+id divider3
 id drawerLayout
 id drawerLayout_shop
 id editTextTextPersonName
@@ -132,6 +138,7 @@ id navigationView
 id navigationView_shop
 id shop_mode
 id shop_mode_shop
+id sp_status
 id sw_gps
 id sw_locationsupdates
 id textView
@@ -162,6 +169,7 @@ id tv_lon
 id tv_sensor
 id tv_shop_address
 id tv_shop_name
+id tv_shop_status
 id tv_title
 id tv_updates
 id tv_username

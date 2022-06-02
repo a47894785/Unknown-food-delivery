@@ -32,8 +32,9 @@ public class RestaurantActivity extends AppCompatActivity {
 
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
+  private DocumentReference documentReference;
   private String userId;
-  private String rName = "", rEmail = "", rPhone = "", rAddress  = "", userEmail = "";
+  private String rName = "", rEmail = "", rPhone = "", rAddress  = "", userEmail = "", rStatus;
   boolean flag = false;
 
   int bottomId;
@@ -57,30 +58,19 @@ public class RestaurantActivity extends AppCompatActivity {
     bottomNavigationViewShop = findViewById(R.id.bottom_navigation_shop);
     bottomNavigationViewShop.getMenu().getItem(0).setChecked(false);
 
+
+
     // 改變上方通知欄
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
       getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 //            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
-    //跳轉進來就進入到 ShopHomeFragment
-    bottomId = R.id.btn_nav_home_shop;
-    getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
 
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
 
-    DocumentReference userDocumentReference = db.collection("users").document(userId);
-    userDocumentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-      @Override
-      public void onSuccess(DocumentSnapshot documentSnapshot) {
-        if (documentSnapshot.exists()) {
-          userEmail = documentSnapshot.getString("email");
-        }
-      }
-    });
-
-    DocumentReference documentReference = db.collection("shops").document(userId);
+    documentReference = db.collection("shops").document(userId);
     documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
       @Override
       public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -89,11 +79,28 @@ public class RestaurantActivity extends AppCompatActivity {
           rEmail = documentSnapshot.getString("shopEmail");
           rPhone = documentSnapshot.getString("shopPhone");
           rAddress = documentSnapshot.getString("shopAddress");
-          Log.d("GetRestaurantInfo", "NO.1 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
+          rStatus = documentSnapshot.getString("shopStatus");
           flag = true;
           checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
+          //跳轉進來就進入到 ShopHomeFragment
+          bottomId = R.id.btn_nav_home_shop;
+          Bundle bundle = new Bundle();
+          bundle.putString("shopStatus", rStatus);
+          shopHomeFragment.setArguments(bundle);
+          Log.d("GetRestaurantInfo", "NO.1 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress + ", ShopStatus: " + rStatus);
+          getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
         } else {
           Log.d("GetRestaurantInfo", "Error, document not found.");
+        }
+      }
+    });
+
+    DocumentReference userDocumentReference = db.collection("users").document(userId);
+    userDocumentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+      @Override
+      public void onSuccess(DocumentSnapshot documentSnapshot) {
+        if (documentSnapshot.exists()) {
+          userEmail = documentSnapshot.getString("email");
         }
       }
     });
@@ -128,9 +135,12 @@ public class RestaurantActivity extends AppCompatActivity {
     bottomNavigationViewShop.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
       @Override
       public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Bundle bundle = new Bundle();
         switch (item.getItemId()) {
           case R.id.btn_nav_home_shop:
             bottomId = R.id.btn_nav_home_shop;
+            bundle.putString("shopStatus", rStatus);
+            shopHomeFragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
             updateInfo(userId);
 //            checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
@@ -138,7 +148,6 @@ public class RestaurantActivity extends AppCompatActivity {
           case R.id.btn_nav_add_shop:
             bottomId = R.id.btn_nav_add_shop;
             updateInfo(userId);
-            Bundle bundle = new Bundle();
             bundle.putString("shopName", rName);
             shopAddFragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopAddFragment).commit();
@@ -154,6 +163,8 @@ public class RestaurantActivity extends AppCompatActivity {
         return true;
       }
     });
+
+
 
   }
 
@@ -186,6 +197,7 @@ public class RestaurantActivity extends AppCompatActivity {
           rEmail = documentSnapshot.getString("shopEmail");
           rPhone = documentSnapshot.getString("shopPhone");
           rAddress = documentSnapshot.getString("shopAddress");
+          rStatus = documentSnapshot.getString("shopStatus");
           checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
           Log.d("GetRestaurantInfo", "NO.3 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
         }
@@ -216,5 +228,11 @@ public class RestaurantActivity extends AppCompatActivity {
     bundle.putString("shopAddress", rAddress);
     bundle.putString("userEmail", userEmail);
     editRestaurantFragment.setArguments(bundle);
+  }
+
+  @Override
+  protected void onStart() {
+
+    super.onStart();
   }
 }

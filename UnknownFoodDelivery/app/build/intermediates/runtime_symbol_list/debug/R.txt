@@ -74,6 +74,7 @@ int array com_google_android_gms_fonts_certs 0x7f030000
 int array com_google_android_gms_fonts_certs_dev 0x7f030001
 int array com_google_android_gms_fonts_certs_prod 0x7f030002
 int array preloaded_fonts 0x7f030003
+int array shop_status 0x7f030004
 int attr SharedValue 0x7f040000
 int attr SharedValueId 0x7f040001
 int attr action 0x7f040002
@@ -2522,6 +2523,7 @@ int drawable bg_add_menu_header 0x7f08005a
 int drawable bg_color 0x7f08005b
 int drawable bg_edit 0x7f08005c
 int drawable bg_input 0x7f08005d
+int drawable bg_shop_status 0x7f0800cd
 int drawable bottom_navigation_selector 0x7f08005e
 int drawable btn_checkbox_checked_mtrl 0x7f08005f
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f080060
@@ -2560,6 +2562,7 @@ int drawable googleg_standard_color_18 0x7f080080
 int drawable ic_baseline_edit_24 0x7f080081
 int drawable ic_baseline_push_pin_24 0x7f080082
 int drawable ic_clock_black_24dp 0x7f080083
+int drawable ic_down 0x7f0800ce
 int drawable ic_keyboard_black_24dp 0x7f080084
 int drawable ic_launcher_background 0x7f080085
 int drawable ic_launcher_foreground 0x7f080086
@@ -2628,6 +2631,7 @@ int drawable notify_panel_notification_icon_bg 0x7f0800c4
 int drawable profile 0x7f0800c5
 int drawable search_icon 0x7f0800c6
 int drawable searchbar 0x7f0800c7
+int drawable style_spinner 0x7f0800cf
 int drawable test_custom_background 0x7f0800c8
 int drawable test_level_drawable 0x7f0800c9
 int drawable tooltip_frame_dark 0x7f0800ca
@@ -2747,6 +2751,7 @@ int id browser_actions_menu_item_icon 0x7f0a006c
 int id browser_actions_menu_item_text 0x7f0a006d
 int id browser_actions_menu_items 0x7f0a006e
 int id browser_actions_menu_view 0x7f0a006f
+int id btn_change_status 0x7f0a0275
 int id btn_login 0x7f0a0070
 int id btn_nav_add_shop 0x7f0a0071
 int id btn_nav_cart 0x7f0a0072
@@ -2830,6 +2835,7 @@ int id disablePostScroll 0x7f0a00bf
 int id disableScroll 0x7f0a00c0
 int id disjoint 0x7f0a00c1
 int id divider 0x7f0a00c2
+int id divider3 0x7f0a0274
 int id dragAnticlockwise 0x7f0a00c3
 int id dragClockwise 0x7f0a00c4
 int id dragDown 0x7f0a00c5
@@ -3125,6 +3131,7 @@ int id snackbar_text 0x7f0a01e6
 int id snap 0x7f0a01e7
 int id snapMargins 0x7f0a01e8
 int id south 0x7f0a01e9
+int id sp_status 0x7f0a027b
 int id spacer 0x7f0a01ea
 int id special_effects_controller_view_tag 0x7f0a01eb
 int id spline 0x7f0a01ec
@@ -3229,6 +3236,7 @@ int id tv_lon 0x7f0a024e
 int id tv_sensor 0x7f0a024f
 int id tv_shop_address 0x7f0a0250
 int id tv_shop_name 0x7f0a0251
+int id tv_shop_status 0x7f0a0273
 int id tv_title 0x7f0a0252
 int id tv_updates 0x7f0a0253
 int id tv_username 0x7f0a0254
