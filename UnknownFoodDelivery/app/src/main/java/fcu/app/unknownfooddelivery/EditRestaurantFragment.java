@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import fcu.app.unknownfooddelivery.adapter.RestaurantProfileAdapter;
+import fcu.app.unknownfooddelivery.item.RestaurantProfile;
+
 public class EditRestaurantFragment extends Fragment {
 
   private String[] restaurantProfileTitle = {"店家名稱", "店家地址", "電話", "電子郵件"};

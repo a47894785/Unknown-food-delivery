@@ -2559,6 +2559,7 @@ int drawable design_password_eye 0x7f08007d
 int drawable design_snackbar_background 0x7f08007e
 int drawable googleg_disabled_color_18 0x7f08007f
 int drawable googleg_standard_color_18 0x7f080080
+int drawable ic_backarrow 0x7f0800d0
 int drawable ic_baseline_edit_24 0x7f080081
 int drawable ic_baseline_push_pin_24 0x7f080082
 int drawable ic_clock_black_24dp 0x7f080083
@@ -2765,6 +2766,7 @@ int id btn_nav_home_shop 0x7f0a0079
 int id btn_register 0x7f0a007a
 int id btn_sendout 0x7f0a007b
 int id btn_upload_img 0x7f0a007c
+int id btn_upload_shop_img 0x7f0a027e
 int id button 0x7f0a007d
 int id button2 0x7f0a007e
 int id button3 0x7f0a007f
@@ -2835,7 +2837,9 @@ int id disablePostScroll 0x7f0a00bf
 int id disableScroll 0x7f0a00c0
 int id disjoint 0x7f0a00c1
 int id divider 0x7f0a00c2
+int id divider2 0x7f0a026e
 int id divider3 0x7f0a0274
+int id divider4 0x7f0a027f
 int id dragAnticlockwise 0x7f0a00c3
 int id dragClockwise 0x7f0a00c4
 int id dragDown 0x7f0a00c5
@@ -2913,8 +2917,12 @@ int id icon_only 0x7f0a010c
 int id ifRoom 0x7f0a010d
 int id ignore 0x7f0a010e
 int id ignoreRequest 0x7f0a010f
+int id im_back_arrow 0x7f0a0288
+int id im_menu_meal_img 0x7f0a0284
 int id im_shopImg 0x7f0a0110
+int id im_shop_image 0x7f0a0287
 int id im_upload 0x7f0a0111
+int id im_upload_shop_img 0x7f0a027d
 int id image 0x7f0a0112
 int id imageView 0x7f0a0113
 int id imageView10 0x7f0a0114
@@ -2969,6 +2977,7 @@ int id lv_cart 0x7f0a0144
 int id lv_edit_shop_prodile 0x7f0a0145
 int id lv_history 0x7f0a0146
 int id lv_shop 0x7f0a0147
+int id lv_show_menu 0x7f0a0281
 int id mainActivity_simulate 0x7f0a0148
 int id masked 0x7f0a0149
 int id match_constraint 0x7f0a014a
@@ -3233,8 +3242,12 @@ int id tv_lat 0x7f0a024b
 int id tv_lbladdress 0x7f0a024c
 int id tv_location_addr 0x7f0a024d
 int id tv_lon 0x7f0a024e
+int id tv_menu_meal_name 0x7f0a0285
+int id tv_menu_meal_price 0x7f0a0286
 int id tv_sensor 0x7f0a024f
 int id tv_shop_address 0x7f0a0250
+int id tv_shop_info_name 0x7f0a0282
+int id tv_shop_info_phone 0x7f0a0283
 int id tv_shop_name 0x7f0a0251
 int id tv_shop_status 0x7f0a0273
 int id tv_title 0x7f0a0252
@@ -3383,10 +3396,12 @@ int layout fragment_home 0x7f0d0038
 int layout fragment_shop_add 0x7f0d0039
 int layout fragment_shop_history 0x7f0d003a
 int layout fragment_shop_home 0x7f0d003b
+int layout fragment_shop_info 0x7f0d0090
 int layout layout_edit_profile 0x7f0d003c
 int layout layout_home 0x7f0d003d
 int layout layout_navigation_header 0x7f0d003e
 int layout listitem 0x7f0d003f
+int layout listitem_shop_page 0x7f0d0091
 int layout m3_alert_dialog 0x7f0d0040
 int layout m3_alert_dialog_actions 0x7f0d0041
 int layout m3_alert_dialog_title 0x7f0d0042

@@ -16,20 +16,20 @@
         "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable\\bg_edit.xml"
     },
     {
-        "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_add_menu_body.xml.flat",
-        "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable\\bg_add_menu_body.xml"
-    },
-    {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\menu_navigation_menu.xml.flat",
         "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\menu\\navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_down.png.flat",
-        "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable-xhdpi\\ic_down.png"
+        "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_add_menu_body.xml.flat",
+        "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable\\bg_add_menu_body.xml"
     },
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_down.png.flat",
+        "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable-xhdpi\\ic_down.png"
     },
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_shop_home.xml.flat",
@@ -78,6 +78,10 @@
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_input.xml.flat",
         "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable\\bg_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_shop_info.xml.flat",
+        "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\layout\\fragment_shop_info.xml"
     },
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_other.png.flat",
@@ -134,6 +138,10 @@
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_cart.xml.flat",
         "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\layout_listitem_shop_page.xml.flat",
+        "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\layout\\listitem_shop_page.xml"
     },
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\menu_bottom_nav_menu.xml.flat",
@@ -234,6 +242,10 @@
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi_ic_backarrow.png.flat",
+        "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable-anydpi\\ic_backarrow.png"
     },
     {
         "merged": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_shop_history.xml.flat",

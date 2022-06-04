@@ -2560,6 +2560,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_backarrow
 drawable ic_baseline_edit_24
 drawable ic_baseline_push_pin_24
 drawable ic_clock_black_24dp
@@ -2766,6 +2767,7 @@ id btn_nav_home_shop
 id btn_register
 id btn_sendout
 id btn_upload_img
+id btn_upload_shop_img
 id button
 id button2
 id button3
@@ -2836,7 +2838,9 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id divider
+id divider2
 id divider3
+id divider4
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2914,8 +2918,12 @@ id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
+id im_back_arrow
+id im_menu_meal_img
 id im_shopImg
+id im_shop_image
 id im_upload
+id im_upload_shop_img
 id image
 id imageView
 id imageView10
@@ -2970,6 +2978,7 @@ id lv_cart
 id lv_edit_shop_prodile
 id lv_history
 id lv_shop
+id lv_show_menu
 id mainActivity_simulate
 id masked
 id match_constraint
@@ -3234,8 +3243,12 @@ id tv_lat
 id tv_lbladdress
 id tv_location_addr
 id tv_lon
+id tv_menu_meal_name
+id tv_menu_meal_price
 id tv_sensor
 id tv_shop_address
+id tv_shop_info_name
+id tv_shop_info_phone
 id tv_shop_name
 id tv_shop_status
 id tv_title
@@ -3384,10 +3397,12 @@ layout fragment_home
 layout fragment_shop_add
 layout fragment_shop_history
 layout fragment_shop_home
+layout fragment_shop_info
 layout layout_edit_profile
 layout layout_home
 layout layout_navigation_header
 layout listitem
+layout listitem_shop_page
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

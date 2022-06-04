@@ -22,6 +22,7 @@ drawable bg_edit
 drawable bg_input
 drawable bg_shop_status
 drawable bottom_navigation_selector
+drawable ic_backarrow
 drawable ic_baseline_edit_24
 drawable ic_baseline_push_pin_24
 drawable ic_down
@@ -67,6 +68,7 @@ id btn_nav_home_shop
 id btn_register
 id btn_sendout
 id btn_upload_img
+id btn_upload_shop_img
 id button
 id button2
 id button3
@@ -74,7 +76,9 @@ id cart
 id delivery_man_mode
 id delivery_man_mode_shop
 id divider
+id divider2
 id divider3
+id divider4
 id drawerLayout
 id drawerLayout_shop
 id editTextTextPersonName
@@ -96,8 +100,12 @@ id general_mode_shop
 id guideline2
 id history
 id home_frag_address
+id im_back_arrow
+id im_menu_meal_img
 id im_shopImg
+id im_shop_image
 id im_upload
+id im_upload_shop_img
 id imageView
 id imageView10
 id imageView11
@@ -125,6 +133,7 @@ id lv_cart
 id lv_edit_shop_prodile
 id lv_history
 id lv_shop
+id lv_show_menu
 id mainActivity_simulate
 id menuLogout
 id menuProfile
@@ -166,8 +175,12 @@ id tv_lat
 id tv_lbladdress
 id tv_location_addr
 id tv_lon
+id tv_menu_meal_name
+id tv_menu_meal_price
 id tv_sensor
 id tv_shop_address
+id tv_shop_info_name
+id tv_shop_info_phone
 id tv_shop_name
 id tv_shop_status
 id tv_title
@@ -188,10 +201,12 @@ layout fragment_home
 layout fragment_shop_add
 layout fragment_shop_history
 layout fragment_shop_home
+layout fragment_shop_info
 layout layout_edit_profile
 layout layout_home
 layout layout_navigation_header
 layout listitem
+layout listitem_shop_page
 menu bottom_nav_menu
 menu bottom_nav_shop_menu
 menu navigation_menu

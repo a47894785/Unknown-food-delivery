@@ -165,6 +165,7 @@ public class RegisterActivity extends AppCompatActivity {
     shop.put("shopPhone", "");
     shop.put("shopEmail", "");
     shop.put("shopStatus", "close");
+    shop.put("shopImage", "");
 
     documentReference.set(shop).addOnSuccessListener(new OnSuccessListener<Void>() {
       @Override
