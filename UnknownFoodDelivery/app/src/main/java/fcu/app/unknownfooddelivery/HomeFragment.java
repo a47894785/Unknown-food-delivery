@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
             Log.d("documents", String.valueOf(document.getData().get("shopName")));
             String shopName = String.valueOf(document.getData().get("shopName"));
             String shopAddress = String.valueOf(document.getData().get("shopAddress"));
-            String shopImgName = "salad.jpg";
+            String shopImgName = String.valueOf(document.getData().get("shopImage"));
             homeShopLists.add(new HomeShopItem(shopName, shopAddress, shopImgName));
           }
         }

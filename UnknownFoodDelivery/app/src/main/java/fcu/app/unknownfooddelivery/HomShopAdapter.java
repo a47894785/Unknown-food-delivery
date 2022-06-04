@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.IOException;
@@ -56,19 +57,20 @@ public class HomShopAdapter extends ArrayAdapter<HomeShopItem> {
     tvShopAddress.setText(item.getShopAddress());
 
     ImageView imShopImg = itemLayout.findViewById(R.id.im_shopImg);
-    storageRef = FirebaseStorage.getInstance().getReference();
-    pic_storage = storageRef.child(item.getImgName());
-    try {
-      File localFile = File.createTempFile("images", "jpg");
-      pic_storage.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-        @Override
-        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-          imShopImg.setImageURI(Uri.fromFile(localFile));
-        }
-      });
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+    Picasso.get().load(item.getImgName()).into(imShopImg);
+//    storageRef = FirebaseStorage.getInstance().getReference();
+//    pic_storage = storageRef.child(item.getImgName());
+//    try {
+//      File localFile = File.createTempFile("images", "jpg");
+//      pic_storage.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+//        @Override
+//        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+//          imShopImg.setImageURI(Uri.fromFile(localFile));
+//        }
+//      });
+//    } catch (IOException e) {
+//      e.printStackTrace();
+//    }
 
    return  itemLayout;
   }

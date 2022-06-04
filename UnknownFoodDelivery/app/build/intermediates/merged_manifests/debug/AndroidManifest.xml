@@ -101,8 +101,15 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="fcu.app.unknownfooddelivery.com.squareup.picasso"
+            android:exported="false" />
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="fcu.app.unknownfooddelivery.firebaseinitprovider"

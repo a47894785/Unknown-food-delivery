@@ -1,9 +1,13 @@
 package fcu.app.unknownfooddelivery;
 
+import android.content.ContentResolver;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
@@ -12,8 +16,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,8 +29,13 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,11 +44,18 @@ import java.util.Map;
 public class EditRestaurantFragment extends Fragment {
 
   private String[] restaurantProfileTitle = {"店家名稱", "店家地址", "電話", "電子郵件"};
-  String rName, rEmail, rPhone, rAddress, userEmail;
-  String updateData;
+  String rName, rEmail, rPhone, rAddress, userEmail, rImgUrl;
+  String updateData, data_type;
   private FirebaseFirestore db;
   private FirebaseAuth fAuth;
   private String userId;
+
+  private Button btnUpload;
+  private ImageView imShopImg;
+  private Intent intent;
+  private Uri uri;
+  private StorageReference storageReference,pic_storage;
+  Boolean imgFlag = false;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,8 +68,12 @@ public class EditRestaurantFragment extends Fragment {
       rEmail = this.getArguments().getString("shopEmail").equals("") ? "尚未設定電子郵件" : this.getArguments().getString("shopEmail");
       rPhone = this.getArguments().getString("shopPhone").equals("") ? "尚未設定店家電話" : this.getArguments().getString("shopPhone");
       rAddress = this.getArguments().getString("shopAddress").equals("") ? "尚未設定店家地址" : this.getArguments().getString("shopAddress");
+      rImgUrl = this.getArguments().getString("shopImage");
     }
 
+    imShopImg = view.findViewById(R.id.im_upload_shop_img);
+    btnUpload = view.findViewById(R.id.btn_upload_shop_img);
+    storageReference = FirebaseStorage.getInstance().getReference();
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
@@ -65,6 +88,62 @@ public class EditRestaurantFragment extends Fragment {
 
     RestaurantProfileAdapter adapter = new RestaurantProfileAdapter(getContext(), R.layout.layout_edit_profile, restaurantProfileList);
     lv.setAdapter(adapter);
+
+    if (rImgUrl != "") {
+      Picasso.get().load(rImgUrl).into(imShopImg);
+    }
+
+    imShopImg.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+          intent = new Intent();
+          intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+          intent.setType("image/*");
+          intent.setAction(Intent.ACTION_GET_CONTENT);
+          startActivityForResult(intent, 1);
+      }
+    });
+
+    btnUpload.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        if (imgFlag) {
+          Log.d("rName", rName);
+          pic_storage = storageReference.child(rName + "." + data_type);
+          pic_storage.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+              Log.d("photo", "OnSuccess: upload photo");
+              pic_storage.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                @Override
+                public void onComplete(@NonNull Task<Uri> task) {
+                  String imgUrl = task.getResult().toString();
+                  DocumentReference documentReference = db.collection("shops").document(userId);
+                  Map<String, Object> shopImgUrl = new HashMap<>();
+                  shopImgUrl.put("shopImage", imgUrl);
+
+                  documentReference.update(shopImgUrl).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                      Toast.makeText(getContext(), "上傳成功!", Toast.LENGTH_SHORT).show();
+                      Log.d("UploadImage", "Successfully");
+                    }
+                  }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                      Log.d("UploadImage", "Failed");
+                    }
+                  });
+                }
+              });
+            }
+          });
+        } else {
+          Toast.makeText(getContext(), "錯誤", Toast.LENGTH_SHORT).show();
+        }
+
+      }
+    });
 
     lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
@@ -109,6 +188,20 @@ public class EditRestaurantFragment extends Fragment {
     });
 
     return view;
+  }
+
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    if (requestCode == 1){
+      uri = data.getData();
+      Log.d("URIINFO", String.valueOf(uri));
+      imShopImg.setImageURI(uri);
+      ContentResolver contentResolver = getContext().getContentResolver();
+      MimeTypeMap mimeTypeMap= MimeTypeMap.getSingleton();
+      data_type = mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+      imgFlag = true;
+    }
+    super.onActivityResult(requestCode, resultCode, data);
   }
 
   private void updateRestaurantInfo(int index, String userEmail, String newData) {

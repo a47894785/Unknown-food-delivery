@@ -34,7 +34,7 @@ public class RestaurantActivity extends AppCompatActivity {
   private FirebaseFirestore db;
   private DocumentReference documentReference;
   private String userId;
-  private String rName = "", rEmail = "", rPhone = "", rAddress  = "", userEmail = "", rStatus;
+  private String rName = "", rEmail = "", rPhone = "", rAddress  = "", userEmail = "", rStatus, rImgUrl = "";
   boolean flag = false;
 
   int bottomId;
@@ -80,8 +80,9 @@ public class RestaurantActivity extends AppCompatActivity {
           rPhone = documentSnapshot.getString("shopPhone");
           rAddress = documentSnapshot.getString("shopAddress");
           rStatus = documentSnapshot.getString("shopStatus");
+          rImgUrl = documentSnapshot.getString("shopImage");
           flag = true;
-          checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
+          checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress, rImgUrl);
           //跳轉進來就進入到 ShopHomeFragment
           bottomId = R.id.btn_nav_home_shop;
           Bundle bundle = new Bundle();
@@ -168,10 +169,10 @@ public class RestaurantActivity extends AppCompatActivity {
 
   }
 
-  public void checkRestaurantInfo(EditRestaurantFragment editRestaurantFragment, boolean flag, String rName, String rEmail, String rPhone, String rAddress) {
+  public void checkRestaurantInfo(EditRestaurantFragment editRestaurantFragment, boolean flag, String rName, String rEmail, String rPhone, String rAddress, String rImgUrl) {
 
-    if (rName == null || rEmail == null || rPhone == null || rAddress == null
-        || rName == "" || rEmail == "" || rPhone == "" || rAddress == ""){
+    if (rName == null || rEmail == null || rPhone == null || rAddress == null || rImgUrl == null
+        || rName == "" || rEmail == "" || rPhone == "" || rAddress == "" || rImgUrl == ""){
       AlertDialog.Builder checkDialog = new AlertDialog.Builder(this);
       checkDialog.setMessage("尚有店家資訊未設定，請至店家資訊設定。");
       checkDialog.setTitle("提醒");
@@ -198,7 +199,7 @@ public class RestaurantActivity extends AppCompatActivity {
           rPhone = documentSnapshot.getString("shopPhone");
           rAddress = documentSnapshot.getString("shopAddress");
           rStatus = documentSnapshot.getString("shopStatus");
-          checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
+          checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress, rImgUrl);
           Log.d("GetRestaurantInfo", "NO.3 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
         }
       }
@@ -227,6 +228,7 @@ public class RestaurantActivity extends AppCompatActivity {
     bundle.putString("shopPhone", rPhone);
     bundle.putString("shopAddress", rAddress);
     bundle.putString("userEmail", userEmail);
+    bundle.putString("shopImage", rImgUrl);
     editRestaurantFragment.setArguments(bundle);
   }
 

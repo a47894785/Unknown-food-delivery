@@ -15,6 +15,8 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\PinHua\.gradle\ca
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\b0e4be692ce7049b5a98718950615c50\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:15:1-38:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\38e5b66d42b0986267915b7e3e70732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\PinHua\.gradle\caches\transforms-3\fd521136ce2c6392395539f549a62f43\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6860b130f9ab3b506df3cd72ce86393a\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
@@ -80,6 +82,7 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\PinHua\.gradle\caches\transfor
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\b5b9a8ffe71c29ead418b5833555d33b\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\0c56d297b0c111274292142cfab35623\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\27bd022f5f4fdf47298f2b9153bc58e2\transformed\exifinterface-27.1.0\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
 INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
 INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-44:12
@@ -105,6 +108,8 @@ MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gra
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:26:5-67
 	android:name
 		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -133,6 +138,10 @@ MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradl
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6860b130f9ab3b506df3cd72ce86393a\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6860b130f9ab3b506df3cd72ce86393a\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6ce665f93413e69f06e123ad51aeca95\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
@@ -247,6 +256,10 @@ MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinH
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\6496b389223c04c88479051e22b657a6\transformed\play-services-location-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\b0e4be692ce7049b5a98718950615c50\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\b0e4be692ce7049b5a98718950615c50\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\38e5b66d42b0986267915b7e3e70732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\38e5b66d42b0986267915b7e3e70732a\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\PinHua\.gradle\caches\transforms-3\fd521136ce2c6392395539f549a62f43\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
@@ -377,6 +390,8 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Pin
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\0c56d297b0c111274292142cfab35623\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\27bd022f5f4fdf47298f2b9153bc58e2\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\27bd022f5f4fdf47298f2b9153bc58e2\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -393,6 +408,8 @@ MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gra
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:25:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\1f090d05d10d542834632a524fde4f69\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 	android:name
@@ -451,6 +468,8 @@ MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gra
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\643bb2969e04c54af4ffc6b67f95f544\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\3d3046c03e2c58ca4fecb9a85cbcc3a4\transformed\firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
 MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\3d3046c03e2c58ca4fecb9a85cbcc3a4\transformed\firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
 	android:exported
@@ -479,6 +498,20 @@ ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle
 		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\PinHua\.gradle\caches\transforms-3\781cfed6792636743c0f7fc15107d7ec\transformed\firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\cdffe5b3430620d06da6472a0e0e113b\transformed\firebase-database-19.6.0\AndroidManifest.xml:33:17-109
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\PinHua\.gradle\caches\transforms-3\9890a520faf00cfea8728603091c3bfd\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\3d3046c03e2c58ca4fecb9a85cbcc3a4\transformed\firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
 	android:authorities
