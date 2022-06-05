@@ -3,6 +3,7 @@ local
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
+array mealNum
 array preloaded_fonts
 array shop_status
 color black
@@ -130,7 +131,7 @@ id imageView7
 id imageView8
 id imageView9
 id image_View16_shop
-id iv_menu_deliver
+id iv_menu
 id iv_menu_shop
 id lock
 id lv_cart
@@ -151,7 +152,7 @@ id menu_logout_shop
 id menu_profile_shop
 id message
 id nav
-id navigationView_deliver
+id navigationView
 id navigationView_shop
 id shop_mode
 id shop_mode_deliver

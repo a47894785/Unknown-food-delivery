@@ -74,6 +74,7 @@ animator nav_default_pop_exit_anim
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
+array mealNum
 array preloaded_fonts
 array shop_status
 attr SharedValue
@@ -2986,7 +2987,7 @@ id item2
 id item3
 id item4
 id item_touch_helper_previous_elevation
-id iv_menu_deliver
+id iv_menu
 id iv_menu_shop
 id jumpToEnd
 id jumpToStart
@@ -3080,7 +3081,7 @@ id multiply
 id nav
 id nav_controller_view_tag
 id nav_host_fragment_container
-id navigationView_deliver
+id navigationView
 id navigationView_shop
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container

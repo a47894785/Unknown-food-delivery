@@ -4,12 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.content.Intent;
 import android.os.Build;
@@ -55,9 +49,9 @@ public class DeliverActivity extends AppCompatActivity{
     db = FirebaseFirestore.getInstance();
 
 
-    ivMenuShop = findViewById(R.id.iv_menu_deliver);
+    ivMenuShop = findViewById(R.id.iv_menu);
     drawerLayoutShop = findViewById(R.id.drawerLayout_deliver);
-    navigationViewShop = findViewById(R.id.navigationView_deliver);
+    navigationViewShop = findViewById(R.id.navigationView);
     getSupportFragmentManager().beginTransaction().replace(R.id.delivery_container,mapsFragment).commit();
     ivMenuShop.setOnClickListener(new View.OnClickListener() {
       @Override

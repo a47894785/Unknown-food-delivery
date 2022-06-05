@@ -2,7 +2,10 @@ package fcu.app.unknownfooddelivery;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +17,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ShopHomeFragment extends Fragment {
 
@@ -22,6 +34,10 @@ public class ShopHomeFragment extends Fragment {
   private Spinner spinner;
   private Button btnChange;
   private int selected;
+  private FirebaseFirestore db;
+  private FirebaseAuth fAuth;
+  private String userId;
+  private String changeStatus;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,17 +54,21 @@ public class ShopHomeFragment extends Fragment {
       Log.d("Status", shopStatus);
     }
 
-//    switch (shopStatus) {
-//      case "open":
-//        tvStatus.setText("營業中");
-//        break;
-//      case "busy":
-//        tvStatus.setText("忙碌中");
-//        break;
-//      case "close":
-//        tvStatus.setText("結束營業");
-//        break;
-//    }
+    fAuth = FirebaseAuth.getInstance();
+    db = FirebaseFirestore.getInstance();
+    userId = fAuth.getCurrentUser().getUid();
+
+    switch (shopStatus) {
+      case "open":
+        tvStatus.setText("營業中");
+        break;
+      case "busy":
+        tvStatus.setText("忙碌中");
+        break;
+      case "close":
+        tvStatus.setText("結束營業");
+        break;
+    }
 
 
 
@@ -58,19 +78,55 @@ public class ShopHomeFragment extends Fragment {
         selected = spinner.getSelectedItemPosition();
         switch (selected) {
           case 1:
-
-            tvStatus.setText("營業中");
+            if (shopStatus.equals("open")){
+              changeStatus = "error";
+              Toast.makeText(getContext(), "錯誤!", Toast.LENGTH_SHORT).show();
+            } else {
+              changeStatus = "open";
+            }
+//            tvStatus.setText("營業中");
             break;
           case 2:
-            tvStatus.setText("忙碌中");
+            if (shopStatus.equals("busy")){
+              changeStatus = "error";
+              Toast.makeText(getContext(), "錯誤!", Toast.LENGTH_SHORT).show();
+            } else {
+              changeStatus = "busy";
+            }
+//            tvStatus.setText("忙碌中");
             break;
           case 3:
-            tvStatus.setText("結束營業");
+            if (shopStatus.equals("close")){
+              changeStatus = "error";
+              Toast.makeText(getContext(), "錯誤!", Toast.LENGTH_SHORT).show();
+            } else {
+              changeStatus = "close";
+            }
+//            tvStatus.setText("結束營業");
             break;
           default:
-            tvStatus.setText("請設定營業狀態");
+            Toast.makeText(getContext(), "錯誤，請選擇欲更改的狀態", Toast.LENGTH_SHORT).show();
+            changeStatus = "error";
+//            tvStatus.setText("請設定營業狀態");
             break;
         }
+        Log.d("ChangeStatus", changeStatus);
+        Map<String, Object> shopChangeStatus = new HashMap<>();
+        shopChangeStatus.put("shopStatus", changeStatus);
+
+        db.collection("shops").document(userId).update(shopChangeStatus).addOnSuccessListener(new OnSuccessListener<Void>() {
+          @Override
+          public void onSuccess(Void unused) {
+            Toast.makeText(getContext(), "更改營業狀態成功", Toast.LENGTH_SHORT).show();
+          }
+        }).addOnFailureListener(new OnFailureListener() {
+          @Override
+          public void onFailure(@NonNull Exception e) {
+            Toast.makeText(getContext(), "更改營業狀態失敗", Toast.LENGTH_SHORT).show();
+
+          }
+        });
+
       }
     });
 

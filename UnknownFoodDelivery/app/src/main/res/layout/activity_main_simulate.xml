@@ -36,7 +36,7 @@
             android:paddingRight="10dp"
             android:textColor="#000000"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_menu_deliver"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_menu"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
@@ -49,7 +49,7 @@
             app:srcCompat="@drawable/bg" />
 
         <ImageView
-            android:id="@+id/iv_menu_deliver"
+            android:id="@+id/iv_menu"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="20dp"
@@ -98,14 +98,14 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/bg"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_menu_deliver"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_menu"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_backarrow" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigationView_deliver"
+        android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

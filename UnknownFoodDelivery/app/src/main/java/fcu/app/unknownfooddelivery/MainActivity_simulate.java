@@ -2,7 +2,11 @@ package fcu.app.unknownfooddelivery;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -62,6 +66,11 @@ public class MainActivity_simulate extends AppCompatActivity {
     int count = 0;
     int bottomId;
 
+    static final String DB_NAME = "unknown";
+    static final String TB_NAME = "cart";
+    SQLiteDatabase sqlDb;
+    String createTable;
+
     private String currentAddress = "當前位置";
     LocationRequest locationRequest;
     LocationCallback locationCallBack;
@@ -87,10 +96,21 @@ public class MainActivity_simulate extends AppCompatActivity {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 //            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
-
         fAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
         userId = fAuth.getCurrentUser().getUid();
+
+        sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
+        createTable = "CREATE TABLE IF NOT EXISTS " + TB_NAME +
+            "(userId VARCHAR(32), " +
+            "shopName VARCHAR(16), " +
+            "mealName VARCHAR(16), " +
+            "mealPrice VARCHAR(8), " +
+            "mealNum VARCHAR(8))";
+
+        sqlDb.execSQL(createTable);
+        sqlDb.close();
+
         DocumentReference documentReference = db.collection("users").document(userId);
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -109,9 +129,9 @@ public class MainActivity_simulate extends AppCompatActivity {
 
         tvLocationAddr = findViewById(R.id.tv_location_addr);
         drawerLayout = findViewById(R.id.drawerLayout);
-        ivMenu = findViewById(R.id.iv_menu_deliver);
+        ivMenu = findViewById(R.id.iv_menu);
         etSearch = findViewById(R.id.et_search);
-        navigationView = findViewById(R.id.navigationView_deliver);
+        navigationView = findViewById(R.id.navigationView);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.getMenu().getItem(0).setChecked(false);
 
@@ -150,8 +170,6 @@ public class MainActivity_simulate extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                 } else if(id == R.id.shop_mode){
                     startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
-                }else if(id == R.id.delivery_man_mode){
-                    startActivity(new Intent(getApplicationContext(), DeliverActivity.class));
                 }
                 return true;
             }
@@ -299,6 +317,55 @@ public class MainActivity_simulate extends AppCompatActivity {
                 //
             }
         }
+    }
+
+    protected void updateSql(String userId, String shopName, String mealName, String mealPrice, String mealNum){
+        Log.d("ReturnValues", userId + "/ " + shopName + "/ " + mealName + "/ "  + mealPrice + "/ " + mealNum);
+        sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
+        sqlDb.execSQL(createTable);
+
+        Cursor cursor = sqlDb.rawQuery("SELECT * FROM " + TB_NAME, null);
+        ContentValues contentValues = new ContentValues(5);
+        contentValues.put("userId", userId);
+        contentValues.put("shopName", shopName);
+        contentValues.put("mealName", mealName);
+        contentValues.put("mealPrice", mealPrice);
+        contentValues.put("mealNum", mealNum);
+
+        sqlDb.insert(TB_NAME, null, contentValues);
+        sqlDb.close();
+    }
+
+    protected void getSqlData() {
+        sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
+        sqlDb.execSQL(createTable);
+
+        Cursor cursor = sqlDb.rawQuery("SELECT * FROM " + TB_NAME, null);
+        String str = "";
+        if (cursor.moveToFirst()){
+            str = "總共有 " + cursor.getCount() + "筆資料\n";
+            str += "-----------------------------\n";
+
+            do{
+                str += "userId:" + cursor.getString(0) + "\n";
+                str += "shopName:" + cursor.getString(1) + "\n";
+                str += "mealName:" + cursor.getString(2) + "\n";
+                str += "mealPrice:" + cursor.getString(3) + "\n";
+                str += "mealNum:" + cursor.getString(4) + "\n";
+                str += "-----------------------------\n";
+            } while(cursor.moveToNext());
+        } else if (cursor.getCount() == 0) {
+            str = "總共有 0 筆資料";
+        }
+        Log.d("CheckSqlData", str);
+        sqlDb.close();
+    }
+
+    protected void delSqlData() {
+        sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
+        String deleteData = "DELETE FROM " + TB_NAME;
+        sqlDb.execSQL(deleteData);
+        sqlDb.close();
     }
 
     @Override
