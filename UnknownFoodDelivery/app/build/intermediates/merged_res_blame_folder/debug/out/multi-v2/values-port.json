@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "C:\\unknown2\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sfsffk\\.gradle\\caches\\transforms-3\\4cbcb2a139875109bde94b7e730430f9\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\96140\\.gradle\\caches\\transforms-3\\4cbcb2a139875109bde94b7e730430f9\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

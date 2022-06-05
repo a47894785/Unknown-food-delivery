@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\sfsffk\\Documents\\GitHub\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+            "outputFile": "C:\\unknown2\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sfsffk\\.gradle\\caches\\transforms-3\\3b185c71f62a8e5ce74dbacb5af9ac95\\transformed\\material-1.5.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\96140\\.gradle\\caches\\transforms-3\\3b185c71f62a8e5ce74dbacb5af9ac95\\transformed\\material-1.5.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -128,6 +128,8 @@ public class RestaurantActivity extends AppCompatActivity {
           drawerLayoutShop.closeDrawer(GravityCompat.START);
         } else if (id == R.id.general_mode_shop){
           startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
+        }else if(id == R.id.delivery_man_mode_shop){
+          startActivity(new Intent(getApplicationContext(), DeliverActivity.class));
         }
         return true;
       }

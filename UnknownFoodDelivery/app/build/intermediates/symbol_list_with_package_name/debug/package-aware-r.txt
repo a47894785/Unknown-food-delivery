@@ -2822,6 +2822,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id delivery_man_mode
+id delivery_man_mode_deliver
 id delivery_man_mode_shop
 id deltaRelative
 id dependency_ordering
@@ -2851,6 +2852,7 @@ id dragRight
 id dragStart
 id dragUp
 id drawerLayout
+id drawerLayout_deliver
 id drawerLayout_shop
 id dropdown_menu
 id easeIn
@@ -2894,6 +2896,7 @@ id fragment_container_view_tag
 id frost
 id general_chat
 id general_mode
+id general_mode_deliver
 id general_mode_shop
 id ghost_view
 id ghost_view_holder
@@ -2956,7 +2959,7 @@ id item2
 id item3
 id item4
 id item_touch_helper_previous_elevation
-id iv_menu
+id iv_menu_deliver
 id iv_menu_shop
 id jumpToEnd
 id jumpToStart
@@ -3005,8 +3008,11 @@ id material_value_index
 id media_actions
 id menuLogout
 id menuProfile
+id menuProfile_deliver
 id menu_change_shop
+id menu_history_deliver
 id menu_history_shop
+id menu_logout_deliver
 id menu_logout_shop
 id menu_profile_shop
 id message
@@ -3046,7 +3052,7 @@ id multiply
 id nav
 id nav_controller_view_tag
 id nav_host_fragment_container
-id navigationView
+id navigationView_deliver
 id navigationView_shop
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
@@ -3125,6 +3131,7 @@ id selection_type
 id sharedValueSet
 id sharedValueUnset
 id shop_mode
+id shop_mode_deliver
 id shop_mode_shop
 id shortcut
 id showCustom
@@ -3203,6 +3210,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
 id textView9
 id text_input_end_icon
@@ -3365,6 +3373,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_deliver
 layout activity_login
 layout activity_main
 layout activity_main_simulate
@@ -3487,6 +3496,7 @@ menu bottom_nav_menu
 menu bottom_nav_shop_menu
 menu example_menu
 menu example_menu2
+menu navigation_deliver_menu
 menu navigation_menu
 menu navigation_shop_menu
 mipmap ic_launcher

@@ -109,9 +109,9 @@ public class MainActivity_simulate extends AppCompatActivity {
 
         tvLocationAddr = findViewById(R.id.tv_location_addr);
         drawerLayout = findViewById(R.id.drawerLayout);
-        ivMenu = findViewById(R.id.iv_menu);
+        ivMenu = findViewById(R.id.iv_menu_deliver);
         etSearch = findViewById(R.id.et_search);
-        navigationView = findViewById(R.id.navigationView);
+        navigationView = findViewById(R.id.navigationView_deliver);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.getMenu().getItem(0).setChecked(false);
 
@@ -150,6 +150,8 @@ public class MainActivity_simulate extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                 } else if(id == R.id.shop_mode){
                     startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
+                }else if(id == R.id.delivery_man_mode){
+                    startActivity(new Intent(getApplicationContext(), DeliverActivity.class));
                 }
                 return true;
             }

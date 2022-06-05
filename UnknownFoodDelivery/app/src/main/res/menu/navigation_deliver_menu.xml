@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menuProfile_deliver"
+        android:icon="@drawable/userprofile"
+        android:title="個人資訊" />
+
+    <item android:id="@+id/menu_history_deliver"
+        android:icon="@drawable/icon_shophistory"
+        android:title="今日訂單" />
+
+    <item android:id="@+id/menu_logout_deliver"
+        android:icon="@drawable/ic_logout"
+        android:title="登出" />
+
+    <item android:title="模式">
+        <menu>
+            <item android:title="外送員"
+                android:id="@+id/delivery_man_mode_deliver"/>
+            <item android:title="一般使用者"
+                android:id="@+id/general_mode_deliver"/>
+            <item android:title="店家"
+                android:id="@+id/shop_mode_deliver"/>
+        </menu>
+    </item>
+
+</menu>

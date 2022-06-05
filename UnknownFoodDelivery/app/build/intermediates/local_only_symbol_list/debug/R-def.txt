@@ -75,12 +75,14 @@ id button2
 id button3
 id cart
 id delivery_man_mode
+id delivery_man_mode_deliver
 id delivery_man_mode_shop
 id divider
 id divider2
 id divider3
 id divider4
 id drawerLayout
+id drawerLayout_deliver
 id drawerLayout_shop
 id editTextTextPersonName
 id edit_profile_lv
@@ -97,6 +99,7 @@ id et_phone
 id et_search
 id general_chat
 id general_mode
+id general_mode_deliver
 id general_mode_shop
 id guideline2
 id history
@@ -126,7 +129,7 @@ id imageView7
 id imageView8
 id imageView9
 id image_View16_shop
-id iv_menu
+id iv_menu_deliver
 id iv_menu_shop
 id lock
 id lv_cart
@@ -137,15 +140,19 @@ id lv_show_menu
 id mainActivity_simulate
 id menuLogout
 id menuProfile
+id menuProfile_deliver
 id menu_change_shop
+id menu_history_deliver
 id menu_history_shop
+id menu_logout_deliver
 id menu_logout_shop
 id menu_profile_shop
 id message
 id nav
-id navigationView
+id navigationView_deliver
 id navigationView_shop
 id shop_mode
+id shop_mode_deliver
 id shop_mode_shop
 id sp_status
 id sw_gps
@@ -160,6 +167,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
 id textView9
 id tv_address
@@ -187,6 +195,7 @@ id tv_title
 id tv_updates
 id tv_username
 id view
+layout activity_deliver
 layout activity_login
 layout activity_main
 layout activity_main_simulate
@@ -209,6 +218,7 @@ layout listitem
 layout listitem_shop_page
 menu bottom_nav_menu
 menu bottom_nav_shop_menu
+menu navigation_deliver_menu
 menu navigation_menu
 menu navigation_shop_menu
 mipmap ic_launcher
