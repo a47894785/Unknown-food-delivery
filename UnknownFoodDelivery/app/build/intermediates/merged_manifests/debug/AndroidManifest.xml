@@ -49,7 +49,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyD7hHqwXg71U-svTu9wyX4P1LILvfHzehQ" />
 
         <activity
             android:name="fcu.app.unknownfooddelivery.DeliverActivity"
