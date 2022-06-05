@@ -4,6 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.content.Intent;
 import android.os.Build;
@@ -18,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class DeliverActivity extends AppCompatActivity {
+public class DeliverActivity extends AppCompatActivity{
 
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
@@ -27,11 +33,17 @@ public class DeliverActivity extends AppCompatActivity {
   private DrawerLayout drawerLayoutShop;
   private ImageView ivMenuShop;
   private NavigationView navigationViewShop;
+  MapsFragment mapsFragment = new MapsFragment();
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_deliver);
+    /*SupportMapFragment
+            .findFragmentById(R.id.map);
+    mapFragment.getMapAsync(this);*/
+
 
     // 改變上方通知欄
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -46,7 +58,7 @@ public class DeliverActivity extends AppCompatActivity {
     ivMenuShop = findViewById(R.id.iv_menu_deliver);
     drawerLayoutShop = findViewById(R.id.drawerLayout_deliver);
     navigationViewShop = findViewById(R.id.navigationView_deliver);
-
+    getSupportFragmentManager().beginTransaction().replace(R.id.delivery_container,mapsFragment).commit();
     ivMenuShop.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -71,4 +83,10 @@ public class DeliverActivity extends AppCompatActivity {
       }
     });
   }
+  /*@Override
+  public void onMapReady(GoogleMap googleMap) {
+    googleMap.addMarker(new MarkerOptions()
+            .position(new LatLng(24.1798, 120.6467))
+            .title("Marker"));
+  }*/
 }

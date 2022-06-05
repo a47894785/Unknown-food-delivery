@@ -74,6 +74,7 @@ id button
 id button2
 id button3
 id cart
+id delivery_container
 id delivery_man_mode
 id delivery_man_mode_deliver
 id delivery_man_mode_shop
@@ -138,6 +139,7 @@ id lv_history
 id lv_shop
 id lv_show_menu
 id mainActivity_simulate
+id map
 id menuLogout
 id menuProfile
 id menuProfile_deliver
@@ -167,7 +169,6 @@ id textView2
 id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView9
 id tv_address
@@ -207,6 +208,7 @@ layout fragment_edit_restaurant
 layout fragment_general_chat
 layout fragment_history
 layout fragment_home
+layout fragment_maps
 layout fragment_shop_add
 layout fragment_shop_history
 layout fragment_shop_home
