@@ -73,9 +73,9 @@ int animator nav_default_pop_exit_anim 0x7f020023
 int array com_google_android_gms_fonts_certs 0x7f030000
 int array com_google_android_gms_fonts_certs_dev 0x7f030001
 int array com_google_android_gms_fonts_certs_prod 0x7f030002
-int array mealNum 0x7f030005
-int array preloaded_fonts 0x7f030003
-int array shop_status 0x7f030004
+int array mealNum 0x7f030003
+int array preloaded_fonts 0x7f030004
+int array shop_status 0x7f030005
 int attr SharedValue 0x7f040000
 int attr SharedValueId 0x7f040001
 int attr action 0x7f040002
@@ -2986,7 +2986,7 @@ int id item2 0x7f0a013c
 int id item3 0x7f0a013d
 int id item4 0x7f0a013e
 int id item_touch_helper_previous_elevation 0x7f0a013f
-int id iv_menu 0x7f0a0289
+int id iv_menu 0x7f0a0140
 int id iv_menu_shop 0x7f0a0141
 int id jumpToEnd 0x7f0a0142
 int id jumpToStart 0x7f0a0143
@@ -3080,7 +3080,7 @@ int id multiply 0x7f0a019a
 int id nav 0x7f0a019b
 int id nav_controller_view_tag 0x7f0a019c
 int id nav_host_fragment_container 0x7f0a019d
-int id navigationView 0x7f0a028a
+int id navigationView 0x7f0a019e
 int id navigationView_shop 0x7f0a019f
 int id navigation_bar_item_active_indicator_view 0x7f0a01a0
 int id navigation_bar_item_icon_container 0x7f0a01a1

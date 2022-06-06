@@ -168,8 +168,10 @@ public class MainActivity_simulate extends AppCompatActivity {
                     editProfileFragment.setArguments(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, editProfileFragment).commit();
                     drawerLayout.closeDrawer(GravityCompat.START);
-                } else if(id == R.id.shop_mode){
+                } else if (id == R.id.shop_mode){
                     startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
+                } else if (id == R.id.delivery_man_mode) {
+                    startActivity(new Intent(getApplicationContext(), DeliverActivity.class));
                 }
                 return true;
             }

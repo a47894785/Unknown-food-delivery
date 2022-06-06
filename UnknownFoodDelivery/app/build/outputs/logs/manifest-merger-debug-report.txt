@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.navigation:navigation-ui:2.4.2] C:\Users\PinHua\.gradle\caches\transforms-3\305d76ce424c872f5f60df496930436c\transformed\navigation-ui-2.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\PinHua\.gradle\caches\transforms-3\73aabcf6eaf165e1c2c2321712ab0401\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\PinHua\.gradle\caches\transforms-3\d9e96e05398050274f714a73265440b5\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
@@ -84,25 +84,25 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\PinHua\
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\PinHua\.gradle\caches\transforms-3\f2b7d92505ccdb37b1ea72806567808c\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\7267c6d7af507a88b065345d0892ed21\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\5371ffdaf518b4cb732c3f6a7797b95c\transformed\exifinterface-27.1.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
 	package
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:3:5-42
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:3:5-42
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:1-63:12
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d55c1c78d27dbdb4bcd1ab089225225c\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d55c1c78d27dbdb4bcd1ab089225225c\transformed\firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\da1afea896a4affc0865dbc4909e719e\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
@@ -114,21 +114,21 @@ MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\PinHua\.
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\319a129cf2de3863f9eb1160466fba07\transformed\firebase-database-19.6.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.6.0] C:\Users\PinHua\.gradle\caches\transforms-3\319a129cf2de3863f9eb1160466fba07\transformed\firebase-database-19.6.0\AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:5-81
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:5-81
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:22-78
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:6:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:8:5-80
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:8:5-80
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:8:22-77
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:8:22-77
 application
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:10:5-61:19
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:10:5-61:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\PinHua\.gradle\caches\transforms-3\73aabcf6eaf165e1c2c2321712ab0401\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\PinHua\.gradle\caches\transforms-3\73aabcf6eaf165e1c2c2321712ab0401\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\PinHua\.gradle\caches\transforms-3\d9e96e05398050274f714a73265440b5\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
@@ -178,79 +178,79 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\PinHua\.gradle\cac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\PinHua\.gradle\caches\transforms-3\65c5a45dc0ebea764720990f61f025b1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:16:9-57
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:16:9-57
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:29:9-31:71
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:29:9-31:71
 	android:value
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:31:13-68
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:31:13-68
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:30:13-58
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:30:13-58
 activity#fcu.app.unknownfooddelivery.DeliverActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:33:9-35:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:33:9-35:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:35:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:34:13-44
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:34:13-44
 activity#fcu.app.unknownfooddelivery.RestaurantActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:36:9-38:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:36:9-38:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:37:13-47
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:37:13-47
 activity#fcu.app.unknownfooddelivery.MainActivity_simulate
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:39:9-41:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:39:9-41:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:41:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:40:13-50
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:40:13-50
 activity#fcu.app.unknownfooddelivery.RegisterActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:42:9-44:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:42:9-44:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:44:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:43:13-45
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:43:13-45
 activity#fcu.app.unknownfooddelivery.LoginActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:45:9-53:20
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:45:9-53:20
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:47:13-36
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:47:13-36
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:46:13-42
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:46:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:48:13-52:29
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:48:13-52:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:49:17-69
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:49:25-66
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:49:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:51:17-77
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:51:17-77
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:51:27-74
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:51:27-74
 activity#fcu.app.unknownfooddelivery.MainActivity
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:54:9-56:40
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:54:9-56:40
 	android:exported
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:56:13-37
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:56:13-37
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:55:13-41
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:55:13-41
 meta-data#preloaded_fonts
-ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:58:9-60:57
+ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:58:9-60:57
 	android:resource
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:60:13-54
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:60:13-54
 	android:name
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:59:13-43
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml:59:13-43
 uses-sdk
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 MERGED from [androidx.navigation:navigation-ui:2.4.2] C:\Users\PinHua\.gradle\caches\transforms-3\305d76ce424c872f5f60df496930436c\transformed\navigation-ui-2.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.4.2] C:\Users\PinHua\.gradle\caches\transforms-3\305d76ce424c872f5f60df496930436c\transformed\navigation-ui-2.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\PinHua\.gradle\caches\transforms-3\73aabcf6eaf165e1c2c2321712ab0401\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
@@ -411,16 +411,16 @@ MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transfo
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\PinHua\.gradle\caches\transforms-3\7267c6d7af507a88b065345d0892ed21\transformed\grpc-android-1.44.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\5371ffdaf518b4cb732c3f6a7797b95c\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\PinHua\.gradle\caches\transforms-3\5371ffdaf518b4cb732c3f6a7797b95c\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\test\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PinHua\Desktop\APP_PROJECT\Unknown-food-delivery\UnknownFoodDelivery\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\PinHua\.gradle\caches\transforms-3\d55c1c78d27dbdb4bcd1ab089225225c\transformed\firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\PinHua\.gradle\caches\transforms-3\da1afea896a4affc0865dbc4909e719e\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79

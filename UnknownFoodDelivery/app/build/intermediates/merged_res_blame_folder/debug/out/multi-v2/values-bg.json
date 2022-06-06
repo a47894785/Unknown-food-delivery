@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\test\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bg\\values-bg.xml",
+            "outputFile": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bg\\values-bg.xml",
             "map": [
                 {
                     "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\305d76ce424c872f5f60df496930436c\\transformed\\navigation-ui-2.4.2\\res\\values-bg\\values-bg.xml",
