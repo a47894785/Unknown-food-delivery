@@ -148,6 +148,10 @@
         "source": "C:\\Users\\User\\StudioProjects\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\drawable\\bg_shop_status.xml"
     },
     {
+        "merged": "C:\\Users\\User\\StudioProjects\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_deliver_status.xml.flat",
+        "source": "C:\\Users\\User\\StudioProjects\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\layout\\fragment_deliver_status.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\StudioProjects\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\User\\StudioProjects\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },

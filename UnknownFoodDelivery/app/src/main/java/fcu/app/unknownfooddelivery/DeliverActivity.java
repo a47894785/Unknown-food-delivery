@@ -28,6 +28,7 @@ public class DeliverActivity extends AppCompatActivity{
   private ImageView ivMenuShop;
   private NavigationView navigationViewShop;
   MapsFragment mapsFragment = new MapsFragment();
+  DeliveryStatusFragment deliveryStatusFragment = new DeliveryStatusFragment();
 
 
   @Override
@@ -72,6 +73,8 @@ public class DeliverActivity extends AppCompatActivity{
           startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
         }else if(id == R.id.shop_mode_deliver){
           startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
+        }else if(id == R.id.menu_status_deliver){
+          getSupportFragmentManager().beginTransaction().replace(R.id.delivery_container, deliveryStatusFragment).commit();
         }
         return true;
       }

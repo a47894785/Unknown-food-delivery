@@ -24,10 +24,10 @@ import java.util.Map;
 
 public class DeliveryStatusFragment extends Fragment {
 
-  private String shopStatus;
-  private TextView tvStatus;
+  private String deliverStatus;
+  private TextView tvDeliverStatus;
   private Spinner spinner;
-  private Button btnChange;
+  private Button btnDeliverChange;
   private int selected;
   private FirebaseFirestore db;
   private FirebaseAuth fAuth;
@@ -38,45 +38,45 @@ public class DeliveryStatusFragment extends Fragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     // Inflate the layout for this fragment
-    View view = inflater.inflate(R.layout.fragment_shop_home, container, false);
+    View view = inflater.inflate(R.layout.fragment_deliver_status, container, false);
 
-    tvStatus = view.findViewById(R.id.tv_shop_status);
-    spinner = view.findViewById(R.id.sp_status);
-    btnChange = view.findViewById(R.id.btn_change_status);
+    tvDeliverStatus = view.findViewById(R.id.tv_deliver_status);
+    spinner = view.findViewById(R.id.deliver_status);
+    btnDeliverChange = view.findViewById(R.id.btn_change_deliver_status);
 
     if (getArguments() != null) {
-      shopStatus = this.getArguments().getString("shopStatus");
-      Log.d("Status", shopStatus);
+      deliverStatus = this.getArguments().getString("shopStatus");
+      Log.d("Status", deliverStatus);
     }
 
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
 
-    switch (shopStatus) {
+    /*switch (deliverStatus) {
       case "open":
-        tvStatus.setText("營業中");
-        tvStatus.setTextColor(Color.GREEN);
+        tvDeliverStatus.setText("接單中");
+        tvDeliverStatus.setTextColor(Color.GREEN);
         break;
       case "busy":
-        tvStatus.setText("忙碌中");
-        tvStatus.setTextColor(Color.RED);
+        tvDeliverStatus.setText("忙碌中");
+        tvDeliverStatus.setTextColor(Color.RED);
         break;
       case "close":
-        tvStatus.setText("結束營業");
-        tvStatus.setTextColor(Color.GRAY);
+        tvDeliverStatus.setText("停止接單");
+        tvDeliverStatus.setTextColor(Color.GRAY);
         break;
-    }
+    }*/
 
 
 
-    btnChange.setOnClickListener(new View.OnClickListener() {
+   /* btnDeliverChange.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
         selected = spinner.getSelectedItemPosition();
         switch (selected) {
           case 1:
-            if (shopStatus.equals("open")){
+            if (deliverStatus.equals("open")){
               changeStatus = "error";
               Toast.makeText(getContext(), "錯誤!", Toast.LENGTH_SHORT).show();
             } else {
@@ -85,7 +85,7 @@ public class DeliveryStatusFragment extends Fragment {
 //            tvStatus.setText("營業中");
             break;
           case 2:
-            if (shopStatus.equals("busy")){
+            if (deliverStatus.equals("busy")){
               changeStatus = "error";
               Toast.makeText(getContext(), "錯誤!", Toast.LENGTH_SHORT).show();
             } else {
@@ -94,7 +94,7 @@ public class DeliveryStatusFragment extends Fragment {
 //            tvStatus.setText("忙碌中");
             break;
           case 3:
-            if (shopStatus.equals("close")){
+            if (deliverStatus.equals("close")){
               changeStatus = "error";
               Toast.makeText(getContext(), "錯誤!", Toast.LENGTH_SHORT).show();
             } else {
@@ -115,18 +115,18 @@ public class DeliveryStatusFragment extends Fragment {
         db.collection("shops").document(userId).update(shopChangeStatus).addOnSuccessListener(new OnSuccessListener<Void>() {
           @Override
           public void onSuccess(Void unused) {
-            Toast.makeText(getContext(), "更改營業狀態成功", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "更改接單狀態成功", Toast.LENGTH_SHORT).show();
           }
         }).addOnFailureListener(new OnFailureListener() {
           @Override
           public void onFailure(@NonNull Exception e) {
-            Toast.makeText(getContext(), "更改營業狀態失敗", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "更改接單狀態失敗", Toast.LENGTH_SHORT).show();
 
           }
         });
 
       }
-    });
+    });*/
 
     return view;
   }
