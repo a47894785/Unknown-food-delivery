@@ -95,18 +95,16 @@ public class HomeFragment extends Fragment {
         bundle.putString("shopId", selectedId);
         shopInfoFragment.setArguments(bundle);
 
-        ImageView imBack = getActivity().findViewById(R.id.im_back_arrow);
         EditText etSearch = getActivity().findViewById(R.id.et_search);
         etSearch.setVisibility(View.GONE);
-//        imBack.setVisibility(View.VISIBLE);
 
+        ImageView imBackArrow = getActivity().findViewById(R.id.im_back_arrow);
+        imBackArrow.setVisibility(View.VISIBLE);
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.btn_nav_container, shopInfoFragment).commit();
       }
     });
-
-
 
     return view;
   }

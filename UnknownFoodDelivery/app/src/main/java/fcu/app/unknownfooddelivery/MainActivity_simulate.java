@@ -55,6 +55,7 @@ public class MainActivity_simulate extends AppCompatActivity {
     private double latitude;
     private double longitude;
     private ImageView ivMenu;
+    private ImageView imBackArrow;
 
     private FirebaseAuth fAuth;
     private FirebaseFirestore db;
@@ -130,6 +131,7 @@ public class MainActivity_simulate extends AppCompatActivity {
         tvLocationAddr = findViewById(R.id.tv_location_addr);
         drawerLayout = findViewById(R.id.drawerLayout);
         ivMenu = findViewById(R.id.iv_menu);
+        imBackArrow = findViewById(R.id.im_back_arrow);
         etSearch = findViewById(R.id.et_search);
         navigationView = findViewById(R.id.navigationView);
         bottomNavigationView = findViewById(R.id.bottom_navigation);

@@ -7,29 +7,43 @@
     android:background="@drawable/bg_edit"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_edit_profile_title"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:background="#EBDFB7"
-        android:drawableEnd="@drawable/ic_baseline_push_pin_24"
-        android:fontFamily="@font/noto_sans"
-        android:gravity="start|center_vertical"
-        android:paddingHorizontal="15dp"
-        android:text="使用者名稱"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
 
-    <TextView
-        android:id="@+id/tv_edit_profile_update"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#D8D8D8"
-        android:drawableEnd="@drawable/ic_baseline_edit_24"
-        android:gravity="start|center_vertical"
-        android:paddingHorizontal="15dp"
-        android:text="王XX"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_edit_profile_title"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:background="#F3ECD5"
+                android:drawableEnd="@drawable/ic_baseline_push_pin_24"
+                android:fontFamily="@font/noto_sans"
+                android:gravity="start|center_vertical"
+                android:paddingHorizontal="15dp"
+                android:shadowRadius="10"
+                android:text="使用者名稱"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_edit_profile_update"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#EAF3ED"
+                android:drawableEnd="@drawable/ic_baseline_edit_24"
+                android:gravity="start|center_vertical"
+                android:paddingHorizontal="15dp"
+                android:text="王XX"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

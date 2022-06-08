@@ -6,30 +6,41 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/im_shopImg"
-        android:layout_width="410dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        tools:srcCompat="@tools:sample/avatars" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/im_shopImg"
+            android:layout_width="410dp"
+            android:layout_height="180dp"
+            android:forceHasOverlappingRendering="false"
+            android:importantForAutofill="auto"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tv_shop_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#C4C4C4"
-        android:paddingHorizontal="15dp"
+        android:background="#fff"
+        android:paddingLeft="2dp"
+        android:paddingTop="5dp"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="24sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tv_shop_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#C4C4C4"
-        android:paddingHorizontal="15dp"
+        android:background="#fff"
+        android:paddingLeft="2dp"
+        android:paddingBottom="5dp"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="24sp" />
+        android:textSize="14sp" />
+
 </LinearLayout>

@@ -1,5 +1,6 @@
 package fcu.app.unknownfooddelivery;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -61,12 +62,15 @@ public class ShopHomeFragment extends Fragment {
     switch (shopStatus) {
       case "open":
         tvStatus.setText("營業中");
+        tvStatus.setTextColor(Color.GREEN);
         break;
       case "busy":
         tvStatus.setText("忙碌中");
+        tvStatus.setTextColor(Color.RED);
         break;
       case "close":
         tvStatus.setText("結束營業");
+        tvStatus.setTextColor(Color.GRAY);
         break;
     }
 

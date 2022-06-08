@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -40,7 +43,7 @@ import fcu.app.unknownfooddelivery.item.MealItem;
 
 public class ShopInfoFragment extends Fragment {
 
-  private ImageView imShopImage;
+  private ImageView imShopImage, imBackArrow;
   private TextView tvShopName, tvShopPhone;
   private String shopId, shopName, shopPhone, shopImgUrl;
   private ListView lvMenu;
@@ -70,6 +73,7 @@ public class ShopInfoFragment extends Fragment {
 
     db = FirebaseFirestore.getInstance();
     imShopImage = view.findViewById(R.id.im_shop_image);
+    imBackArrow = getActivity().findViewById(R.id.im_back_arrow);
     tvShopName = view.findViewById(R.id.tv_shop_info_name);
     tvShopPhone = view.findViewById(R.id.tv_shop_info_phone);
     lvMenu = view.findViewById(R.id.lv_show_menu);
@@ -143,6 +147,19 @@ public class ShopInfoFragment extends Fragment {
           }
         });
         mealDialog.show();
+      }
+    });
+
+    imBackArrow.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        HomeFragment homeFragment = new HomeFragment();
+        EditText etSearch = getActivity().findViewById(R.id.et_search);
+        imBackArrow.setVisibility(View.GONE);
+        etSearch.setVisibility(View.VISIBLE);
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.btn_nav_container, homeFragment).commit();
       }
     });
 

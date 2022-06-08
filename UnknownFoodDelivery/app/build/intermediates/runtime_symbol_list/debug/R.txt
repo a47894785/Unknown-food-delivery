@@ -2583,9 +2583,11 @@ int drawable design_ic_visibility 0x7f08007c
 int drawable design_ic_visibility_off 0x7f08007d
 int drawable design_password_eye 0x7f08007e
 int drawable design_snackbar_background 0x7f08007f
+int drawable general_home_shop_image 0x7f0800d2
 int drawable googleg_disabled_color_18 0x7f080080
 int drawable googleg_standard_color_18 0x7f080081
 int drawable ic_backarrow 0x7f080082
+int drawable ic_baseline_arrow_back_24 0x7f0800d3
 int drawable ic_baseline_edit_24 0x7f080083
 int drawable ic_baseline_push_pin_24 0x7f080084
 int drawable ic_clock_black_24dp 0x7f080085
@@ -2802,6 +2804,7 @@ int id cache_measures 0x7f0a0084
 int id callMeasure 0x7f0a0085
 int id cancel_action 0x7f0a0086
 int id cancel_button 0x7f0a0087
+int id cardView 0x7f0a0289
 int id carryVelocity 0x7f0a0088
 int id cart 0x7f0a0089
 int id center 0x7f0a008a
