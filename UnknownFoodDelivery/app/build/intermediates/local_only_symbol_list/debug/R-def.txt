@@ -32,6 +32,7 @@ drawable ic_down
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_logout
+drawable ic_on
 drawable icon_add
 drawable icon_cart
 drawable icon_change_shop_menu
@@ -46,6 +47,7 @@ drawable lock
 drawable logo
 drawable message
 drawable profile
+drawable run_btn
 drawable search_icon
 drawable searchbar
 drawable style_spinner
@@ -76,6 +78,7 @@ id btn_upload_shop_img
 id button
 id button2
 id button3
+id button6
 id cardView
 id cart
 id delivery_container

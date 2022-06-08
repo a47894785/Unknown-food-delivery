@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
+            "outputFile": "C:\\Users\\User\\StudioProjects\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\305d76ce424c872f5f60df496930436c\\transformed\\navigation-ui-2.4.2\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,166",
-                        "endColumns": "110,116",
-                        "endOffsets": "161,278"
-                    },
-                    "to": {
-                        "startLines": "104,105",
-                        "startColumns": "4,4",
-                        "startOffsets": "9359,9470",
-                        "endColumns": "110,116",
-                        "endOffsets": "9465,9582"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\ae624f1769e7162d0562c1678973a71f\\transformed\\play-services-base-18.0.1\\res\\values-si\\values.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\ae624f1769e7162d0562c1678973a71f\\transformed\\play-services-base-18.0.1\\res\\values-si\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\5cb1c2f3a9956547f63a12c148d9c18e\\transformed\\play-services-basement-18.0.0\\res\\values-si\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "134",
-                        "endOffsets": "329"
-                    },
-                    "to": {
-                        "startLines": "45",
-                        "startColumns": "4",
-                        "startOffsets": "4347",
-                        "endColumns": "138",
-                        "endOffsets": "4481"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\d4417e0859b0639c4a6f346aa18b54a8\\transformed\\appcompat-1.4.1\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\d4417e0859b0639c4a6f346aa18b54a8\\transformed\\appcompat-1.4.1\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\65c5a45dc0ebea764720990f61f025b1\\transformed\\core-1.7.0\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\65c5a45dc0ebea764720990f61f025b1\\transformed\\core-1.7.0\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -89,7 +55,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\73aabcf6eaf165e1c2c2321712ab0401\\transformed\\material-1.5.0\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\305d76ce424c872f5f60df496930436c\\transformed\\navigation-ui-2.4.2\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,166",
+                        "endColumns": "110,116",
+                        "endOffsets": "161,278"
+                    },
+                    "to": {
+                        "startLines": "104,105",
+                        "startColumns": "4,4",
+                        "startOffsets": "9359,9470",
+                        "endColumns": "110,116",
+                        "endOffsets": "9465,9582"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\5cb1c2f3a9956547f63a12c148d9c18e\\transformed\\play-services-basement-18.0.0\\res\\values-si\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "134",
+                        "endOffsets": "329"
+                    },
+                    "to": {
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "4347",
+                        "endColumns": "138",
+                        "endOffsets": "4481"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\73aabcf6eaf165e1c2c2321712ab0401\\transformed\\material-1.5.0\\res\\values-si\\values-si.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -2604,6 +2604,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_on
 drawable icon_add
 drawable icon_cart
 drawable icon_change_shop_menu
@@ -2659,6 +2660,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable profile
+drawable run_btn
 drawable search_icon
 drawable searchbar
 drawable style_spinner
@@ -2800,6 +2802,7 @@ id btn_upload_shop_img
 id button
 id button2
 id button3
+id button6
 id buttonPanel
 id cache_measures
 id callMeasure
