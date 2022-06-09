@@ -27,8 +27,7 @@
                 android:shadowRadius="10"
                 android:text="使用者名稱"
                 android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="italic" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_edit_profile_update"
