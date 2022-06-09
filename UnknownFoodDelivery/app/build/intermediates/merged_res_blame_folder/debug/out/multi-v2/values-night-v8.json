@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\unknown_trytry\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\DEMO\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\96140\\.gradle\\caches\\transforms-3\\604972797af3e58483543483ec697bff\\transformed\\neumorphism-0.3.0\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,123,205,287,383,483,575",
-                        "endColumns": "67,81,81,95,99,91,105",
-                        "endOffsets": "118,200,282,378,478,570,676"
-                    },
-                    "to": {
-                        "startLines": "33,34,35,36,37,38,39",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "3386,3454,3536,3618,3714,3814,3906",
-                        "endColumns": "67,81,81,95,99,91,105",
-                        "endOffsets": "3449,3531,3613,3709,3809,3901,4007"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\96140\\.gradle\\caches\\transforms-3\\73aabcf6eaf165e1c2c2321712ab0401\\transformed\\material-1.5.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\73aabcf6eaf165e1c2c2321712ab0401\\transformed\\material-1.5.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\unknown_trytry\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\604972797af3e58483543483ec697bff\\transformed\\neumorphism-0.3.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,123,205,287,383,483,575",
+                        "endColumns": "67,81,81,95,99,91,105",
+                        "endOffsets": "118,200,282,378,478,570,676"
+                    },
+                    "to": {
+                        "startLines": "33,34,35,36,37,38,39",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "3386,3454,3536,3618,3714,3814,3906",
+                        "endColumns": "67,81,81,95,99,91,105",
+                        "endOffsets": "3449,3531,3613,3709,3809,3901,4007"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\PinHua\\Desktop\\APP_PROJECT\\DEMO\\Unknown-food-delivery\\UnknownFoodDelivery\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -57,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\96140\\.gradle\\caches\\transforms-3\\d4417e0859b0639c4a6f346aa18b54a8\\transformed\\appcompat-1.4.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\PinHua\\.gradle\\caches\\transforms-3\\d4417e0859b0639c4a6f346aa18b54a8\\transformed\\appcompat-1.4.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -2640,6 +2640,7 @@ drawable ic_baseline_edit_24
 drawable ic_baseline_edit_note_24
 drawable ic_baseline_push_pin_24
 drawable ic_clock_black_24dp
+drawable ic_delivery
 drawable ic_down
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2653,6 +2654,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_on
+drawable ic_relax
 drawable icon_add
 drawable icon_cart
 drawable icon_change_shop_menu
@@ -2996,6 +2998,10 @@ id guideline3
 id header_title
 id hideable
 id history
+id history_meal_name
+id history_meal_num
+id history_meal_price
+id history_shop_name
 id home
 id homeAsUp
 id home_frag_address
@@ -3012,6 +3018,7 @@ id im_back_arrow
 id im_menu_meal_img
 id im_shopImg
 id im_shop_image
+id im_status
 id im_update_meal_img
 id im_upload
 id im_upload_shop_img
@@ -3071,6 +3078,7 @@ id lv_edit_shop_prodile
 id lv_history
 id lv_shop
 id lv_show_menu
+id lv_show_order
 id lv_update_manu
 id mainActivity_simulate
 id map
@@ -3350,6 +3358,7 @@ id tv_menu_meal_name
 id tv_menu_meal_price
 id tv_money
 id tv_money_num
+id tv_order_info
 id tv_sensor
 id tv_shop_address
 id tv_shop_info_name
@@ -3512,10 +3521,12 @@ layout fragment_shop_history
 layout fragment_shop_home
 layout fragment_shop_info
 layout fragment_update_menu
+layout history_item
 layout layout_edit_profile
 layout layout_home
 layout layout_navigation_header
 layout listitem
+layout listitem_order_deliver
 layout listitem_shop_page
 layout listitem_update_menu
 layout m3_alert_dialog

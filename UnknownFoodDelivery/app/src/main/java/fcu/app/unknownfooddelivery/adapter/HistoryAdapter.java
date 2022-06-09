@@ -44,16 +44,16 @@ public class HistoryAdapter extends ArrayAdapter<HistoryItem> {
     HistoryItem item = historyItems.get(position);
 
     TextView tvShop_Meal_Name= itemLayout.findViewById(R.id.history_shop_name);
-    tvShop_Meal_Name.setText(item.getTv_shopname());
+    tvShop_Meal_Name.setText(item.getTv_shopname() + " - ");
 
     TextView tvMeal_name = itemLayout.findViewById(R.id.history_meal_name);
-    tvMeal_name.setText(item.getTv_mealname());
+    tvMeal_name.setText(item.getTv_mealname() + " ");
 
     TextView tvMeal_price = itemLayout.findViewById(R.id.history_meal_price);
-    tvMeal_price.setText(item.getTv_mealprice());
+    tvMeal_price.setText(item.getTv_mealprice() + "元 x ");
 
     TextView tvMeal_num = itemLayout.findViewById(R.id.history_meal_num);
-    tvMeal_num.setText(item.getTv_mealnum());
+    tvMeal_num.setText(item.getTv_mealnum() + "個");
     return  itemLayout;
   }
 }

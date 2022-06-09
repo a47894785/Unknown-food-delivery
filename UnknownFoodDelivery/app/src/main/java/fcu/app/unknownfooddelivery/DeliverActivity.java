@@ -27,6 +27,7 @@ public class DeliverActivity extends AppCompatActivity{
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
   private DocumentReference documentReference;
+  private DrawerLayout drawerLayout;
 
   private SharedPreferences sharedPreferences;
   private String userId;
@@ -51,7 +52,7 @@ public class DeliverActivity extends AppCompatActivity{
     // 改變上方通知欄
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
       getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
     fAuth = FirebaseAuth.getInstance();
@@ -59,7 +60,7 @@ public class DeliverActivity extends AppCompatActivity{
     userId = fAuth.getCurrentUser().getUid();
     sharedPreferences = getPreferences(MODE_PRIVATE);
 
-
+    drawerLayout = findViewById(R.id.drawerLayout_deliver);
     ivMenuShop = findViewById(R.id.iv_menu);
     drawerLayoutShop = findViewById(R.id.drawerLayout_deliver);
     navigationViewShop = findViewById(R.id.navigationView);
@@ -105,6 +106,7 @@ public class DeliverActivity extends AppCompatActivity{
           startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
         }else if(id == R.id.menu_status_deliver){
           getSupportFragmentManager().beginTransaction().replace(R.id.delivery_container, deliveryStatusFragment).commit();
+          drawerLayout.closeDrawer(GravityCompat.START);
         }
         return true;
       }
