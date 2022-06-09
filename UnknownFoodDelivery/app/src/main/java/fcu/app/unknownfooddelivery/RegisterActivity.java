@@ -78,8 +78,24 @@ public class RegisterActivity extends AppCompatActivity {
         String phone = etPhone.getText().toString();
 
         // 設定輸入限制
+
+        if (TextUtils.isEmpty(name)) {
+          etName.setError("使用者名稱不能為空");
+          return;
+        }
+
         if (TextUtils.isEmpty(email)) {
           etEmail.setError("Email不能為空");
+          return;
+        }
+
+        if (TextUtils.isEmpty(phone)){
+          etPhone.setError("電話不能為空");
+          return;
+        }
+
+        if (phone.length() < 10) {
+          etPhone.setError("輸入錯誤!電話號碼必須為十個數字!");
           return;
         }
 
@@ -95,11 +111,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         if (!password.equals(confirm)) {
           etConfirm.setError("確認密碼不相符!");
-          return;
-        }
-
-        if (phone.length() < 10) {
-          etPhone.setError("輸入錯誤!電話號碼必須為十個數字!");
           return;
         }
 

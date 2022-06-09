@@ -99,7 +99,7 @@ public class CartFragment extends Fragment {
       public void onClick(View view) {
         if(flag){
           AlertDialog.Builder summitDialog = new AlertDialog.Builder(getContext());
-          summitDialog.setTitle("確認雌點並送出");
+          summitDialog.setTitle("確認餐點並送出");
 
           summitDialog.setPositiveButton("確認", new DialogInterface.OnClickListener() {
             @Override
@@ -120,6 +120,7 @@ public class CartFragment extends Fragment {
                   @Override
                   public void onSuccess(Void unused) {
                     Log.d("order","oder summit success");
+                    Toast.makeText(getContext(), "訂單送出", Toast.LENGTH_SHORT).show();
                   }
                 }).addOnFailureListener(new OnFailureListener() {
                   @Override

@@ -84,10 +84,10 @@ public class LoginActivity extends AppCompatActivity {
           @Override
           public void onComplete(@NonNull Task<AuthResult> task) {
             if (task.isSuccessful()) {
-              Toast.makeText(LoginActivity.this, "Login Successfully", android.widget.Toast.LENGTH_SHORT).show();
+              Toast.makeText(LoginActivity.this, "成功登入", android.widget.Toast.LENGTH_SHORT).show();
               startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
             } else {
-              Toast.makeText(LoginActivity.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+              Toast.makeText(LoginActivity.this, "錯誤", Toast.LENGTH_SHORT).show();
             }
           }
         });

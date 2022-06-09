@@ -169,14 +169,29 @@ public class EditRestaurantFragment extends Fragment {
         editDialog.setTitle(restaurantProfileTitle[index]);
         EditText updateDataInput = new EditText(getContext());
         if (index == 0) {
-          updateDataInput.setText(rName);
+          if (rName.equals("尚未設定店家名稱")) {
+            updateDataInput.setHint(rName);
+          } else {
+            updateDataInput.setText(rName);
+          }
         } else if (index == 1) {
-          updateDataInput.setText(rAddress);
+          if (rAddress.equals("尚未設定店家地址")) {
+            updateDataInput.setHint(rAddress);
+          } else {
+            updateDataInput.setText(rAddress);
+          }
         } else if (index == 2) {
+          if (rPhone.equals("尚未設定店家電話")) {
+            updateDataInput.setHint(rPhone);
+          }
 //          updateDataInput.setText(rPhone);
           updateDataInput.setInputType(InputType.TYPE_CLASS_PHONE);
         } else if (index == 3) {
-          updateDataInput.setText(rEmail);
+          if (rEmail.equals("尚未設定電子郵件")) {
+            updateDataInput.setHint(rEmail);
+          } else {
+            updateDataInput.setText(rEmail);
+          }
         }
 
         editDialog.setView(updateDataInput);
