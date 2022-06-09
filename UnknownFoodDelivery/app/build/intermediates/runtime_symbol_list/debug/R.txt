@@ -2708,6 +2708,7 @@ int drawable notify_panel_notification_icon_bg 0x7f0800cd
 int drawable profile 0x7f0800ce
 int drawable search_icon 0x7f0800cf
 int drawable searchbar 0x7f0800d0
+int drawable style_list_view 0x7f0800d7
 int drawable style_spinner 0x7f0800d1
 int drawable test_custom_background 0x7f0800d2
 int drawable test_level_drawable 0x7f0800d3
@@ -2989,6 +2990,7 @@ int id grouping 0x7f0a010d
 int id groups 0x7f0a010e
 int id guideline 0x7f0a010f
 int id guideline2 0x7f0a0110
+int id guideline3 0x7f0a0299
 int id header_title 0x7f0a0111
 int id hideable 0x7f0a0112
 int id history 0x7f0a0113

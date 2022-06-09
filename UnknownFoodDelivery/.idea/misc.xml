@@ -35,13 +35,17 @@
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/general_home_image_shape.xml" value="0.109" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/general_home_shop_image.xml" value="0.109" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.129" />
+        <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.129" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.129" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/ic_drop.xml" value="0.144" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/searchbar.xml" value="0.144" />
+        <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/style_list_view.xml" value="0.129" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/drawable/style_spinner.xml" value="0.144" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_deliver.xml" value="0.1875" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_main_simulate.xml" value="0.33" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/activity_resaurant.xml" value="0.33" />
+        <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/cart_item.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_cart.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_edit_profile.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_edit_restaurant.xml" value="0.33" />
         <entry key="..\:/Users/PinHua/Desktop/APP_PROJECT/Unknown-food-delivery/UnknownFoodDelivery/app/src/main/res/layout/fragment_home.xml" value="0.36614583333333334" />

@@ -51,6 +51,7 @@ drawable message
 drawable profile
 drawable search_icon
 drawable searchbar
+drawable style_list_view
 drawable style_spinner
 drawable userprofile
 font noto_sans
@@ -112,6 +113,7 @@ id general_mode
 id general_mode_deliver
 id general_mode_shop
 id guideline2
+id guideline3
 id history
 id home_frag_address
 id im_back_arrow
