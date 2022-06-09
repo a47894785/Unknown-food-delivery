@@ -44,6 +44,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity_simulate extends AppCompatActivity {
@@ -223,6 +224,10 @@ public class MainActivity_simulate extends AppCompatActivity {
                     case R.id.btn_nav_cart:
                         bottomId = R.id.btn_nav_cart;
                         etSearch.setVisibility(View.VISIBLE);
+                        Bundle bundle_cart = new Bundle();
+                        bundle_cart.putString("userid", userId);
+                        bundle_cart.putString("username",userName);
+                        cartFragment.setArguments(bundle_cart);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, cartFragment).commit();
                         break;
                     case R.id.btn_nav_chat:
@@ -365,9 +370,34 @@ public class MainActivity_simulate extends AppCompatActivity {
         sqlDb.close();
     }
 
+    protected ArrayList<String> getSQLdata_to_cart() {
+        sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
+        sqlDb.execSQL(createTable);
+        Cursor cursor = sqlDb.rawQuery("SELECT * FROM " + TB_NAME, null);
+        ArrayList<String> arrayList = new ArrayList<>();
+        if (cursor.moveToFirst()){
+            do{
+                arrayList.add(cursor.getString(1));
+                arrayList.add(cursor.getString(2));
+                arrayList.add(cursor.getString(3));
+                arrayList.add(cursor.getString(4));
+            } while(cursor.moveToNext());
+        } else if (cursor.getCount() == 0) {
+        }
+        sqlDb.close();
+        return arrayList;
+    }
+
     protected void delSqlData() {
         sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
         String deleteData = "DELETE FROM " + TB_NAME;
+        sqlDb.execSQL(deleteData);
+        sqlDb.close();
+    }
+
+    protected void delSqlDate_cart(String shopName,String mealName){
+        sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
+        String deleteData = "DELETE FROM " + TB_NAME  + " WHERE " + "shopName" + "='" +shopName +"'" + " AND " + "mealName"+ "='" +mealName +"'";
         sqlDb.execSQL(deleteData);
         sqlDb.close();
     }

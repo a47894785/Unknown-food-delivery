@@ -2589,6 +2589,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_backarrow
 drawable ic_baseline_arrow_back_24
+drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
 drawable ic_baseline_push_pin_24
 drawable ic_clock_black_24dp
@@ -2660,7 +2661,6 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable profile
-drawable run_btn
 drawable search_icon
 drawable searchbar
 drawable style_spinner
@@ -2786,6 +2786,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_change_deliver_status
 id btn_change_status
+id btn_erase_all
 id btn_login
 id btn_nav_add_shop
 id btn_nav_cart
@@ -2798,11 +2799,10 @@ id btn_nav_home
 id btn_nav_home_shop
 id btn_register
 id btn_sendout
+id btn_summit
 id btn_upload_img
 id btn_upload_shop_img
 id button
-id button2
-id button3
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2893,7 +2893,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id editTextTextPersonName
 id editTextTextPersonName2
 id edit_profile_lv
 id edit_query
@@ -3241,15 +3240,12 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView10
 id textView12
-id textView14
-id textView15
-id textView16
 id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
 id textView9
 id text_input_end_icon
@@ -3293,12 +3289,15 @@ id tv_location_addr
 id tv_lon
 id tv_menu_meal_name
 id tv_menu_meal_price
+id tv_money
+id tv_money_num
 id tv_sensor
 id tv_shop_address
 id tv_shop_info_name
 id tv_shop_info_phone
 id tv_shop_name
 id tv_shop_status
+id tv_shopname_mealname
 id tv_title
 id tv_updates
 id tv_username
@@ -3421,6 +3420,7 @@ layout activity_register
 layout activity_resaurant
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout cart_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/menuProfile_deliver"
         android:icon="@drawable/userprofile"
         android:title="個人資訊" />
 
+    <item
+        android:id="@+id/menu_status_deliver"
+        android:title="接單狀態" />
     <item android:id="@+id/menu_history_deliver"
         android:icon="@drawable/icon_shophistory"
         android:title="今日訂單" />

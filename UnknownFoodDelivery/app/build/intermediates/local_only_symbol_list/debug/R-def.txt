@@ -26,6 +26,7 @@ drawable bottom_navigation_selector
 drawable general_home_shop_image
 drawable ic_backarrow
 drawable ic_baseline_arrow_back_24
+drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
 drawable ic_baseline_push_pin_24
 drawable ic_down
@@ -47,7 +48,6 @@ drawable lock
 drawable logo
 drawable message
 drawable profile
-drawable run_btn
 drawable search_icon
 drawable searchbar
 drawable style_spinner
@@ -62,6 +62,7 @@ id bottom_navigation
 id bottom_navigation_shop
 id btn_change_deliver_status
 id btn_change_status
+id btn_erase_all
 id btn_login
 id btn_nav_add_shop
 id btn_nav_cart
@@ -74,11 +75,10 @@ id btn_nav_home
 id btn_nav_home_shop
 id btn_register
 id btn_sendout
+id btn_summit
 id btn_upload_img
 id btn_upload_shop_img
 id button
-id button2
-id button3
 id cardView
 id cart
 id deliver_status
@@ -93,7 +93,6 @@ id divider4
 id drawerLayout
 id drawerLayout_deliver
 id drawerLayout_shop
-id editTextTextPersonName
 id editTextTextPersonName2
 id edit_profile_lv
 id et_add_meal_info
@@ -170,15 +169,12 @@ id sp_status
 id sw_gps
 id sw_locationsupdates
 id textView
-id textView10
 id textView12
-id textView14
-id textView15
-id textView16
 id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
 id textView9
 id tv_address
@@ -197,12 +193,15 @@ id tv_location_addr
 id tv_lon
 id tv_menu_meal_name
 id tv_menu_meal_price
+id tv_money
+id tv_money_num
 id tv_sensor
 id tv_shop_address
 id tv_shop_info_name
 id tv_shop_info_phone
 id tv_shop_name
 id tv_shop_status
+id tv_shopname_mealname
 id tv_title
 id tv_updates
 id tv_username
@@ -213,6 +212,7 @@ layout activity_main
 layout activity_main_simulate
 layout activity_register
 layout activity_resaurant
+layout cart_item
 layout fragment_cart
 layout fragment_deliver_status
 layout fragment_edit_profile
