@@ -1,6 +1,8 @@
 package fcu.app.unknownfooddelivery;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -42,6 +44,7 @@ public class CartFragment extends Fragment {
   private ArrayList<CartItem> cartList;
   private Button btn_Summit,btn_Erase_all;
   private Boolean flag;
+  private SharedPreferences sharedPreferences;
 
   FirebaseAuth fAuth;
   FirebaseFirestore db;
@@ -59,13 +62,14 @@ public class CartFragment extends Fragment {
 
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
+    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
+    username = sharedPreferences.getString("username","");
 
-
-    if (getArguments() != null) {
-      userid = this.getArguments().getString("userid");
-      username = this.getArguments().getString("username");
-      Log.d("cart_userid", userid +" + " + username);
-    }
+//    if (getArguments() != null) {
+//      userid = this.getArguments().getString("userid");
+//      username = this.getArguments().getString("username");
+//      Log.d("cart_userid", userid +" + " + username);
+//    }
 
     MainActivity_simulate mainActivity = (MainActivity_simulate) getActivity();
     temp = mainActivity.getSQLdata_to_cart();

@@ -362,17 +362,32 @@ public class MainActivity_simulate extends AppCompatActivity {
         Log.d("ReturnValues", userId + "/ " + shopName + "/ " + mealName + "/ "  + mealPrice + "/ " + mealNum + "/ " + mealImg);
         sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
         sqlDb.execSQL(createTable);
+        Cursor cursortemp = sqlDb.rawQuery("SELECT * FROM " + TB_NAME  + " WHERE shopName='" +shopName +"'"+ " AND " + "mealName='" +mealName + "'",null);
+        int tempnum = 0;
+        if (cursortemp.moveToFirst()){
+            do{
+                tempnum = Integer.valueOf(cursortemp.getString(4));
+            } while(cursortemp.moveToNext());
+        } else if (cursortemp.getCount() == 0) {
+            tempnum = 0;
+        }
+        if(tempnum != 0){
+            tempnum += Integer.valueOf(mealNum);
+            String newnum = Integer.toString(tempnum);
+            String updateData = "UPDATE " + TB_NAME + " SET mealNum ='" + newnum + "'"+" WHERE shopName='" +shopName +"'"+ " AND " + "mealName='" +mealName + "'" ;
+            sqlDb.execSQL(updateData);
+        }else {
+            Cursor cursor = sqlDb.rawQuery("SELECT * FROM " + TB_NAME, null);
+            ContentValues contentValues = new ContentValues(6);
+            contentValues.put("userId", userId);
+            contentValues.put("shopName", shopName);
+            contentValues.put("mealName", mealName);
+            contentValues.put("mealPrice", mealPrice);
+            contentValues.put("mealNum", mealNum);
+            contentValues.put("mealImg", mealImg);
 
-        Cursor cursor = sqlDb.rawQuery("SELECT * FROM " + TB_NAME, null);
-        ContentValues contentValues = new ContentValues(6);
-        contentValues.put("userId", userId);
-        contentValues.put("shopName", shopName);
-        contentValues.put("mealName", mealName);
-        contentValues.put("mealPrice", mealPrice);
-        contentValues.put("mealNum", mealNum);
-        contentValues.put("mealImg", mealImg);
-
-        sqlDb.insert(TB_NAME, null, contentValues);
+            sqlDb.insert(TB_NAME, null, contentValues);
+        }
         sqlDb.close();
     }
 
