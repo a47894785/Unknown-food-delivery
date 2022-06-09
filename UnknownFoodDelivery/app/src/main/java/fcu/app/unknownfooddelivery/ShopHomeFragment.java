@@ -120,27 +120,32 @@ public class ShopHomeFragment extends Fragment {
 //            tvStatus.setText("請設定營業狀態");
             break;
         }
-        Log.d("ChangeStatus", changeStatus);
-        Map<String, Object> shopChangeStatus = new HashMap<>();
-        shopChangeStatus.put("shopStatus", changeStatus);
+        if(changeStatus != "error") {
+          Log.d("ChangeStatus", changeStatus);
+          Map<String, Object> shopChangeStatus = new HashMap<>();
+          shopChangeStatus.put("shopStatus", changeStatus);
 
-        db.collection("shops").document(userId).update(shopChangeStatus).addOnSuccessListener(new OnSuccessListener<Void>() {
-          @Override
-          public void onSuccess(Void unused) {
-            getFragmentManager().beginTransaction().detach(ShopHomeFragment.this).commit();
-            getFragmentManager().beginTransaction().attach(ShopHomeFragment.this).commit();
-            Toast.makeText(getContext(), "更改營業狀態成功", Toast.LENGTH_SHORT).show();
-          }
-        }).addOnFailureListener(new OnFailureListener() {
-          @Override
-          public void onFailure(@NonNull Exception e) {
-            Toast.makeText(getContext(), "更改營業狀態失敗", Toast.LENGTH_SHORT).show();
+          db.collection("shops").document(userId).update(shopChangeStatus).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+              getFragmentManager().beginTransaction().detach(ShopHomeFragment.this).commit();
+              getFragmentManager().beginTransaction().attach(ShopHomeFragment.this).commit();
+              Toast.makeText(getContext(), "更改營業狀態成功", Toast.LENGTH_SHORT).show();
+            }
+          }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+              Toast.makeText(getContext(), "更改營業狀態失敗", Toast.LENGTH_SHORT).show();
 
-          }
-        });
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("shopStatus", changeStatus);
-        editor.commit();
+            }
+          });
+          SharedPreferences.Editor editor = sharedPreferences.edit();
+          editor.putString("shopStatus", changeStatus);
+          editor.commit();
+        }
+        else{
+          Toast.makeText(getContext(), "所選模式與當前相同", Toast.LENGTH_SHORT).show();
+        }
       }
     });
 

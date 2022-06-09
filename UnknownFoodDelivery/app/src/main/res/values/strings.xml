@@ -8,6 +8,11 @@
         <item>忙碌中</item>
         <item>結束營業</item>
     </string-array>
+    <string-array name="deliver_status">
+        <item> </item>
+        <item>開始接單</item>
+        <item>休息 不想接啦</item>
+    </string-array>
     <string-array name="mealNum">
         <item>1</item>
         <item>2</item>

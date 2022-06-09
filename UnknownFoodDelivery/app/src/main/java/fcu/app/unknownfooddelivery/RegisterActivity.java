@@ -132,6 +132,7 @@ public class RegisterActivity extends AppCompatActivity {
               });
 
               initShopInfo(userID);
+              initDeliverInfo(userID);
 
               fAuth.signOut(); // 避免一註冊完就跳到 MainActivity
               startActivity(new Intent(getApplicationContext(), LoginActivity.class));
@@ -178,7 +179,25 @@ public class RegisterActivity extends AppCompatActivity {
         Log.d("CreateShopInfo", "OnFailure: " + e);
       }
     });
-
   }
+  private void initDeliverInfo(String id){
+    DocumentReference documentReference = db.collection("delivers").document(id);
 
+    // init db data
+    Map<String, Object> deliver = new HashMap<>();
+    deliver.put("deliverStatus", "close");
+
+
+    documentReference.set(deliver).addOnSuccessListener(new OnSuccessListener<Void>() {
+      @Override
+      public void onSuccess(Void unused) {
+        Log.d("CreateDeliverInfo", "OnSuccess: Deliver information is initialized for " + id);
+      }
+    }).addOnFailureListener(new OnFailureListener() {
+      @Override
+      public void onFailure(@NonNull Exception e) {
+        Log.d("CreateDeliverInfo", "OnFailure: " + e);
+      }
+    });
+  }
 }

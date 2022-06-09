@@ -6,16 +6,20 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class DeliverActivity extends AppCompatActivity{
@@ -23,6 +27,10 @@ public class DeliverActivity extends AppCompatActivity{
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
   private DocumentReference documentReference;
+
+  private SharedPreferences sharedPreferences;
+  private String userId;
+  private String deliverStatus;
 
   private DrawerLayout drawerLayoutShop;
   private ImageView ivMenuShop;
@@ -48,11 +56,33 @@ public class DeliverActivity extends AppCompatActivity{
 
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
+    userId = fAuth.getCurrentUser().getUid();
+    sharedPreferences = getPreferences(MODE_PRIVATE);
 
 
     ivMenuShop = findViewById(R.id.iv_menu);
     drawerLayoutShop = findViewById(R.id.drawerLayout_deliver);
     navigationViewShop = findViewById(R.id.navigationView);
+
+    Log.d("deliver_try",userId);
+    documentReference = db.collection("delivers").document(userId);
+    documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+      @Override
+      public void onSuccess(DocumentSnapshot documentSnapshot) {
+        Log.d("deliver_try","try");
+        if (documentSnapshot.exists()){
+          deliverStatus = documentSnapshot.getString("deliverStatus");
+          Log.d("deliver_try",deliverStatus);
+          SharedPreferences.Editor deliver_edit = sharedPreferences.edit();
+          deliver_edit.putString("deliverstatus", deliverStatus);
+          deliver_edit.commit();
+        }
+        else {
+          Log.d("deliver_try","not find");
+        }
+      }
+    });
+
     getSupportFragmentManager().beginTransaction().replace(R.id.delivery_container,mapsFragment).commit();
     ivMenuShop.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -69,7 +99,7 @@ public class DeliverActivity extends AppCompatActivity{
           fAuth.signOut();
           startActivity(new Intent(getApplicationContext(), LoginActivity.class));
           finish();
-        } else if (id == R.id.general_mode_deliver){
+        }else if (id == R.id.general_mode_deliver){
           startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
         }else if(id == R.id.shop_mode_deliver){
           startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
