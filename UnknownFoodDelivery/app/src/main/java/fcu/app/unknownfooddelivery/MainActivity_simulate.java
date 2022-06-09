@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -62,11 +63,13 @@ public class MainActivity_simulate extends AppCompatActivity {
     private FirebaseFirestore db;
     private String userId;
     private String userName, userEmail, userPhone;
+    private SharedPreferences sharedPreferences;
 
     private NavigationView navigationView;
     private BottomNavigationView bottomNavigationView;
     int count = 0;
     int bottomId;
+    Boolean updateGPS = false;
 
     static final String DB_NAME = "unknown";
     static final String TB_NAME = "cart";
@@ -74,6 +77,7 @@ public class MainActivity_simulate extends AppCompatActivity {
     String createTable;
 
     private String currentAddress = "當前位置";
+    private String lastAddress;
     LocationRequest locationRequest;
     LocationCallback locationCallBack;
     FusedLocationProviderClient fusedLocationProviderClient;
@@ -108,7 +112,8 @@ public class MainActivity_simulate extends AppCompatActivity {
             "shopName VARCHAR(16), " +
             "mealName VARCHAR(16), " +
             "mealPrice VARCHAR(8), " +
-            "mealNum VARCHAR(8))";
+            "mealNum VARCHAR(8), " +
+            "mealImg VACHAR(64))";
 
         sqlDb.execSQL(createTable);
         sqlDb.close();
@@ -122,6 +127,13 @@ public class MainActivity_simulate extends AppCompatActivity {
                     userName = documentSnapshot.getString("username");
                     userEmail = documentSnapshot.getString("email");
                     userPhone = documentSnapshot.getString("phone");
+
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("username", userName);
+                    editor.putString("useremail", userEmail);
+                    editor.putString("userphone", userPhone);
+                    editor.commit();
+
                     Log.d("GetUserInfo", "UserName: " + userName + ", UserEmail: " + userEmail + ", UserPhone: " + userPhone);
                 } else {
                     Log.d("GetUserInfo", "Error, document do not exists.");
@@ -137,6 +149,8 @@ public class MainActivity_simulate extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationView);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.getMenu().getItem(0).setChecked(false);
+
+        sharedPreferences = getPreferences(MODE_PRIVATE);
 
         locationRequest = new LocationRequest();
         locationRequest.setInterval(1000 * 10);
@@ -164,11 +178,11 @@ public class MainActivity_simulate extends AppCompatActivity {
                     etSearch.setVisibility(View.GONE);
                     Log.d("BottomIndex", String.valueOf(bottomId));
 
-                    Bundle bundle = new Bundle();
-                    bundle.putString("username", userName);
-                    bundle.putString("email", userEmail);
-                    bundle.putString("phone", userPhone);
-                    editProfileFragment.setArguments(bundle);
+//                    Bundle bundle = new Bundle();
+//                    bundle.putString("username", userName);
+//                    bundle.putString("email", userEmail);
+//                    bundle.putString("phone", userPhone);
+//                    editProfileFragment.setArguments(bundle);
                     getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, editProfileFragment).commit();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 } else if (id == R.id.shop_mode){
@@ -206,6 +220,13 @@ public class MainActivity_simulate extends AppCompatActivity {
                             userName = documentSnapshot.getString("username");
                             userEmail = documentSnapshot.getString("email");
                             userPhone = documentSnapshot.getString("phone");
+
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("username", userName);
+                            editor.putString("useremail", userEmail);
+                            editor.putString("userphone", userPhone);
+                            editor.commit();
+
                             Log.d("GetUserInfo", "UserName: " + userName + ", UserEmail: " + userEmail + ", UserPhone: " + userPhone);
                         } else {
                             Log.d("GetUserInfo", "Error, document do not exists.");
@@ -216,18 +237,14 @@ public class MainActivity_simulate extends AppCompatActivity {
                     case R.id.btn_nav_home:
                         bottomId = R.id.btn_nav_home;
                         etSearch.setVisibility(View.VISIBLE);
-                        Bundle bundle = new Bundle();
-                        bundle.putString("address", currentAddress);
-                        homeFragment.setArguments(bundle);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("address", currentAddress);
+//                        homeFragment.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, homeFragment).commit();
                         break;
                     case R.id.btn_nav_cart:
                         bottomId = R.id.btn_nav_cart;
                         etSearch.setVisibility(View.VISIBLE);
-                        Bundle bundle_cart = new Bundle();
-                        bundle_cart.putString("userid", userId);
-                        bundle_cart.putString("username",userName);
-                        cartFragment.setArguments(bundle_cart);
                         getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, cartFragment).commit();
                         break;
                     case R.id.btn_nav_chat:
@@ -254,20 +271,33 @@ public class MainActivity_simulate extends AppCompatActivity {
 
         Geocoder geocoder = new Geocoder(MainActivity_simulate.this);
         try {
-            currentAddress = "";
+            lastAddress = currentAddress;
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-            currentAddress = addresses.get(0).getAddressLine(0);
+            currentAddress = addresses.get(0).getAddressLine(0).substring(3);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("Address", currentAddress);
+            editor.commit();
             tvLocationAddr.setText(currentAddress);
 
             Log.d("CurrentAddress", currentAddress + ", No." + ++count);
+            if (!currentAddress.equals(lastAddress) && count != 0) {
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("Address", currentAddress);
+                editor.commit();
+                Log.d("CurrentAddress_1", currentAddress + ", No." + count);
+                getSupportFragmentManager().beginTransaction().detach(homeFragment).commit();
+                getSupportFragmentManager().beginTransaction().attach(homeFragment).commit();
+            }
+
             // 設 flag 控制更新
             if (count == 1) {
-                Bundle bundle = new Bundle();
-                bundle.putString("address", currentAddress);
-                homeFragment.setArguments(bundle);
-                bottomId = R.id.btn_nav_home;
+//                Bundle bundle = new Bundle();
+//                bundle.putString("address", currentAddress);
+//                homeFragment.setArguments(bundle);
+//                bottomId = R.id.btn_nav_home;
                 getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container, homeFragment).commit();
-                Log.d("CurrentAddress", "Update");
+                count++;
+
             }
 
 
@@ -328,18 +358,19 @@ public class MainActivity_simulate extends AppCompatActivity {
         }
     }
 
-    protected void updateSql(String userId, String shopName, String mealName, String mealPrice, String mealNum){
-        Log.d("ReturnValues", userId + "/ " + shopName + "/ " + mealName + "/ "  + mealPrice + "/ " + mealNum);
+    protected void updateSql(String userId, String shopName, String mealName, String mealPrice, String mealNum, String mealImg){
+        Log.d("ReturnValues", userId + "/ " + shopName + "/ " + mealName + "/ "  + mealPrice + "/ " + mealNum + "/ " + mealImg);
         sqlDb = openOrCreateDatabase(DB_NAME, Context.MODE_PRIVATE, null);
         sqlDb.execSQL(createTable);
 
         Cursor cursor = sqlDb.rawQuery("SELECT * FROM " + TB_NAME, null);
-        ContentValues contentValues = new ContentValues(5);
+        ContentValues contentValues = new ContentValues(6);
         contentValues.put("userId", userId);
         contentValues.put("shopName", shopName);
         contentValues.put("mealName", mealName);
         contentValues.put("mealPrice", mealPrice);
         contentValues.put("mealNum", mealNum);
+        contentValues.put("mealImg", mealImg);
 
         sqlDb.insert(TB_NAME, null, contentValues);
         sqlDb.close();
@@ -361,6 +392,7 @@ public class MainActivity_simulate extends AppCompatActivity {
                 str += "mealName:" + cursor.getString(2) + "\n";
                 str += "mealPrice:" + cursor.getString(3) + "\n";
                 str += "mealNum:" + cursor.getString(4) + "\n";
+                str += "mealImg:" + cursor.getString(5) + "\n";
                 str += "-----------------------------\n";
             } while(cursor.moveToNext());
         } else if (cursor.getCount() == 0) {

@@ -18,7 +18,7 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="20dp"
         android:footerDividersEnabled="true"
-        android:headerDividersEnabled="true"
+        android:headerDividersEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

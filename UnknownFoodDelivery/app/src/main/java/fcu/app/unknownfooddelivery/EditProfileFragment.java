@@ -1,6 +1,8 @@
 package fcu.app.unknownfooddelivery;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -37,9 +39,11 @@ public class EditProfileFragment extends Fragment {
   private String[] userProfileTitle = {"使用者名稱", "電話號碼"};
   String userName, userEmail, userPhone;
   String updateData;
+  String profileType = "";
   private FirebaseFirestore db;
   private FirebaseAuth fAuth;
   private String userId;
+  private SharedPreferences sharedPreferences;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,15 +51,16 @@ public class EditProfileFragment extends Fragment {
 
     View view = inflater.inflate(R.layout.fragment_edit_profile, container, false);
 
-    if (getArguments() != null) {
-      userEmail = this.getArguments().getString("email");
-      userName = this.getArguments().getString("username");
-      userPhone = this.getArguments().getString("phone");
-    }
+//    if (getArguments() != null) {
+//      userEmail = this.getArguments().getString("email");
+//      userName = this.getArguments().getString("username");
+//      userPhone = this.getArguments().getString("phone");
+//    }
 
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
+    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
 
 //    DocumentReference documentReference = db.collection("users").document(userId);
 //    Log.d("UserId", userId);
@@ -76,6 +81,11 @@ public class EditProfileFragment extends Fragment {
 
     ListView lv = view.findViewById(R.id.edit_profile_lv);
     ArrayList<UserProfile> userProfileList = new ArrayList<UserProfile>();
+
+    userName = sharedPreferences.getString("username", "");
+    userPhone = sharedPreferences.getString("userphone", "");
+    userEmail = sharedPreferences.getString("useremail", "");
+    Log.d("userEmail", userEmail);
 
     userProfileList.add(new UserProfile(userProfileTitle[0], userName));
     userProfileList.add(new UserProfile(userProfileTitle[1], userPhone));
@@ -136,7 +146,7 @@ public class EditProfileFragment extends Fragment {
   }
 
   private void updateUserData(int index, String currentUserData, String newData, String userEmail) {
-    String profileType = "";
+
     Map<String, Object> userProfile = new HashMap<>();
     switch (index) {
       case 0:
@@ -145,7 +155,7 @@ public class EditProfileFragment extends Fragment {
         break;
       case 1:
         userProfile.put("phone", newData);
-        profileType = "phone";
+        profileType = "userphone";
         break;
     }
 
@@ -164,6 +174,8 @@ public class EditProfileFragment extends Fragment {
               .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
+                  getFragmentManager().beginTransaction().detach(EditProfileFragment.this).commit();
+                  getFragmentManager().beginTransaction().attach(EditProfileFragment.this).commit();
                   Toast.makeText(getContext(), "更新成功", Toast.LENGTH_SHORT).show();
                 }
               }).addOnFailureListener(new OnFailureListener() {
@@ -173,11 +185,14 @@ public class EditProfileFragment extends Fragment {
 
             }
           });
+          SharedPreferences.Editor editor = sharedPreferences.edit();
+          editor.putString(profileType, newData);
+          editor.commit();
+          Log.d("updateProfile", "{" + profileType + " / " + newData + "}");
         } else {
           Toast.makeText(getContext(), "更新失敗", Toast.LENGTH_SHORT).show();
         }
       }
     });
-
   }
 }

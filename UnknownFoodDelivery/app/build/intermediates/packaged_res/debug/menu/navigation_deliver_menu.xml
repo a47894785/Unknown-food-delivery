@@ -8,7 +8,9 @@
 
     <item
         android:id="@+id/menu_status_deliver"
+        android:icon="@drawable/ic_baseline_edit_note_24"
         android:title="接單狀態" />
+
     <item android:id="@+id/menu_history_deliver"
         android:icon="@drawable/icon_shophistory"
         android:title="今日訂單" />

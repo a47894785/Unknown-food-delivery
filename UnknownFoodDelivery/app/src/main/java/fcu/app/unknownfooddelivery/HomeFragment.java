@@ -1,5 +1,7 @@
 package fcu.app.unknownfooddelivery;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -37,6 +39,8 @@ public class HomeFragment extends Fragment {
   private FirebaseAuth fAuth;
   private String userId;
   public String count;
+  private SharedPreferences sharedPreferences;
+  private String currentAddress;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,15 +52,19 @@ public class HomeFragment extends Fragment {
     tvCurrentAddress = view.findViewById(R.id.home_frag_address);
     lvShop = view.findViewById(R.id.lv_shop);
 
-    if (getArguments() != null) {
-      String currentAddress = this.getArguments().getString("address");
-      tvCurrentAddress.setText(currentAddress);
-    }
+//    if (getArguments() != null) {
+//      currentAddress = this.getArguments().getString("address");
+//      Log.d("Test", currentAddress);
+//      tvCurrentAddress.setText(currentAddress);
+//    }
 
+    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
     ArrayList<String> shopIdList = new ArrayList<>();
+
+
 //
     db.collection("shops").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
       @Override
@@ -109,4 +117,16 @@ public class HomeFragment extends Fragment {
     return view;
   }
 
+  @Override
+  public void onResume() {
+    currentAddress = sharedPreferences.getString("Address", "無");
+//    Log.d("CurrentAddress", currentAddress);
+    tvCurrentAddress.setText(currentAddress);
+    super.onResume();
+  }
+
+  @Override
+  public void onPause() {
+    super.onPause();
+  }
 }

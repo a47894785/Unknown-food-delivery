@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout_shop"
     tools:context=".RestaurantActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#fff">
 
         <FrameLayout
             android:id="@+id/btn_nav_container_shop"
@@ -20,7 +22,6 @@
             app:layout_constraintTop_toBottomOf="@+id/image_View16_shop">
 
         </FrameLayout>
-
 
 
         <ImageView
@@ -56,11 +57,11 @@
             app:itemIconTint="@color/white"
             app:itemRippleColor="#2196F3"
             app:itemTextColor="#FFFFFF"
+            app:labelVisibilityMode="unlabeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_shop_menu"
-            app:labelVisibilityMode="unlabeled"/>
+            app:menu="@menu/bottom_nav_shop_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

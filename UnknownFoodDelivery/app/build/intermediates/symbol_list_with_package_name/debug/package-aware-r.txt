@@ -35,6 +35,7 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+animator button_state_list_anim_neumorph
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -343,6 +344,8 @@ attr colorScheme
 attr colorSecondary
 attr colorSecondaryContainer
 attr colorSecondaryVariant
+attr colorShadowDark
+attr colorShadowLight
 attr colorSurface
 attr colorSurfaceInverse
 attr colorSurfaceVariant
@@ -856,6 +859,32 @@ attr navigationViewStyle
 attr nestedScrollFlags
 attr nestedScrollViewStyle
 attr nestedScrollable
+attr neumorphButtonStyle
+attr neumorphCardViewStyle
+attr neumorphFloatingActionButtonStyle
+attr neumorphImageButtonStyle
+attr neumorphImageViewStyle
+attr neumorphTextViewStyle
+attr neumorph_backgroundColor
+attr neumorph_cornerFamily
+attr neumorph_cornerSize
+attr neumorph_cornerSizeBottomLeft
+attr neumorph_cornerSizeBottomRight
+attr neumorph_cornerSizeTopLeft
+attr neumorph_cornerSizeTopRight
+attr neumorph_inset
+attr neumorph_insetBottom
+attr neumorph_insetEnd
+attr neumorph_insetStart
+attr neumorph_insetTop
+attr neumorph_lightSource
+attr neumorph_shadowColorDark
+attr neumorph_shadowColorLight
+attr neumorph_shadowElevation
+attr neumorph_shapeAppearance
+attr neumorph_shapeType
+attr neumorph_strokeColor
+attr neumorph_strokeWidth
 attr nullable
 attr number
 attr numericModifiers
@@ -1336,6 +1365,8 @@ color design_dark_default_color_primary_dark
 color design_dark_default_color_primary_variant
 color design_dark_default_color_secondary
 color design_dark_default_color_secondary_variant
+color design_dark_default_color_shadow_dark
+color design_dark_default_color_shadow_light
 color design_dark_default_color_surface
 color design_default_color_background
 color design_default_color_error
@@ -1349,6 +1380,8 @@ color design_default_color_primary_dark
 color design_default_color_primary_variant
 color design_default_color_secondary
 color design_default_color_secondary_variant
+color design_default_color_shadow_dark
+color design_default_color_shadow_light
 color design_default_color_surface
 color design_error
 color design_fab_shadow_end_color
@@ -1987,6 +2020,13 @@ dimen design_bottom_navigation_text_size
 dimen design_bottom_sheet_elevation
 dimen design_bottom_sheet_modal_elevation
 dimen design_bottom_sheet_peek_height_min
+dimen design_btn_padding_bottom
+dimen design_btn_padding_left
+dimen design_btn_padding_right
+dimen design_btn_padding_top
+dimen design_default_corner_radius
+dimen design_default_inset
+dimen design_default_padding
 dimen design_fab_border_width
 dimen design_fab_elevation
 dimen design_fab_image_size
@@ -2021,6 +2061,10 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen edit_text_underline_corner_size
+dimen edit_text_underline_elevation
+dimen edit_text_underline_height
+dimen edit_text_underline_inset_bottom
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -2579,6 +2623,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable default_edit_text_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2591,6 +2636,7 @@ drawable ic_backarrow
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
+drawable ic_baseline_edit_note_24
 drawable ic_baseline_push_pin_24
 drawable ic_clock_black_24dp
 drawable ic_down
@@ -2768,6 +2814,7 @@ id autoCompleteToStart
 id bar_chart
 id barrier
 id baseline
+id basin
 id beginOnFirstDraw
 id beginning
 id bestChoice
@@ -2923,6 +2970,7 @@ id fill_vertical
 id filled
 id fitToContents
 id fixed
+id flat
 id flip
 id floating
 id forever
@@ -2961,6 +3009,7 @@ id im_back_arrow
 id im_menu_meal_img
 id im_shopImg
 id im_shop_image
+id im_update_meal_img
 id im_upload
 id im_upload_shop_img
 id image
@@ -3001,7 +3050,9 @@ id jumpToStart
 id labeled
 id layout
 id left
+id leftBottom
 id leftToRight
+id leftTop
 id legacy
 id light
 id line1
@@ -3017,6 +3068,7 @@ id lv_edit_shop_prodile
 id lv_history
 id lv_shop
 id lv_show_menu
+id lv_update_manu
 id mainActivity_simulate
 id map
 id masked
@@ -3114,6 +3166,7 @@ id on
 id onInterceptTouchReturnSwipe
 id outline
 id outward
+id oval
 id overshoot
 id packed
 id parallax
@@ -3129,6 +3182,7 @@ id percent
 id pin
 id position
 id postLayout
+id pressed
 id progress_circular
 id progress_horizontal
 id radio
@@ -3136,7 +3190,9 @@ id ratio
 id rectangles
 id reverseSawtooth
 id right
+id rightBottom
 id rightToLeft
+id rightTop
 id right_icon
 id right_side
 id rounded
@@ -3299,6 +3355,7 @@ id tv_shop_name
 id tv_shop_status
 id tv_shopname_mealname
 id tv_title
+id tv_update_menu_meal_name
 id tv_updates
 id tv_username
 id unchecked
@@ -3329,6 +3386,8 @@ integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
 integer bottom_sheet_slide_duration
+integer button_pressed_animation_delay
+integer button_pressed_animation_duration
 integer cancel_button_image_alpha
 integer config_navAnimTime
 integer config_tooltipAnimTime
@@ -3449,11 +3508,13 @@ layout fragment_shop_add
 layout fragment_shop_history
 layout fragment_shop_home
 layout fragment_shop_info
+layout fragment_update_menu
 layout layout_edit_profile
 layout layout_home
 layout layout_navigation_header
 layout listitem
 layout listitem_shop_page
+layout listitem_update_menu
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3820,6 +3881,15 @@ style Base_Theme_MaterialComponents_Light_Dialog_Bridge
 style Base_Theme_MaterialComponents_Light_Dialog_FixedSize
 style Base_Theme_MaterialComponents_Light_Dialog_MinWidth
 style Base_Theme_MaterialComponents_Light_DialogWhenLarge
+style Base_Theme_Neumorph
+style Base_Theme_Neumorph_Bridge
+style Base_Theme_Neumorph_CompactMenu
+style Base_Theme_Neumorph_DialogWhenLarge
+style Base_Theme_Neumorph_Light
+style Base_Theme_Neumorph_Light_Bridge
+style Base_Theme_Neumorph_Light_DarkActionBar
+style Base_Theme_Neumorph_Light_DarkActionBar_Bridge
+style Base_Theme_Neumorph_Light_DialogWhenLarge
 style Base_ThemeOverlay_AppCompat
 style Base_ThemeOverlay_AppCompat_ActionBar
 style Base_ThemeOverlay_AppCompat_Dark
@@ -3864,6 +3934,11 @@ style Base_V21_Theme_MaterialComponents
 style Base_V21_Theme_MaterialComponents_Dialog
 style Base_V21_Theme_MaterialComponents_Light
 style Base_V21_Theme_MaterialComponents_Light_Dialog
+style Base_V21_Theme_Neumorph
+style Base_V21_Theme_Neumorph_Bridge
+style Base_V21_Theme_Neumorph_Light
+style Base_V21_Theme_Neumorph_Light_Bridge
+style Base_V21_Theme_Neumorph_Light_DarkActionBar_Bridge
 style Base_V21_ThemeOverlay_AppCompat_Dialog
 style Base_V21_ThemeOverlay_Material3_BottomSheetDialog
 style Base_V21_ThemeOverlay_MaterialComponents_BottomSheetDialog
@@ -4007,6 +4082,8 @@ style Platform_MaterialComponents
 style Platform_MaterialComponents_Dialog
 style Platform_MaterialComponents_Light
 style Platform_MaterialComponents_Light_Dialog
+style Platform_Neumorph
+style Platform_Neumorph_Light
 style Platform_ThemeOverlay_AppCompat
 style Platform_ThemeOverlay_AppCompat_Dark
 style Platform_ThemeOverlay_AppCompat_Light
@@ -4032,6 +4109,7 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
+style ShapeAppearance
 style ShapeAppearance_Material3_LargeComponent
 style ShapeAppearance_Material3_MediumComponent
 style ShapeAppearance_Material3_NavigationBarView_ActiveIndicator
@@ -4043,6 +4121,12 @@ style ShapeAppearance_MaterialComponents_MediumComponent
 style ShapeAppearance_MaterialComponents_SmallComponent
 style ShapeAppearance_MaterialComponents_Test
 style ShapeAppearance_MaterialComponents_Tooltip
+style ShapeAppearance_Neumorph
+style ShapeAppearance_Neumorph_Button
+style ShapeAppearance_Neumorph_CardView
+style ShapeAppearance_Neumorph_FloatingActionButton
+style ShapeAppearance_Neumorph_ImageButton
+style ShapeAppearance_Neumorph_ImageView
 style ShapeAppearanceOverlay
 style ShapeAppearanceOverlay_BottomLeftDifferentCornerSize
 style ShapeAppearanceOverlay_BottomRightCut
@@ -4283,6 +4367,26 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_Neumorph
+style Theme_Neumorph_Bridge
+style Theme_Neumorph_CompactMenu
+style Theme_Neumorph_DayNight
+style Theme_Neumorph_DayNight_Bridge
+style Theme_Neumorph_DayNight_DarkActionBar
+style Theme_Neumorph_DayNight_DarkActionBar_Bridge
+style Theme_Neumorph_DayNight_DialogWhenLarge
+style Theme_Neumorph_DayNight_NoActionBar
+style Theme_Neumorph_DayNight_NoActionBar_Bridge
+style Theme_Neumorph_DialogWhenLarge
+style Theme_Neumorph_Light
+style Theme_Neumorph_Light_Bridge
+style Theme_Neumorph_Light_DarkActionBar
+style Theme_Neumorph_Light_DarkActionBar_Bridge
+style Theme_Neumorph_Light_DialogWhenLarge
+style Theme_Neumorph_Light_NoActionBar
+style Theme_Neumorph_Light_NoActionBar_Bridge
+style Theme_Neumorph_NoActionBar
+style Theme_Neumorph_NoActionBar_Bridge
 style Theme_UnknownFoodDelivery
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
@@ -4381,7 +4485,13 @@ style ThemeOverlay_MaterialComponents_TimePicker_Display_TextInputEditText
 style ThemeOverlay_MaterialComponents_Toolbar_Popup_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
+style ThemeOverlay_Neumorph
+style ThemeOverlay_Neumorph_ActionBar
+style ThemeOverlay_Neumorph_Dark
+style ThemeOverlay_Neumorph_Dark_ActionBar
+style ThemeOverlay_Neumorph_Light
 style ThemeOverlayColorAccentRed
+style Widget
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
@@ -4728,6 +4838,13 @@ style Widget_MaterialComponents_Toolbar_Primary
 style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
+style Widget_Neumorph
+style Widget_Neumorph_Button
+style Widget_Neumorph_CardView
+style Widget_Neumorph_FloatingActionButton
+style Widget_Neumorph_ImageButton
+style Widget_Neumorph_ImageView
+style Widget_Neumorph_TextView
 style Widget_Support_CoordinatorLayout
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
@@ -4851,6 +4968,14 @@ styleable NavigationBarView backgroundTint elevation itemActiveIndicatorStyle it
 styleable NavigationRailView headerLayout itemMinHeight menuGravity
 styleable NavigationView android_layout_gravity android_background android_fitsSystemWindows android_maxWidth bottomInsetScrimEnabled dividerInsetEnd dividerInsetStart drawerLayoutCornerSize elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor itemVerticalPadding menu shapeAppearance shapeAppearanceOverlay subheaderColor subheaderInsetEnd subheaderInsetStart subheaderTextAppearance topInsetScrimEnabled
 styleable Navigator android_label android_id route
+styleable NeumorphButton neumorph_backgroundColor neumorph_inset neumorph_insetBottom neumorph_insetEnd neumorph_insetStart neumorph_insetTop neumorph_lightSource neumorph_shadowColorDark neumorph_shadowColorLight neumorph_shadowElevation neumorph_shapeAppearance neumorph_shapeType neumorph_strokeColor neumorph_strokeWidth
+styleable NeumorphCardView neumorph_backgroundColor neumorph_inset neumorph_insetBottom neumorph_insetEnd neumorph_insetStart neumorph_insetTop neumorph_lightSource neumorph_shadowColorDark neumorph_shadowColorLight neumorph_shadowElevation neumorph_shapeAppearance neumorph_shapeType neumorph_strokeColor neumorph_strokeWidth
+styleable NeumorphFloatingActionButton neumorph_backgroundColor neumorph_inset neumorph_insetBottom neumorph_insetEnd neumorph_insetStart neumorph_insetTop neumorph_lightSource neumorph_shadowColorDark neumorph_shadowColorLight neumorph_shadowElevation neumorph_shapeAppearance neumorph_shapeType neumorph_strokeColor neumorph_strokeWidth
+styleable NeumorphImageButton neumorph_backgroundColor neumorph_inset neumorph_insetBottom neumorph_insetEnd neumorph_insetStart neumorph_insetTop neumorph_lightSource neumorph_shadowColorDark neumorph_shadowColorLight neumorph_shadowElevation neumorph_shapeAppearance neumorph_shapeType neumorph_strokeColor neumorph_strokeWidth
+styleable NeumorphImageView neumorph_backgroundColor neumorph_inset neumorph_insetBottom neumorph_insetEnd neumorph_insetStart neumorph_insetTop neumorph_lightSource neumorph_shadowColorDark neumorph_shadowColorLight neumorph_shadowElevation neumorph_shapeAppearance neumorph_shapeType neumorph_strokeColor neumorph_strokeWidth
+styleable NeumorphShape neumorph_shapeAppearance
+styleable NeumorphShapeAppearance neumorph_cornerFamily neumorph_cornerSize neumorph_cornerSizeBottomLeft neumorph_cornerSizeBottomRight neumorph_cornerSizeTopLeft neumorph_cornerSizeTopRight
+styleable NeumorphTextView neumorph_shadowColorDark neumorph_shadowColorLight neumorph_shadowElevation
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor

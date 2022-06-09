@@ -124,7 +124,7 @@ public class ShopAddFragment extends Fragment {
               @Override
               public void onComplete(@NonNull Task<Uri> task) {
                 mealImgUrl = task.getResult().toString();
-                DocumentReference documentReference = db.collection("shops").document(userId).collection("menu").document(mealName);
+                DocumentReference documentReference = db.collection("shops").document(userId).collection("menu").document();
                 Map<String, Object> menu = new HashMap<String, Object>();
                 menu.put("mealInfo",mealInfo);
                 menu.put("mealName", mealName);
@@ -148,6 +148,7 @@ public class ShopAddFragment extends Fragment {
                     etMealPrice.setError(null);
                     imUpload.setImageResource(R.drawable.ic_launcher_foreground);
                     checkImg = false;
+                    Toast.makeText(getContext(), "新增餐點成功", Toast.LENGTH_SHORT).show();
                   }
                 }).addOnFailureListener(new OnFailureListener() {
                   @Override

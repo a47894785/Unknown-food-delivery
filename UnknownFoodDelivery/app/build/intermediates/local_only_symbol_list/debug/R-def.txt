@@ -28,6 +28,7 @@ drawable ic_backarrow
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_edit_24
+drawable ic_baseline_edit_note_24
 drawable ic_baseline_push_pin_24
 drawable ic_down
 drawable ic_launcher_background
@@ -117,6 +118,7 @@ id im_back_arrow
 id im_menu_meal_img
 id im_shopImg
 id im_shop_image
+id im_update_meal_img
 id im_upload
 id im_upload_shop_img
 id imageView
@@ -146,6 +148,7 @@ id lv_edit_shop_prodile
 id lv_history
 id lv_shop
 id lv_show_menu
+id lv_update_manu
 id mainActivity_simulate
 id map
 id menuLogout
@@ -203,6 +206,7 @@ id tv_shop_name
 id tv_shop_status
 id tv_shopname_mealname
 id tv_title
+id tv_update_menu_meal_name
 id tv_updates
 id tv_username
 id view
@@ -225,11 +229,13 @@ layout fragment_shop_add
 layout fragment_shop_history
 layout fragment_shop_home
 layout fragment_shop_info
+layout fragment_update_menu
 layout layout_edit_profile
 layout layout_home
 layout layout_navigation_header
 layout listitem
 layout listitem_shop_page
+layout listitem_update_menu
 menu bottom_nav_menu
 menu bottom_nav_shop_menu
 menu navigation_deliver_menu

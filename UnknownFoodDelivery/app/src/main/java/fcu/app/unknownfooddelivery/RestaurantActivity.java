@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,12 +30,13 @@ public class RestaurantActivity extends AppCompatActivity {
 
   private DrawerLayout drawerLayoutShop;
   private ImageView ivMenuShop;
+  private SharedPreferences sharedPreferences;
 
   private FirebaseAuth fAuth;
   private FirebaseFirestore db;
   private DocumentReference documentReference;
   private String userId;
-  private String rName = "", rEmail = "", rPhone = "", rAddress  = "", userEmail = "", rStatus, rImgUrl = "";
+  private String rName, rEmail, rPhone, rAddress, userEmail, rStatus, rImgUrl;
   boolean flag = false;
 
   int bottomId;
@@ -45,6 +47,7 @@ public class RestaurantActivity extends AppCompatActivity {
   ShopAddFragment shopAddFragment = new ShopAddFragment();
   ShopHistoryFragment shopHistoryFragment = new ShopHistoryFragment();
   EditRestaurantFragment editRestaurantFragment = new EditRestaurantFragment();
+  UpdateMenuFragment updateMenuFragment = new UpdateMenuFragment();
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +60,7 @@ public class RestaurantActivity extends AppCompatActivity {
     navigationViewShop = findViewById(R.id.navigationView_shop);
     bottomNavigationViewShop = findViewById(R.id.bottom_navigation_shop);
     bottomNavigationViewShop.getMenu().getItem(0).setChecked(false);
-
+    sharedPreferences = getPreferences(MODE_PRIVATE);
 
 
     // 改變上方通知欄
@@ -69,6 +72,16 @@ public class RestaurantActivity extends AppCompatActivity {
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
+
+    DocumentReference userDocumentReference = db.collection("users").document(userId);
+    userDocumentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+      @Override
+      public void onSuccess(DocumentSnapshot documentSnapshot) {
+        if (documentSnapshot.exists()) {
+          userEmail = documentSnapshot.getString("email");
+        }
+      }
+    });
 
     documentReference = db.collection("shops").document(userId);
     documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -82,12 +95,24 @@ public class RestaurantActivity extends AppCompatActivity {
           rStatus = documentSnapshot.getString("shopStatus");
           rImgUrl = documentSnapshot.getString("shopImage");
           flag = true;
+
+
+          SharedPreferences.Editor editor = sharedPreferences.edit();
+          editor.putString("shopName", rName);
+          editor.putString("shopEmail", rEmail);
+          editor.putString("shopPhone", rPhone);
+          editor.putString("shopAddress", rAddress);
+          editor.putString("shopStatus", rStatus);
+          editor.putString("shopImage", rImgUrl);
+          editor.putString("useremail", userEmail);
+          editor.commit();
+
           checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress, rImgUrl);
           //跳轉進來就進入到 ShopHomeFragment
           bottomId = R.id.btn_nav_home_shop;
-          Bundle bundle = new Bundle();
-          bundle.putString("shopStatus", rStatus);
-          shopHomeFragment.setArguments(bundle);
+//          Bundle bundle = new Bundle();
+//          bundle.putString("shopStatus", rStatus);
+//          shopHomeFragment.setArguments(bundle);
           Log.d("GetRestaurantInfo", "NO.1 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress + ", ShopStatus: " + rStatus);
           getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
         } else {
@@ -96,15 +121,6 @@ public class RestaurantActivity extends AppCompatActivity {
       }
     });
 
-    DocumentReference userDocumentReference = db.collection("users").document(userId);
-    userDocumentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-      @Override
-      public void onSuccess(DocumentSnapshot documentSnapshot) {
-        if (documentSnapshot.exists()) {
-          userEmail = documentSnapshot.getString("email");
-        }
-      }
-    });
 
     ivMenuShop.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -123,13 +139,16 @@ public class RestaurantActivity extends AppCompatActivity {
           startActivity(new Intent(getApplicationContext(), LoginActivity.class));
           finish();
         } else if (id == R.id.menu_profile_shop) {
-          dataBundle(editRestaurantFragment, flag);
+//          dataBundle(editRestaurantFragment, flag);
           getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, editRestaurantFragment).commit();
           drawerLayoutShop.closeDrawer(GravityCompat.START);
         } else if (id == R.id.general_mode_shop){
           startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
         }else if(id == R.id.delivery_man_mode_shop){
           startActivity(new Intent(getApplicationContext(), DeliverActivity.class));
+        } else if (id == R.id.menu_change_shop) {
+          getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, updateMenuFragment).commit();
+          drawerLayoutShop.closeDrawer(GravityCompat.START);
         }
         return true;
       }
@@ -142,8 +161,8 @@ public class RestaurantActivity extends AppCompatActivity {
         switch (item.getItemId()) {
           case R.id.btn_nav_home_shop:
             bottomId = R.id.btn_nav_home_shop;
-            bundle.putString("shopStatus", rStatus);
-            shopHomeFragment.setArguments(bundle);
+//            bundle.putString("shopStatus", rStatus);
+//            shopHomeFragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, shopHomeFragment).commit();
             updateInfo(userId);
 //            checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress);
@@ -181,7 +200,7 @@ public class RestaurantActivity extends AppCompatActivity {
       checkDialog.setPositiveButton("前往", new DialogInterface.OnClickListener() {
         @Override
         public void onClick(DialogInterface dialogInterface, int i) {
-          dataBundle(editRestaurantFragment, flag);
+//          dataBundle(editRestaurantFragment, flag);
           getSupportFragmentManager().beginTransaction().replace(R.id.btn_nav_container_shop, editRestaurantFragment).commit();
         }
       });
@@ -201,6 +220,17 @@ public class RestaurantActivity extends AppCompatActivity {
           rPhone = documentSnapshot.getString("shopPhone");
           rAddress = documentSnapshot.getString("shopAddress");
           rStatus = documentSnapshot.getString("shopStatus");
+          rImgUrl = documentSnapshot.getString("shopImage");
+
+          SharedPreferences.Editor editor = sharedPreferences.edit();
+          editor.putString("shopName", rName);
+          editor.putString("shopEmail", rEmail);
+          editor.putString("shopPhone", rPhone);
+          editor.putString("shopAddress", rAddress);
+          editor.putString("shopStatus", rStatus);
+          editor.putString("shopImage", rImgUrl);
+          editor.commit();
+
           checkRestaurantInfo(editRestaurantFragment, flag, rName, rEmail, rPhone, rAddress, rImgUrl);
           Log.d("GetRestaurantInfo", "NO.3 Shop Name: " + rName + ", Shop Email: " + rEmail + ", Shop Phone: " + rPhone + ", Shop Address: " + rAddress);
         }

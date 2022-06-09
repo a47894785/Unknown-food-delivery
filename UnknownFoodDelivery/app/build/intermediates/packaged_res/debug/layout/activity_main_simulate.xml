@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#fff">
 
         <FrameLayout
             android:id="@+id/btn_nav_container"
@@ -18,7 +19,7 @@
             app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView16"/>
+            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
         <EditText
             android:id="@+id/et_search"
@@ -85,11 +86,11 @@
             app:itemIconTint="@color/white"
             app:itemRippleColor="#2196F3"
             app:itemTextColor="#FFFFFF"
+            app:labelVisibilityMode="unlabeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu"
-            app:labelVisibilityMode="unlabeled"/>
+            app:menu="@menu/bottom_nav_menu" />
 
         <ImageView
             android:id="@+id/im_back_arrow"

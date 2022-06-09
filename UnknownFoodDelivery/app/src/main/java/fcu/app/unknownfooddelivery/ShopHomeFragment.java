@@ -1,5 +1,7 @@
 package fcu.app.unknownfooddelivery;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -39,6 +41,7 @@ public class ShopHomeFragment extends Fragment {
   private FirebaseAuth fAuth;
   private String userId;
   private String changeStatus;
+  private SharedPreferences sharedPreferences;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,11 +52,14 @@ public class ShopHomeFragment extends Fragment {
     tvStatus = view.findViewById(R.id.tv_shop_status);
     spinner = view.findViewById(R.id.sp_status);
     btnChange = view.findViewById(R.id.btn_change_status);
+    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
 
-    if (getArguments() != null) {
-      shopStatus = this.getArguments().getString("shopStatus");
-      Log.d("Status", shopStatus);
-    }
+//    if (getArguments() != null) {
+//      shopStatus = this.getArguments().getString("shopStatus");
+//      Log.d("Status", shopStatus);
+//    }
+
+    shopStatus = sharedPreferences.getString("shopStatus", "close");
 
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
@@ -121,6 +127,8 @@ public class ShopHomeFragment extends Fragment {
         db.collection("shops").document(userId).update(shopChangeStatus).addOnSuccessListener(new OnSuccessListener<Void>() {
           @Override
           public void onSuccess(Void unused) {
+            getFragmentManager().beginTransaction().detach(ShopHomeFragment.this).commit();
+            getFragmentManager().beginTransaction().attach(ShopHomeFragment.this).commit();
             Toast.makeText(getContext(), "更改營業狀態成功", Toast.LENGTH_SHORT).show();
           }
         }).addOnFailureListener(new OnFailureListener() {
@@ -130,7 +138,9 @@ public class ShopHomeFragment extends Fragment {
 
           }
         });
-
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("shopStatus", changeStatus);
+        editor.commit();
       }
     });
 

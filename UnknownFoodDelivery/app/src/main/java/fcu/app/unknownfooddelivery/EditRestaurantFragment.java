@@ -1,8 +1,10 @@
 package fcu.app.unknownfooddelivery;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -49,9 +51,11 @@ public class EditRestaurantFragment extends Fragment {
   private String[] restaurantProfileTitle = {"店家名稱", "店家地址", "電話", "電子郵件"};
   String rName, rEmail, rPhone, rAddress, userEmail, rImgUrl;
   String updateData, data_type;
+  String profileType = "";
   private FirebaseFirestore db;
   private FirebaseAuth fAuth;
   private String userId;
+  private SharedPreferences sharedPreferences;
 
   private Button btnUpload;
   private ImageView imShopImg;
@@ -65,21 +69,30 @@ public class EditRestaurantFragment extends Fragment {
                            Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.fragment_edit_restaurant, container, false);
 
-    if (getArguments() != null) {
-      userEmail = this.getArguments().getString("userEmail");
-      rName = this.getArguments().getString("shopName").equals("") ? "尚未設定店家名稱" : this.getArguments().getString("shopName");
-      rEmail = this.getArguments().getString("shopEmail").equals("") ? "尚未設定電子郵件" : this.getArguments().getString("shopEmail");
-      rPhone = this.getArguments().getString("shopPhone").equals("") ? "尚未設定店家電話" : this.getArguments().getString("shopPhone");
-      rAddress = this.getArguments().getString("shopAddress").equals("") ? "尚未設定店家地址" : this.getArguments().getString("shopAddress");
-      rImgUrl = this.getArguments().getString("shopImage");
-    }
+//    if (getArguments() != null) {
+//      userEmail = this.getArguments().getString("userEmail");
+//      rName = this.getArguments().getString("shopName").equals("") ? "尚未設定店家名稱" : this.getArguments().getString("shopName");
+//      rEmail = this.getArguments().getString("shopEmail").equals("") ? "尚未設定電子郵件" : this.getArguments().getString("shopEmail");
+//      rPhone = this.getArguments().getString("shopPhone").equals("") ? "尚未設定店家電話" : this.getArguments().getString("shopPhone");
+//      rAddress = this.getArguments().getString("shopAddress").equals("") ? "尚未設定店家地址" : this.getArguments().getString("shopAddress");
+//      rImgUrl = this.getArguments().getString("shopImage");
+//    }
 
+    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
     imShopImg = view.findViewById(R.id.im_upload_shop_img);
     btnUpload = view.findViewById(R.id.btn_upload_shop_img);
     storageReference = FirebaseStorage.getInstance().getReference();
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
+
+    rName = sharedPreferences.getString("shopName", "").equals("") ? "尚未設定店家名稱" : sharedPreferences.getString("shopName", "");
+    rEmail = sharedPreferences.getString("shopEmail", "").equals("") ? "尚未設定電子郵件" : sharedPreferences.getString("shopEmail", "");
+    rPhone = sharedPreferences.getString("shopPhone", "").equals("") ? "尚未設定店家電話": sharedPreferences.getString("shopPhone", "");
+    rAddress = sharedPreferences.getString("shopAddress", "").equals("") ? "尚未設定店家地址": sharedPreferences.getString("shopAddress", "");
+    rImgUrl = sharedPreferences.getString("shopImage", "");
+    userEmail = sharedPreferences.getString("useremail", "");
+    Log.d("getShopInfor", rName + "/" + rEmail + "/" + rPhone + "/" + rAddress + "/" + userEmail);
 
     ListView lv = view.findViewById(R.id.lv_edit_shop_prodile);
     ArrayList<RestaurantProfile> restaurantProfileList = new ArrayList<>();
@@ -99,11 +112,11 @@ public class EditRestaurantFragment extends Fragment {
     imShopImg.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-          intent = new Intent();
-          intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-          intent.setType("image/*");
-          intent.setAction(Intent.ACTION_GET_CONTENT);
-          startActivityForResult(intent, 1);
+        intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent, 1);
       }
     });
 
@@ -130,6 +143,7 @@ public class EditRestaurantFragment extends Fragment {
                     public void onSuccess(Void unused) {
                       Toast.makeText(getContext(), "上傳成功!", Toast.LENGTH_SHORT).show();
                       Log.d("UploadImage", "Successfully");
+                      SharedPreferences.Editor editor = sharedPreferences.edit();
                     }
                   }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -213,15 +227,19 @@ public class EditRestaurantFragment extends Fragment {
     switch (index) {
       case 0:
         rProfile.put("shopName", newData);
+        profileType = "shopName";
         break;
       case 1:
         rProfile.put("shopAddress", newData);
+        profileType = "shopAddress";
         break;
       case 2:
         rProfile.put("shopPhone", newData);
+        profileType = "shopPhone";
         break;
       case 3:
         rProfile.put("shopEmail", newData);
+        profileType = "shopEmail";
         break;
     }
 
@@ -235,6 +253,9 @@ public class EditRestaurantFragment extends Fragment {
               .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
+
+                  getFragmentManager().beginTransaction().detach(EditRestaurantFragment.this).commit();
+                  getFragmentManager().beginTransaction().attach(EditRestaurantFragment.this).commit();
                   Toast.makeText(getContext(), "更新成功", Toast.LENGTH_SHORT).show();
                 }
               }).addOnFailureListener(new OnFailureListener() {
@@ -243,6 +264,10 @@ public class EditRestaurantFragment extends Fragment {
               Toast.makeText(getContext(), "發生錯誤", Toast.LENGTH_SHORT).show();
             }
           });
+          SharedPreferences.Editor editor = sharedPreferences.edit();
+          editor.putString(profileType, newData);
+          editor.commit();
+          Log.d("updateProfile", "{" + profileType + " / " + newData + "}");
         } else {
           Toast.makeText(getContext(), "更新失敗", Toast.LENGTH_SHORT).show();
         }

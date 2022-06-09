@@ -135,7 +135,7 @@ public class ShopInfoFragment extends Fragment {
           public void onClick(DialogInterface dialogInterface, int i) {
             String num = String.valueOf(mealNum.getSelectedItemPosition() + 1);
             MainActivity_simulate mainActivity = (MainActivity_simulate) getActivity();
-            mainActivity.updateSql(shopId, shopName, selectMealName, selectMaelPrice, num);
+            mainActivity.updateSql(shopId, shopName, selectMealName, selectMaelPrice, num, photoName);
             Toast.makeText(getContext(), "加入成功", Toast.LENGTH_SHORT).show();
             mainActivity.getSqlData();
           }

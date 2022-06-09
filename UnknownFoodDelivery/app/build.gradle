@@ -49,4 +49,5 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-database:19.6.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
 }
