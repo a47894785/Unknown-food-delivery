@@ -64,6 +64,8 @@ public class ShopAddFragment extends Fragment {
     if(getArguments() != null){
       shopName = this.getArguments().getString("shopName");
     }
+
+    // 連接 Components
     btnUploadImg = view.findViewById(R.id.btn_upload_img);
     btnSendOut = view.findViewById(R.id.btn_sendout);
     etMealName = (EditText) view.findViewById(R.id.et_add_meal_name);
@@ -73,11 +75,12 @@ public class ShopAddFragment extends Fragment {
 
     storageReference = FirebaseStorage.getInstance().getReference();
 
+    // 連接 Firebase Authentication & Firebase Firestore
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
 
-
+    // 上傳圖片按鈕
     btnUploadImg.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -88,6 +91,8 @@ public class ShopAddFragment extends Fragment {
         startActivityForResult(intent, 1);
       }
     });
+
+    // 送出餐點資訊
     btnSendOut.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {

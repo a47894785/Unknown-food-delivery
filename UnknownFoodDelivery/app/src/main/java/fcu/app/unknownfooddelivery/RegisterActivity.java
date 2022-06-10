@@ -167,6 +167,7 @@ public class RegisterActivity extends AppCompatActivity {
 
   }
 
+  // 初始化 Firebase 上 shops 的資料
   private void initShopInfo(String id){
     DocumentReference documentReference = db.collection("shops").document(id);
 
@@ -191,6 +192,8 @@ public class RegisterActivity extends AppCompatActivity {
       }
     });
   }
+
+  // 初始化 Firebase 上 delivers 的資料
   private void initDeliverInfo(String id){
     DocumentReference documentReference = db.collection("delivers").document(id);
 

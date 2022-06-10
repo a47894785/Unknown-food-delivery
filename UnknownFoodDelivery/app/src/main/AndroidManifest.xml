@@ -37,7 +37,7 @@
             android:name=".RestaurantActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity_simulate"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
@@ -51,9 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

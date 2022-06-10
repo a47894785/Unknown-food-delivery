@@ -30,9 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import fcu.app.unknownfooddelivery.adapter.CartAdapter;
-import fcu.app.unknownfooddelivery.adapter.MenuAdapter;
 import fcu.app.unknownfooddelivery.item.CartItem;
-import fcu.app.unknownfooddelivery.item.MealItem;
 
 public class CartFragment extends Fragment {
 
@@ -71,7 +69,7 @@ public class CartFragment extends Fragment {
 //      Log.d("cart_userid", userid +" + " + username);
 //    }
 
-    MainActivity_simulate mainActivity = (MainActivity_simulate) getActivity();
+    MainActivity mainActivity = (MainActivity) getActivity();
     temp = mainActivity.getSQLdata_to_cart();
     cartList = new ArrayList<>();
     money = 0;

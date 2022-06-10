@@ -49,29 +49,25 @@ public class HomeFragment extends Fragment {
 
     View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+    // 連接 Components
     tvCurrentAddress = view.findViewById(R.id.home_frag_address);
     lvShop = view.findViewById(R.id.lv_shop);
 
-//    if (getArguments() != null) {
-//      currentAddress = this.getArguments().getString("address");
-//      Log.d("Test", currentAddress);
-//      tvCurrentAddress.setText(currentAddress);
-//    }
-
     sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
+
+    // 連接 Firebase Authentication & Firebase Firestore
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
+
     ArrayList<String> shopIdList = new ArrayList<>();
 
-
-//
+    // 拿取 Firebase 中 shops 中的所有店家資料，並新增到店家的 ArrayLists，設置 Adapter
     db.collection("shops").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
       @Override
       public void onComplete(@NonNull Task<QuerySnapshot> task) {
         count = String.valueOf(task.getResult().size());
         ArrayList<HomeShopItem> homeShopLists = new ArrayList<>();
-
 
         for (QueryDocumentSnapshot document : task.getResult()) {
           Log.d("documents", document.getId() + " => " + document.getData());
@@ -94,6 +90,7 @@ public class HomeFragment extends Fragment {
 
     });
 
+    // ListView 監聽器，點擊可以將切換到該店家的詳細頁面
     lvShop.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {

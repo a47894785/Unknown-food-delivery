@@ -63,6 +63,7 @@ public class DeliveryStatusFragment extends Fragment {
     // Inflate the layout for this fragment
     View view = inflater.inflate(R.layout.fragment_deliver_status, container, false);
 
+    // 連接 Components
     tvDeliverStatus = view.findViewById(R.id.tv_deliver_status);
     spinner = view.findViewById(R.id.deliver_status);
     btnDeliverChange = view.findViewById(R.id.btn_change_deliver_status);
@@ -70,13 +71,16 @@ public class DeliveryStatusFragment extends Fragment {
     imStatus = view.findViewById(R.id.im_status);
     orderLists = new ArrayList<>();
 
+    // 連接 Firebase Authentication & Firebase Firestore
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
-    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
 
+    // 讀 SharedPreferences 資料
+    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
     deliverStatus = sharedPreferences.getString("deliverstatus", "close");
 
+    // 根據狀態資訊顯示
     switch (deliverStatus) {
       case "open":
         tvDeliverStatus.setText("接單中...");
@@ -92,6 +96,7 @@ public class DeliveryStatusFragment extends Fragment {
         break;
     }
 
+    // 讀取 Firebase 上 orders 的資料 (訂單)
     db.collection("orders").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
       @Override
       public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -116,6 +121,7 @@ public class DeliveryStatusFragment extends Fragment {
       }
     });
 
+    // ListView 監聽器
     lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
@@ -176,8 +182,7 @@ public class DeliveryStatusFragment extends Fragment {
       }
     });
 
-
-
+    // 更改外送員的狀態，並將其更新到 Firebase
     btnDeliverChange.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -236,6 +241,7 @@ public class DeliveryStatusFragment extends Fragment {
     return view;
   }
 
+  // 接受訂單後更改 Firebase 上該訂單的狀態
   private void acceptOrder(String orderId) {
     Map<String, Object> order = new HashMap<>();
     order.put("orderStatus", "yes");

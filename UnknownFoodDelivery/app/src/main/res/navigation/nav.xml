@@ -7,9 +7,9 @@
 
     <activity
         android:id="@+id/mainActivity_simulate"
-        android:name="fcu.app.unknownfooddelivery.MainActivity_simulate"
+        android:name="fcu.app.unknownfooddelivery.MainActivity"
         android:label="activity_main_simulate"
-        tools:layout="@layout/activity_main_simulate" />
+        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/cart"
         android:name="fcu.app.unknownfooddelivery.CartFragment"

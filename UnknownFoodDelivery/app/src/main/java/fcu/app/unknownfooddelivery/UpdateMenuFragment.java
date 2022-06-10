@@ -39,7 +39,7 @@ public class UpdateMenuFragment extends Fragment {
   private FirebaseFirestore db;
   private FirebaseAuth fAuth;
   private String userId;
-  private MainActivity_simulate mainActivity_simulate;
+  private MainActivity mainActivity_simulate;
   private String mealName, mealPrice, mealImg, mealId;
   private String type;
 

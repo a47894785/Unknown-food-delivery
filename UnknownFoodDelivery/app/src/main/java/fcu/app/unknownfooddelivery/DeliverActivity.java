@@ -44,27 +44,25 @@ public class DeliverActivity extends AppCompatActivity{
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_deliver);
-    /*SupportMapFragment
-            .findFragmentById(R.id.map);
-    mapFragment.getMapAsync(this);*/
-
 
     // 改變上方通知欄
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
       getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//      getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
+    // 連接 Firebase Authentication & Firebase Firestore
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
     sharedPreferences = getPreferences(MODE_PRIVATE);
 
+    // 連接 Components
     drawerLayout = findViewById(R.id.drawerLayout_deliver);
     ivMenuShop = findViewById(R.id.iv_menu);
     drawerLayoutShop = findViewById(R.id.drawerLayout_deliver);
     navigationViewShop = findViewById(R.id.navigationView);
 
+    // 拿取 Firebase 上 delivers 的資訊
     Log.d("deliver_try",userId);
     documentReference = db.collection("delivers").document(userId);
     documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -84,7 +82,10 @@ public class DeliverActivity extends AppCompatActivity{
       }
     });
 
+    // 顯示 google map
     getSupportFragmentManager().beginTransaction().replace(R.id.delivery_container,mapsFragment).commit();
+
+    // 左上圖片點擊展開左邊導覽列
     ivMenuShop.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -92,6 +93,7 @@ public class DeliverActivity extends AppCompatActivity{
       }
     });
     navigationViewShop.setItemIconTintList(null);
+    // 左邊導覽列監聽器
     navigationViewShop.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
       @Override
       public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -101,7 +103,7 @@ public class DeliverActivity extends AppCompatActivity{
           startActivity(new Intent(getApplicationContext(), LoginActivity.class));
           finish();
         }else if (id == R.id.general_mode_deliver){
-          startActivity(new Intent(getApplicationContext(), MainActivity_simulate.class));
+          startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }else if(id == R.id.shop_mode_deliver){
           startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
         }else if(id == R.id.menu_status_deliver){
@@ -112,10 +114,4 @@ public class DeliverActivity extends AppCompatActivity{
       }
     });
   }
-  /*@Override
-  public void onMapReady(GoogleMap googleMap) {
-    googleMap.addMarker(new MarkerOptions()
-            .position(new LatLng(24.1798, 120.6467))
-            .title("Marker"));
-  }*/
 }

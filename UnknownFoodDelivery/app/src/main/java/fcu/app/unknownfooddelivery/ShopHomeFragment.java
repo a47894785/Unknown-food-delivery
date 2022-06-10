@@ -49,22 +49,21 @@ public class ShopHomeFragment extends Fragment {
     // Inflate the layout for this fragment
     View view = inflater.inflate(R.layout.fragment_shop_home, container, false);
 
+    // 連接 Components
     tvStatus = view.findViewById(R.id.tv_shop_status);
     spinner = view.findViewById(R.id.sp_status);
     btnChange = view.findViewById(R.id.btn_change_status);
+
+    // 讀 SharedPreferences 並拿資料
     sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
-
-//    if (getArguments() != null) {
-//      shopStatus = this.getArguments().getString("shopStatus");
-//      Log.d("Status", shopStatus);
-//    }
-
     shopStatus = sharedPreferences.getString("shopStatus", "close");
 
+    // 連接 Firebase Authentication & Firebase Firestore
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
 
+    // 依據店家狀態資料顯示
     switch (shopStatus) {
       case "open":
         tvStatus.setText("營業中");
@@ -80,8 +79,7 @@ public class ShopHomeFragment extends Fragment {
         break;
     }
 
-
-
+    // 更該狀態
     btnChange.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -94,7 +92,6 @@ public class ShopHomeFragment extends Fragment {
             } else {
               changeStatus = "open";
             }
-//            tvStatus.setText("營業中");
             break;
           case 2:
             if (shopStatus.equals("busy")){
@@ -103,7 +100,6 @@ public class ShopHomeFragment extends Fragment {
             } else {
               changeStatus = "busy";
             }
-//            tvStatus.setText("忙碌中");
             break;
           case 3:
             if (shopStatus.equals("close")){
@@ -112,14 +108,14 @@ public class ShopHomeFragment extends Fragment {
             } else {
               changeStatus = "close";
             }
-//            tvStatus.setText("結束營業");
             break;
           default:
             Toast.makeText(getContext(), "錯誤，請選擇欲更改的狀態", Toast.LENGTH_SHORT).show();
             changeStatus = "error";
-//            tvStatus.setText("請設定營業狀態");
             break;
         }
+
+        // 更改 Firebase 上的資料並存入 SharedPreferences
         if(changeStatus != "error") {
           Log.d("ChangeStatus", changeStatus);
           Map<String, Object> shopChangeStatus = new HashMap<>();

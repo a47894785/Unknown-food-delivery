@@ -51,37 +51,16 @@ public class EditProfileFragment extends Fragment {
 
     View view = inflater.inflate(R.layout.fragment_edit_profile, container, false);
 
-//    if (getArguments() != null) {
-//      userEmail = this.getArguments().getString("email");
-//      userName = this.getArguments().getString("username");
-//      userPhone = this.getArguments().getString("phone");
-//    }
-
+    // 連接 Firebase Authentication & Firebase Firestore
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
-    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
-
-//    DocumentReference documentReference = db.collection("users").document(userId);
-//    Log.d("UserId", userId);
-//    documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-//      @Override
-//      public void onSuccess(DocumentSnapshot documentSnapshot) {
-//        if (documentSnapshot.exists()) {
-//          Log.d("GetUserInfo", "Document Exists.");
-//          userName = documentSnapshot.getString("username");
-//          userEmail = documentSnapshot.getString("email");
-//          userPhone = documentSnapshot.getString("phone");
-//          Log.d("GetUserInfo", "UserName: " + userName + ", UserEmail: " + userEmail + ", UserPhone: " + userPhone);
-//        } else {
-//          Log.d("GetUserInfo", "Error, document do not exists.");
-//        }
-//      }
-//    });
 
     ListView lv = view.findViewById(R.id.edit_profile_lv);
     ArrayList<UserProfile> userProfileList = new ArrayList<UserProfile>();
 
+    // 讀取 SharePreferences 資料
+    sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
     userName = sharedPreferences.getString("username", "");
     userPhone = sharedPreferences.getString("userphone", "");
     userEmail = sharedPreferences.getString("useremail", "");
@@ -89,11 +68,11 @@ public class EditProfileFragment extends Fragment {
 
     userProfileList.add(new UserProfile(userProfileTitle[0], userName));
     userProfileList.add(new UserProfile(userProfileTitle[1], userPhone));
-//    userProfileList.add(new UserProfile(userProfileTitle[1], userEmail));
 
     UserProfileAdapter adapter =  new UserProfileAdapter(getContext(), R.layout.layout_edit_profile, userProfileList);
     lv.setAdapter(adapter);
 
+    // ListView 監聽器
     lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
@@ -127,7 +106,6 @@ public class EditProfileFragment extends Fragment {
                   break;
               }
             }
-//           Toast.makeText(getContext(), "User Profile is update to " + updateData, Toast.LENGTH_SHORT).show();
           }
         });
 
@@ -145,6 +123,7 @@ public class EditProfileFragment extends Fragment {
     return view;
   }
 
+  // 將使用者資料更新到 Firebase
   private void updateUserData(int index, String currentUserData, String newData, String userEmail) {
 
     Map<String, Object> userProfile = new HashMap<>();
@@ -166,8 +145,6 @@ public class EditProfileFragment extends Fragment {
       @Override
       public void onComplete(@NonNull Task<QuerySnapshot> task) {
         if (task.isSuccessful() && !task.getResult().isEmpty()) {
-//          DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
-//          String documentId = documentSnapshot.getId();
           db.collection("users")
               .document(userId)
               .update(userProfile)

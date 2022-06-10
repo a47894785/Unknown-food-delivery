@@ -43,14 +43,16 @@ public class HistoryFragment extends Fragment {
     View view = inflater.inflate(R.layout.fragment_history, container, false);
     lvHistory = view.findViewById(R.id.lv_history);
 
+    // 連接 Firebase Authentication & Firebase Firestore
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
+
+    // 拿 SharedPreferences 資料
     sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
-
     userName = sharedPreferences.getString("username", "無");
-    //Log.d("history",userName);
 
+    // 拿 Firebase 上 orders 的資訊
     db.collection("orders").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
       @Override
       public void onComplete(@NonNull Task<QuerySnapshot> task) {

@@ -69,23 +69,19 @@ public class EditRestaurantFragment extends Fragment {
                            Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.fragment_edit_restaurant, container, false);
 
-//    if (getArguments() != null) {
-//      userEmail = this.getArguments().getString("userEmail");
-//      rName = this.getArguments().getString("shopName").equals("") ? "尚未設定店家名稱" : this.getArguments().getString("shopName");
-//      rEmail = this.getArguments().getString("shopEmail").equals("") ? "尚未設定電子郵件" : this.getArguments().getString("shopEmail");
-//      rPhone = this.getArguments().getString("shopPhone").equals("") ? "尚未設定店家電話" : this.getArguments().getString("shopPhone");
-//      rAddress = this.getArguments().getString("shopAddress").equals("") ? "尚未設定店家地址" : this.getArguments().getString("shopAddress");
-//      rImgUrl = this.getArguments().getString("shopImage");
-//    }
-
     sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
+
+    // 連接 Components
     imShopImg = view.findViewById(R.id.im_upload_shop_img);
     btnUpload = view.findViewById(R.id.btn_upload_shop_img);
+
+    // 連接 Firebase Authentication & Firebase Firestore & FirebaseStorage
     storageReference = FirebaseStorage.getInstance().getReference();
     fAuth = FirebaseAuth.getInstance();
     db = FirebaseFirestore.getInstance();
     userId = fAuth.getCurrentUser().getUid();
 
+    // 從 SharedPreferences 拿資料，若該資料是空白字串，則給定預測字串
     rName = sharedPreferences.getString("shopName", "").equals("") ? "尚未設定店家名稱" : sharedPreferences.getString("shopName", "");
     rEmail = sharedPreferences.getString("shopEmail", "").equals("") ? "尚未設定電子郵件" : sharedPreferences.getString("shopEmail", "");
     rPhone = sharedPreferences.getString("shopPhone", "").equals("") ? "尚未設定店家電話": sharedPreferences.getString("shopPhone", "");
@@ -109,6 +105,7 @@ public class EditRestaurantFragment extends Fragment {
       Picasso.get().load(rImgUrl).into(imShopImg);
     }
 
+    // 選擇圖片
     imShopImg.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -120,6 +117,7 @@ public class EditRestaurantFragment extends Fragment {
       }
     });
 
+    // 上傳圖片按鈕
     btnUpload.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -162,6 +160,7 @@ public class EditRestaurantFragment extends Fragment {
       }
     });
 
+    // ListView 監聽器，若店家還沒設定資訊則 AlertDialog 的 TextView 會以 Hint 顯示，否則會顯示店家現有的資訊
     lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
@@ -184,7 +183,6 @@ public class EditRestaurantFragment extends Fragment {
           if (rPhone.equals("尚未設定店家電話")) {
             updateDataInput.setHint(rPhone);
           }
-//          updateDataInput.setText(rPhone);
           updateDataInput.setInputType(InputType.TYPE_CLASS_PHONE);
         } else if (index == 3) {
           if (rEmail.equals("尚未設定電子郵件")) {
@@ -236,6 +234,7 @@ public class EditRestaurantFragment extends Fragment {
     super.onActivityResult(requestCode, resultCode, data);
   }
 
+  // 更新店家資訊到 Firebase
   private void updateRestaurantInfo(int index, String userEmail, String newData) {
     Map<String, Object> rProfile = new HashMap<>();
 
