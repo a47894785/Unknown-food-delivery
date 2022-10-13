@@ -1,5 +1,19 @@
 # Unknown-food-delivery
 
+App 程式介面
+
+登入
+![image](https://github.com/a47894785/Unknown-food-delivery/blob/master/Screenshot_20221013_203842.png)
+
+註冊
+![image](https://github.com/a47894785/Unknown-food-delivery/blob/master/Screenshot_20221013_203856.png)
+
+主頁
+![image](https://github.com/a47894785/Unknown-food-delivery/blob/master/Screenshot_20221013_204035.png)
+
+--- 
+## 課程進度追蹤用
+
 | 組員姓名 | 學號     | GitHub帳號     |
 | -------- | -------- | -------------- |
 | 陳品華   | D0843806 | a47894785      |
