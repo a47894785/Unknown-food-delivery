@@ -3,7 +3,7 @@
 App 程式介面
 
 登入
-![image](https://github.com/a47894785/Unknown-food-delivery/blob/master/Screenshot_20221013_203842.png = 540x1170)
+![image](https://github.com/a47894785/Unknown-food-delivery/blob/master/Screenshot_20221013_203842.png =540x1170)
 
 註冊
 ![image](https://github.com/a47894785/Unknown-food-delivery/blob/master/Screenshot_20221013_203856.png)
